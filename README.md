@@ -6,7 +6,8 @@ This is a simple JavaFX project created using Maven. It includes basic setup for
 
 - Java 8 or higher
 - Maven
-- Git
+- JavaFX
+- Css
 
 ## Getting Started
 
