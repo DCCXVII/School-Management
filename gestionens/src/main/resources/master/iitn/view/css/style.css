@@ -1,0 +1,5 @@
+.button {
+  -fx-background-color: linear-gradient(#f0ff35, #a9ff00);
+  -fx-text-fill: #242d35;
+  -fx-font-size: 14px;
+}
