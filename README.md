@@ -1,6 +1,4 @@
-# My New JavaFX Maven Project
-
-## Description
+# README for JavaFX Maven Project
 
 This is a simple JavaFX project created using Maven. It includes basic setup for a JavaFX application with an MVC architecture.
 
@@ -12,4 +10,38 @@ This is a simple JavaFX project created using Maven. It includes basic setup for
 
 ## Getting Started
 
-1. Clone the repository:
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/DCCXVII/javaproject.git
+   ```
+
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd javaproject/
+   ```
+
+3. **Build the project using Maven:**
+
+   ```bash
+   mvn clean install
+   ```
+
+4. **Run the application:**
+
+   ```bash
+   java -cp target/classes:target/dependency/* master.iitn.App
+   ```
+
+## Configuration
+
+The project includes configuration files for the application in the `src/main/resources/master/config` directory. These files are used to manage application settings and properties.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+This project is licensed under the MIT License.
