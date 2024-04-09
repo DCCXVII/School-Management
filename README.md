@@ -14,13 +14,13 @@ This is a simple JavaFX project created using Maven. It includes basic setup for
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/DCCXVII/javaproject.git
+   git clone new link: https://github.com/DCCXVII/School-Management
    ```
 
 2. **Navigate to the project directory:**
 
    ```bash
-   cd javaproject/
+   cd School-Management/
    ```
 
 3. **Build the project using Maven:**

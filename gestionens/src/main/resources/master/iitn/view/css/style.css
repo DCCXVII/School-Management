@@ -3,3 +3,9 @@
   -fx-text-fill: #242d35;
   -fx-font-size: 14px;
 }
+
+.labelinput {
+  -fx-font-size: 14px;
+  -fx-text-fill: #007ce9;
+  -fx-margin-right: 30px;
+}

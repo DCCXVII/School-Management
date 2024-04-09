@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Button?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+
 
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="master.iitn.PrimaryController" stylesheets="@css/style.css">
    <children>
-      <Label text="Primary View" />
+      <Label text="Calculating the sum" />
+      <HBox alignment="CENTER" ><Label text="digit one" styleClass="labelinput" />
+         
+      <TextField fx:id="digitOne" promptText="Number 1"/></HBox>
+      
+      <TextField fx:id="digitTwo" promptText="Number 2" />
+      <Label fx:id="result" text="Result = "/>
+      <Button fx:id="calculateButton" text="Calculate" onAction="#calculate" styleClass="button"/>
       <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary" styleClass="button"/>
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
+      <Label text="Hello word" fx:id="hello" onMouseEntered="#wrapOnMe" onMouseExited="#wrapOutMe"/>   </children>
+   
 </VBox>
