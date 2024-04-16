@@ -20,7 +20,7 @@ This is a simple JavaFX project created using Maven. It includes basic setup for
 2. **Navigate to the project directory:**
 
    ```bash
-   cd School-Management/
+   cd School-Management/gestionens
    ```
 
 3. **Build the project using Maven:**
