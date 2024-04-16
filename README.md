@@ -32,7 +32,7 @@ This is a simple JavaFX project created using Maven. It includes basic setup for
 4. **Run the application:**
 
    ```bash
-   java -cp target/classes:target/dependency/* master.iitn.App
+   mvn clean javafx:run
    ```
 
 ## Configuration
