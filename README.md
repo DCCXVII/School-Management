@@ -1,4 +1,4 @@
-# README for JavaFX Maven Project
+# JavaFX Maven Project
 
 This is a simple JavaFX project created using Maven. It includes basic setup for a JavaFX application with an MVC architecture.
 
