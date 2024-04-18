@@ -19,6 +19,9 @@
       <Label fx:id="result" text="Result = "/>
       <Button fx:id="calculateButton" text="Calculate" onAction="#calculate" styleClass="button"/>
       <Button fx:id="primaryButton" text="Switch to Secondary View" onAction="#switchToSecondary" styleClass="button"/>
-      <Label text="Hello word" fx:id="hello" onMouseEntered="#wrapOnMe" onMouseExited="#wrapOutMe"/>   </children>
+      <Label text="Hello word" fx:id="hello" onMouseEntered="#wrapOnMe" onMouseExited="#wrapOutMe"/> 
+      <Button fx:id="sceneButton" text="Switch to Scene View" onAction="#switchToScene" styleClass="button"/> 
+    </children>
+
    
 </VBox>

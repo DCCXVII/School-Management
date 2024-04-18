@@ -26,7 +26,7 @@ public class PrimaryController {
     @FXML
     private void wrapOnMe(Event event) {
         hello.setScaleX(1.5);
-        hello.setScaleY(1.5);
+        hello.setScaleY(2);
     }
 
     @FXML
@@ -50,5 +50,10 @@ public class PrimaryController {
     @FXML
     private void switchToSecondary(ActionEvent event) throws IOException {
         App.setRoot("view/secondary");
+    }
+
+    @FXML
+    private void switchToScene(ActionEvent event) throws IOException {
+        App.setRoot("view/scene");
     }
 }

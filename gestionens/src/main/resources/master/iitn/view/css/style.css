@@ -1,5 +1,39 @@
+/* Pallette colors */
+.root {
+  -primarycolor: #007ce9; /* added semicolon here */
+  -secondarycolor: #2ed050;
+  -lightcolor: #ffffff;
+  -darkcolor: #000000;
+}
+
+/* Radius */
+.root {
+  -radiusbutton: 8px;
+  -radiussmall: 2px;
+  -radiusmedium: 5px;
+  -radiuslarge: 10px;
+}
+
+/* Typography */
+
+/* .root {
+  -firstfont: "Open Sans", sans-serif;
+  -secondfont: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+} */
+
+/* font sizes */
+.root{
+  -h1fontsize: 2px;
+  -h2fontsize: 5px;
+  -h3fontsize: 1px;
+  -normalfontsize: 8px;
+  -fontconfsize: 18px;
+  -smallerfontsize: 7px;
+}
+
 .button {
-  -fx-background-color: linear-gradient(#f0ff35, #a9ff00);
+  -fx-background-color: -primarycolor;
   -fx-text-fill: #242d35;
   -fx-font-size: 14px;
 }

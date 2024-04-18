@@ -5,8 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import master.iitn.dao.ConnectDB;
+import utils.DatabasePropertiesLoader;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 /**
  * JavaFX App
@@ -20,6 +24,7 @@ public class App extends Application {
         scene = new Scene(loadFXML("view/primary"), 640, 480);
         stage.setScene(scene);
         stage.setTitle("Hello world");
+        // ConnectDB connectDB ;
         stage.show();
     }
 
