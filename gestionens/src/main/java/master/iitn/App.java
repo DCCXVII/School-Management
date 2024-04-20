@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import master.iitn.dao.ConnectDB;
+import master.iitn.dao.ConnectionProps;
 import utils.DatabasePropertiesLoader;
 
 import java.io.IOException;
@@ -21,7 +22,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("view/primary"), 640, 480);
+        scene = new Scene(loadFXML("view/Login"), 700, 500);
         stage.setScene(scene);
         stage.setTitle("Hello world");
         // ConnectDB connectDB ;
@@ -38,6 +39,8 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        ConnectDB connectDB = new ConnectDB();
+        System.out.println(connectDB.getConnection());
         launch();
     }
 

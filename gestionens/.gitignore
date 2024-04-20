@@ -1,5 +1,4 @@
 target/
 config/
 
-gestionens/src/main/resources/master/config/*.properties
-``
+/confing/
