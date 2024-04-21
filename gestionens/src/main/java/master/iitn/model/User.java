@@ -16,20 +16,16 @@ public class User {
     public User(){
         
     }
-    public User(int user_id, String nom, String prenom, String email, String password, Roles role, String cin,String phone) {
+    public User(int user_id, String image, String nom, String prenom, String email, String password, Roles role, String cin,String phone) {
         this.user_id = user_id;
+        this.image = image;
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
         this.password = password;
-        this.cin = cin;
         this.role = role;
+        this.cin = cin;
         this.phone = phone;
-    }
-
-    public User(int user_id,String image, String nom, String prenom, String email, String password, Roles role) {
-        // super(user_id, nom, prenom, email, password, role);
-        this.image = image;
     }
 
     public User getUser(){
@@ -38,8 +34,8 @@ public class User {
 
     @Override
     public String toString() {
-        return "User [cin=" + cin + ", email=" + email + ", image=" + image + ", nom=" + nom + ", password=" + password
-                + ", prenom=" + prenom + ", role=" + role + ", user_id=" + user_id + "]";
+        return "User [nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", password=" + password + ", role=" + role
+                + ", cin=" + cin + ", phone=" + phone + ", user_id=" + user_id + "]";
     }
 
     public int getId() {

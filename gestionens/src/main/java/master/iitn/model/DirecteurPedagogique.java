@@ -3,8 +3,10 @@ package master.iitn.model;
 public class DirecteurPedagogique extends User{
     private int id_directeur;
 
-    public DirecteurPedagogique(int user_id,String image, String nom, String prenom, String email, String password, Roles role) {
-        super(user_id, image, nom, prenom, email, password, role);
+    public DirecteurPedagogique(int user_id,String image, String nom, String prenom, String email, String password, Roles role, String cin, String phone ) {
+        super(user_id, image, nom, prenom, email, password, role, cin, phone);
+       
+
         this.id_directeur = user_id;
     }
 

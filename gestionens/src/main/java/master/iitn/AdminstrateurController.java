@@ -37,20 +37,27 @@ public class AdminstrateurController {
 
     AdministateurDao administateurDao = new AdministateurDao();
     Roles role ;
+
     @FXML
     public void onBtnClick(ActionEvent event) throws IOException {
         
         try {
+            int user_id =  0;
+            String image = "";
             String n = nom.getText();
             String p = prenom.getText();
             String e = email.getText();
             String pass = password.getText();          
             String c = cin.getText();
             String tele = telephone.getText();
+
             //create user
-            User user = new User(0, n, p, e, pass,Roles.Administrateur,c,tele);
+            User user = new User(user_id, image, n, p, e, pass, Roles.Administrateur, c, tele);
             // insert user
+
+            System.out.println(user.toString());
             administateurDao.AddUser(user);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
