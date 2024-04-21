@@ -30,7 +30,7 @@ public class AdministateurDao {
             stmt.setString(4, user.getEmail());
             stmt.setString(5, user.getPassword());
             stmt.setString(6, user.getCin());
-            stmt.setString(7,null);
+            stmt.setString(7,user.getPhone());
             stmt.setString(8, user.getRole().toString());
             // stmt.setString(9, user.getEmail());
 

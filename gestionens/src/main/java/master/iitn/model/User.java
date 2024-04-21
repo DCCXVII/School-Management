@@ -10,13 +10,13 @@ public class User {
     private String prenom;
     private String email;
     private String password;
-
     private Roles role;
+    private String phone;
 
     public User(){
         
     }
-    public User(int user_id, String nom, String prenom, String email, String password, Roles role, String cin) {
+    public User(int user_id, String nom, String prenom, String email, String password, Roles role, String cin,String phone) {
         this.user_id = user_id;
         this.nom = nom;
         this.prenom = prenom;
@@ -24,7 +24,7 @@ public class User {
         this.password = password;
         this.cin = cin;
         this.role = role;
-        
+        this.phone = phone;
     }
 
     public User(int user_id,String image, String nom, String prenom, String email, String password, Roles role) {
@@ -74,6 +74,10 @@ public class User {
         return role;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
     public void setId(int user_id) {
         this.user_id = user_id;
     }
@@ -104,6 +108,10 @@ public class User {
 
     public void setRole(Roles role) {
         this.role = role;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     

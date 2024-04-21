@@ -46,8 +46,9 @@ public class AdminstrateurController {
             String e = email.getText();
             String pass = password.getText();          
             String c = cin.getText();
+            String tele = telephone.getText();
             //create user
-            User user = new User(0, n, p, e, pass,Roles.Administrateur,c);
+            User user = new User(0, n, p, e, pass,Roles.Administrateur,c,tele);
             // insert user
             administateurDao.AddUser(user);
         } catch (Exception e) {
