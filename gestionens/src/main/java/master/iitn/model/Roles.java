@@ -1,10 +1,10 @@
 package master.iitn.model;
 
-public class Roles {
-    enum Role {
+
+    public enum Roles {
         Etudiant,
         Administrateur,
         Professeur,
         DircteurPedagogique,
     }
-}
+
