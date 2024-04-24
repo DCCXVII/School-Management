@@ -5,13 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import master.iitn.dao.ConnectDB;
-import master.iitn.dao.ConnectionProps;
-import service.DatabasePropertiesLoader;
+import master.iitn.dao.ConnectionFactory;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 /**
  * JavaFX App
@@ -22,7 +18,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("view/Admin"), 1280, 720);
+        scene = new Scene(loadFXML("view/Login"), 1280, 720);
         stage.setScene(scene);
         stage.setTitle("Hello world");
         // ConnectDB connectDB ;
@@ -39,7 +35,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        ConnectDB connectDB = new ConnectDB();
+        ConnectionFactory connectDB = new ConnectionFactory();
         System.out.println(connectDB.getConnection());
         launch();
     }

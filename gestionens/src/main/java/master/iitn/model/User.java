@@ -16,6 +16,12 @@ public class User {
     public User(){
         
     }
+
+    public User(String email, String password){
+        this.email = email;
+        this.password = password;
+    }
+
     public User(int user_id, String image, String nom, String prenom, String email, String password, Roles role, String cin,String phone) {
         this.user_id = user_id;
         this.image = image;
@@ -111,9 +117,7 @@ public class User {
     }
 
     
-    public boolean login(User user){
-        return true;
-    }
+   
 
     public boolean logout(User user){
         return true;

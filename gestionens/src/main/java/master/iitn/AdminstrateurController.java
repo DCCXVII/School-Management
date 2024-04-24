@@ -2,7 +2,6 @@ package master.iitn;
 
 import java.io.IOException;
 
-import javax.management.relation.Role;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -52,7 +51,7 @@ public class AdminstrateurController {
             String tele = telephone.getText();
 
             //create user
-            User user = new User(user_id, image, n, p, e, pass, Roles.Administrateur, c, tele);
+            User user = new User(user_id, image, n, p, e, pass, Roles.Etudiant, c, tele);
             // insert user
 
             System.out.println(user.toString());

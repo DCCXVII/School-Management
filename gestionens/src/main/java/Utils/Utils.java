@@ -1,12 +1,12 @@
-package service;
+package Utils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 // Class that return a hash of passwrod 
-public class HashProps {
+public class Utils {
 
-    public static String generateHash( String password) {
+    public String generateHash( String password) {
         String algorithm = "SHA-256";
         String salt = "iitn-23/24";
         String data =  password + salt;
@@ -29,4 +29,11 @@ public class HashProps {
             return null;
         }
     }
+
+    public String generateEmail(String nom,String prenom,int n){
+        return nom.substring(0, n-1).toLowerCase()+"."+ prenom.toLowerCase()+"@uit.ac.ma";
+        
+    }
+
+    
 }
