@@ -18,7 +18,6 @@ public class UserDao {
     }
 
     public User LoginUser(String email,String password) {
-        //String Hashpassword = utils.generateHash(password);
         String sql = "SELECT * FROM USER WHERE EMAIL='" + email + "' AND PASSWORD='" + password + "'";
         User user = new User();
         try (Connection conn = connection.getConnection();

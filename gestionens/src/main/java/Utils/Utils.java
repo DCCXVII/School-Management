@@ -34,6 +34,5 @@ public class Utils {
         return nom.substring(0, n-1).toLowerCase()+"."+ prenom.toLowerCase()+"@uit.ac.ma";
         
     }
-
-    
+      
 }

@@ -38,21 +38,24 @@ public class LoginController {
     @FXML
     private void Redirect(User user) throws IOException {
         try {
-            if (user.getRole() == Roles.Etudiant) {
-                App.setRoot("view/primary");
-            } else {
-                if (user.getRole() == Roles.Administrateur) {
+            Roles userRole = user.getRole();
+
+            switch (userRole) {
+                case Etudiant:
+                    App.setRoot("view/primary");
+                    break;
+                case Administrateur:
                     App.setRoot("view/Admin");
-                } else {
-                    if(user.getRole()==Roles.Professeur){
-                        App.setRoot("view/Professeur");
-                    }else{
-                        if(user.getRole()==Roles.DircteurPedagogique)
-                        {
-                            App.setRoot("view/DirecteurPedagogique");
-                        }
-                    }
-                }
+                    break;
+                case Professeur:
+                    App.setRoot("view/Professeur");
+                    break;
+                case DircteurPedagogique:
+                    App.setRoot("view/DirecteurPedagogique");
+                    break;
+                default:
+                    // Handle unexpected cases or unassigned roles
+                    break;
             }
         } catch (Exception e) {
             e.getStackTrace();

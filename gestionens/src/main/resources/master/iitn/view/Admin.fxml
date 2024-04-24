@@ -86,7 +86,7 @@
                         <Image url="@../../../../../LA/wallpapers/wallpaperflare.com_wallpaper.jpg" />
                      </image>
                   </ImageView>
-                  <Button alignment="TOP_CENTER" layoutX="355.0" layoutY="640.0" mnemonicParsing="false" style="-fx-background-color: #2ed050;" text="Ajouter" onAction="#onBtnClick">
+                  <Button alignment="TOP_CENTER" layoutX="355.0" layoutY="640.0" mnemonicParsing="false" style="-fx-background-color: #2ed050;" text="Ajouter" onAction="#addNewUser">
                      <font>
                         <Font size="25.0" />
                      </font>

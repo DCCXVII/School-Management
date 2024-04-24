@@ -11,7 +11,7 @@ This is a simple JavaFX project created using Maven. It includes basic setup for
 
 ## Getting Started
 
-0. **Install maven and javafx sdk**
+0. **Install maven and javafx**
    ```
    https://maven.apache.org/download.cgi
    ```
@@ -19,9 +19,9 @@ This is a simple JavaFX project created using Maven. It includes basic setup for
 
    for javafx you can use two options
 
-   - by installing javafx sdk, follow this: ``` https://openjfx.io/openjfx-docs/#install-javafx ```
+   - by installing javafx sdk, follow this:  ``` https://openjfx.io/openjfx-docs/#install-javafx ```
 
-   - or, run it in vscode:```https://gluonhq.com/products/javafx/```
+   - or, run it in vscode: ```https://gluonhq.com/products/javafx/```
 
 
 1. **Clone the repository:**

@@ -1,6 +1,6 @@
 package master.iitn.model;
 
-
+import java.util.Date;
 
 public class User {
     private int user_id;
@@ -11,6 +11,8 @@ public class User {
     private String email;
     private String password;
     private Roles role;
+    private Date date_naissance;
+    private Gender geneder;
     private String phone;
 
     public User(){
@@ -22,7 +24,7 @@ public class User {
         this.password = password;
     }
 
-    public User(int user_id, String image, String nom, String prenom, String email, String password, Roles role, String cin,String phone) {
+    public User(int user_id, String image, String nom, String prenom, String email, String password, Roles role, String cin,String phone,Gender gender,Date date2naissance) {
         this.user_id = user_id;
         this.image = image;
         this.nom = nom;
@@ -32,6 +34,8 @@ public class User {
         this.role = role;
         this.cin = cin;
         this.phone = phone;
+        this.date_naissance = date2naissance;
+        this.geneder = gender;
     }
 
     public User getUser(){
@@ -80,6 +84,14 @@ public class User {
         return phone;
     }
 
+    public Date getDate_naissance() {
+        return date_naissance;
+    }
+
+    public Gender getGender(){
+        return geneder;
+    }
+
     public void setId(int user_id) {
         this.user_id = user_id;
     }
@@ -114,6 +126,14 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public void setDate_naissance(Date date_naissance) {
+        this.date_naissance = date_naissance;
+    }
+
+    public void setGender(Gender gender){
+        this.geneder = gender;
     }
 
     

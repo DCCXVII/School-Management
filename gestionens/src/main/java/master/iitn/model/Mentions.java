@@ -1,7 +1,6 @@
 package master.iitn.model;
 
-public class Mentions {
-    enum Mention {
+public enum Mentions {
         Passable, AssezBien, Bien, TresBien, Excellent
     }
-}
+
