@@ -1,4 +1,4 @@
-package master.iitn;
+package master.iitn.controller;
 
 public class UserController {
     

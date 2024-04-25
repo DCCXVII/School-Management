@@ -1,10 +1,11 @@
-package master.iitn;
+package master.iitn.controller;
 
 import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import master.iitn.App;
 import master.iitn.dao.UserDao;
 import master.iitn.model.Roles;
 import master.iitn.model.User;

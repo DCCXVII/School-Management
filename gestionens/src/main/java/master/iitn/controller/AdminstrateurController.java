@@ -1,4 +1,4 @@
-package master.iitn;
+package master.iitn.controller;
 
 import java.io.IOException;
 import java.util.Date;
