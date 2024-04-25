@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="master.iitn.MatiereController">
+   <left>
+      <VBox fx:id="VBox_RightSide" prefHeight="720.0" prefWidth="304.0" styleClass="vboxsidebar" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="Ensa_Logo" fitHeight="84.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets left="32.0" top="32.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../images/cropped-ensak-logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Button_Home" mnemonicParsing="false" prefHeight="65.0" prefWidth="255.0" styleClass="SideButton" stylesheets="@css/style.css" text="Accueil">
+               <VBox.margin>
+                  <Insets left="20.0" top="32.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fx:id="Logo_Accueil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                     <image>
+                        <Image url="@../images/bouton-daccueil.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Button>
+            <Button fx:id="Button_Matiere" layoutX="30.0" layoutY="158.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="255.0" styleClass="SideButton" stylesheets="@css/style.css" text="Gestion de Matière">
+               <graphic>
+                  <ImageView fx:id="Logo_Matiere" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                     <image>
+                        <Image url="@../images/livre.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="25.0" />
+               </VBox.margin>
+            </Button>
+            <SplitMenuButton mnemonicParsing="false" prefHeight="64.0" prefWidth="255.0" stylesheets="@css/style.css" text="Gestion d'etudiant">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Ajouté" />
+                <MenuItem mnemonicParsing="false" styleClass="inner_pane" text="Affiché" />
+              </items>
+               <VBox.margin>
+                  <Insets left="20.0" top="25.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/etudiant-diplome.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </SplitMenuButton>
+            <Button fx:id="Button_Matiere1" layoutX="30.0" layoutY="249.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="255.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Deconnecte">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="Logo_Matiere2" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                     <image>
+                        <Image url="@../images/se-deconnecter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="20.0" top="250.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox fx:id="Vbox_Center" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="Label_AddMatiere" alignment="CENTER" prefHeight="99.0" prefWidth="1440.0" styleClass="labelTitle" stylesheets="@css/style.css" text="Ajouter matière" textAlignment="RIGHT" textFill="#fdfdfd">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <HBox fx:id="HBox_AddMatiere" prefHeight="99.0" prefWidth="976.0" styleClass="HBox_AddM" stylesheets="@css/style.css">
+               <children>
+                  <Label fx:id="LabelNom_Matiere" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="250.0" styleClass="LabelAjoutM" stylesheets="@css/style.css" text="Nom du matière ">
+                     <HBox.margin>
+                        <Insets left="75.0" right="32.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="TextField_AddMatiere" prefHeight="60.0" prefWidth="250.0" styleClass="LabelAjoutM" stylesheets="@css/style.css">
+                     <HBox.margin>
+                        <Insets left="32.0" right="32.0" top="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="Button_AddMatiere" mnemonicParsing="false" prefHeight="55.0" prefWidth="163.0" styleClass="AddButton" stylesheets="@css/style.css" text="Ajouter" onAction="#addNewMatiere">
+                     <HBox.margin>
+                        <Insets left="32.0" top="20.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fx:id="Logo_Matiere1" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                           <image>
+                              <Image url="@../images/ajouter.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="Label_ShowMatiere" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="1440.0" styleClass="labelTitle" stylesheets="@css/style.css" text="Afficher matière" textAlignment="RIGHT" textFill="#fdfdfd">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <TableView fx:id="TableView_Matiere" prefHeight="425.0" prefWidth="976.0" stylesheets="@css/style.css">
+              <columns>
+                <TableColumn fx:id="Col_IDMatiere" minWidth="0.0" prefWidth="250.0" text="ID_Matière" />
+                <TableColumn fx:id="Col_NomMatiere" minWidth="0.0" prefWidth="1440.0" text="Nom du Matière" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

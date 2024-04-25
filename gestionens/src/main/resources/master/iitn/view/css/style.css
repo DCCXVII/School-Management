@@ -1,45 +1,107 @@
-/* Pallette colors */
-.root {
-  -primarycolor: #007ce9; /* added semicolon here */
-  -secondarycolor: #2ed050;
-  -lightcolor: #ffffff;
-  -darkcolor: #000000;
-}
-
-/* Radius */
-.root {
-  -radiusbutton: 8px;
-  -radiussmall: 2px;
-  -radiusmedium: 5px;
-  -radiuslarge: 10px;
-}
-
-/* Typography */
-
-/* .root {
-  -firstfont: "Open Sans", sans-serif;
-  -secondfont: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-} */
-
-/* font sizes */
-.root{
-  -h1fontsize: 2px;
-  -h2fontsize: 5px;
-  -h3fontsize: 1px;
-  -normalfontsize: 8px;
-  -fontconfsize: 18px;
-  -smallerfontsize: 7px;
-}
-
-.button {
-  -fx-background-color: -primarycolor;
-  -fx-text-fill: #242d35;
-  -fx-font-size: 14px;
-}
 
 .labelinput {
   -fx-font-size: 14px;
   -fx-text-fill: #007ce9;
   -fx-margin-right: 30px;
 }
+
+/* INTERFACE ADMIN *********************************************************************************************************** */
+.vboxsidebar {
+  -fx-background-color: linear-gradient(#007ce9, #004683);
+  -fx-background-radius: 0 0 20 0; /* Top-left, top-right, bottom-right, bottom-left */
+  -fx-border-radius: 10 20 10 20;
+}
+.SideButton {
+  
+  -fx-background-radius: 10 10 10 10; /* Top-left, top-right, bottom-right, bottom-left */
+  -fx-border-radius: 10 10 10 10;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+}
+.AddButton {
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+  -fx-background-color: #ffffff;
+  -fx-border-color: #004683;
+  -fx-border-radius: 25;
+  -fx-border-width: 2;
+  -fx-border-style: solid;
+}
+.SideButton:hover {
+  -fx-background-color: #004683;
+  -fx-text-fill: white;
+}
+.AddButton:hover {
+  -fx-background-color: #004683;
+  -fx-text-fill: white;
+}
+.split-menu-button {
+  -fx-background-color: #ffffff;
+  -fx-border-color: darkblue; /* Border color */
+  -fx-border-raduis: 10px;
+  -fx-border-width: 2px; /* Border width */
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+  /* -fx-background-color: #4caf50;
+  -fx-background-radius: 10;
+  -fx-border-radius: 10;*/
+}
+.menu-item {
+  -fx-background-color: white; /* Background color */
+  -fx-text-fill: black; /* Text color */
+  -fx-font-size: 12px; /* Font size */
+  -fx-padding: 5px; /* Padding */
+}
+
+/* Optional: Define hover state for MenuItem */
+.menu-item:hover {
+  -fx-background-color: rgb(215, 38, 38); /* Background color on hover */
+}
+
+.labelTitle {
+  -fx-background-color: linear-gradient(to right, #007ce9, #004683);
+  /*-fx-background-radius: 10 10 10 10; /* Top-left, top-right, bottom-right, bottom-left */
+  -fx-border-radius: 10 10 10 10;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 30;
+  -fx-font-weight: bold;
+}
+.HBox_AddM {
+  -fx-background-color: #ffffff;
+}
+.LabelAjoutM {
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+  -fx-background-color: #ffffff;
+  -fx-color: #004683;
+  -fx-border-color: #004683;
+  -fx-border-radius: 25;
+  -fx-border-width: 2;
+  -fx-border-style: solid;
+}
+
+.table-view {
+  -fx-background-color: #ffffff; /* Background color of the TableView */
+  -fx-table-cell-border-color: rgb(0, 0, 0); /* Border color of the cells */
+  -fx-background-insets: 0; /* Background insets */
+  -fx-border-width: 2;
+  -fx-border-color: #004683;
+}
+.table-view .column-header {
+  -fx-background-color: #f8f8f8; /* Background color of the header */
+  -fx-text-fill: black; /* Text color of the header */
+  -fx-pref-height: 60; /* Change the header height to 60 pixels */
+  -fx-font-size: 18;
+  -fx-font-weight: bold; /* Font weight of the header text */
+}
+.table-row-cell {
+  -fx-min-height: 45; /* Change the row height to 45 pixels */
+}
+.table-view .table-row-cell:selected {
+  -fx-background-color: #4caf50; /* Background color for selected row */
+}
+/* ********************************************************************************************************* */
