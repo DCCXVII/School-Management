@@ -26,7 +26,7 @@ public class LoginController {
             String EMAIL = email.getText();
             String PASSWORD = password.getText();
             User LoggedUser = userdao.LoginUser(EMAIL, PASSWORD);
-            LoggedUser.toString();
+            System.out.println(LoggedUser.toString());
 
             System.out.println("enterd succefully!!");
             Redirect(LoggedUser);
@@ -43,7 +43,7 @@ public class LoginController {
 
             switch (userRole) {
                 case Etudiant:
-                    App.setRoot("view/primary");
+                    App.setRoot("view/Etudiant_home");
                     break;
                 case Administrateur:
                     App.setRoot("view/Admin");

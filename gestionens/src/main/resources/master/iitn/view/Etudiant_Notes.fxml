@@ -55,16 +55,11 @@
          <right>
             <AnchorPane prefHeight="850.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="Bonjourfield" editable="false" layoutX="-73.0" layoutY="16.0" prefHeight="70.0" prefWidth="500.0" style="-fx-background-color: transparent; -fx-border-color: #2ed050; -fx-border-width: 0px 0px 5px 0px;" text="Bonjour ">
+                  <TextField fx:id="Bonjourfield" layoutX="-73.0" layoutY="16.0" prefHeight="70.0" prefWidth="500.0" promptText="Bonjour M.Nassime BOUANANI," style="-fx-background-color: transparent; -fx-border-color: #2ed050; -fx-border-width: 0px 0px 5px 0px;">
                      <font>
                         <Font name="System Bold" size="30.0" />
                      </font>
                   </TextField>
-                  <Text layoutX="70.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="98.13671875">
-                     <font>
-                        <Font name="System Bold" size="25.0" />
-                     </font>
-                  </Text>
                   <TextField fx:id="Suivi" alignment="TOP_LEFT" cache="true" cacheHint="QUALITY" layoutX="-28.0" layoutY="96.0" mouseTransparent="true" prefHeight="34.0" prefWidth="985.0" style="-fx-border-color: #2ed050 transparent; -fx-background-color: #2ed050 transparent; -fx-border-width: 0px2px 2px 2px;" text="Suivi mes notes">
                      <font>
                         <Font size="22.0" />
@@ -98,7 +93,7 @@
                         <Font size="24.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="etablissementfield" disable="true" editable="false" layoutX="191.0" layoutY="276.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
+                  <TextField fx:id="etablissementfield" layoutX="191.0" layoutY="276.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -108,7 +103,7 @@
                         <Font size="24.0" />
                      </font>
                   </Text>
-                  <TextField fx:id="classefield" disable="true" editable="false" layoutX="613.0" layoutY="276.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
+                  <TextField fx:id="classefield" layoutX="613.0" layoutY="276.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
                      <font>
                         <Font size="18.0" />
                      </font>

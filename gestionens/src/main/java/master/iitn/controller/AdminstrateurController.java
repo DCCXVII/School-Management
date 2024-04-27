@@ -40,6 +40,10 @@ public class AdminstrateurController {
     Roles role;
     Date dob = new Date(2000 - 01 - 01);
 
+
+    
+
+
     @FXML
     private void addNewUser(ActionEvent event) throws IOException {
 
@@ -66,4 +70,10 @@ public class AdminstrateurController {
         }
     }
 
+
+
+    // @FXML
+    // private void getAllMatieres(ActionEvent Action) throws IOException{
+
+    // }
 }

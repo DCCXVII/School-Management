@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import master.iitn.dao.ConnectionFactory;
+import master.iitn.dao.MatiereDao;
 
 import java.io.IOException;
 
@@ -18,7 +19,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("view/Etudiant_home"), 1280, 720);
+        scene = new Scene(loadFXML("view/GestionDeMatiere"), 1280, 720);
         stage.setScene(scene);
         stage.setTitle("Hello world");
         // ConnectDB connectDB ;
@@ -35,8 +36,15 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        ConnectionFactory connectDB = new ConnectionFactory();
-        System.out.println(connectDB.getConnection());
+        // ConnectionFactory connectDB = new ConnectionFactory();
+        // System.out.println(connectDB.getConnection());
+
+        MatiereDao matiereDao = new MatiereDao();
+        
+           matiereDao.getAllMatieres().forEach(matiere -> {
+               System.out.println(matiere.getId() + " " + matiere.getNomMatiere());
+           });
+        
         launch();
     }
 
