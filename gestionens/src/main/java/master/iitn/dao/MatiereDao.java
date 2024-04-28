@@ -4,9 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import master.iitn.model.Matiere;
 
 public class MatiereDao {
@@ -34,26 +35,26 @@ public class MatiereDao {
 
     }
 
-    public List<Matiere> getAllMatieres(){
-        List<Matiere> matieres = new ArrayList<Matiere>();
-        String sql = "SELECT * FROM MATIERES";
-        try {
-            Connection conn = connection.getConnection();
-            PreparedStatement stmt = conn.prepareStatement(sql);
-            ResultSet rs = stmt.executeQuery();
-            while(rs.next()){
-                Matiere mat = new Matiere();
-                mat.setId(rs.getInt("ID_MATIERE"));
-                mat.setNomMatiere(rs.getString("NOM_MATIERE"));
-                matieres.add(mat);
-            }
-
-            stmt.close();
-        }catch (SQLException e) {
-            throw new RuntimeException(e);
+    public ObservableList<Matiere> getAllMatieres(){
+    ObservableList<Matiere> matieres = FXCollections.observableArrayList();
+    String sql = "SELECT * FROM MATIERES";
+    try {
+        Connection conn = connection.getConnection();
+        PreparedStatement stmt = conn.prepareStatement(sql);
+        ResultSet rs = stmt.executeQuery();
+        while(rs.next()){
+            Matiere mat = new Matiere();
+            mat.setId(rs.getInt("ID_MATIERE"));
+            mat.setNomMatiere(rs.getString("NOM_MATIERE"));
+            matieres.add(mat);
         }
-        return matieres;
+
+        stmt.close();
+    }catch (SQLException e) {
+        throw new RuntimeException(e);
     }
+    return matieres;
+}
 
     
 }

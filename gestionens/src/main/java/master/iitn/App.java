@@ -5,14 +5,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import master.iitn.dao.ConnectionFactory;
-import master.iitn.dao.MatiereDao;
+
 
 import java.io.IOException;
 
 /**
  * JavaFX App
  */
+
 public class App extends Application {
 
     private static Scene scene;
@@ -36,15 +36,6 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        // ConnectionFactory connectDB = new ConnectionFactory();
-        // System.out.println(connectDB.getConnection());
-
-        MatiereDao matiereDao = new MatiereDao();
-        
-           matiereDao.getAllMatieres().forEach(matiere -> {
-               System.out.println(matiere.getId() + " " + matiere.getNomMatiere());
-           });
-        
         launch();
     }
 
