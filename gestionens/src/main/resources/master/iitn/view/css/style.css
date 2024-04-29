@@ -103,3 +103,185 @@
   -fx-background-color: #4caf50; /* Background color for selected row */
 }
 /* ********************************************************************************************************* */
+
+.vboxsidebar {
+  -fx-background-color: linear-gradient(#007ce9, #004683);
+  -fx-background-radius: 0 0 20 0; /* Top-left, top-right, bottom-right, bottom-left */
+  -fx-border-radius: 10 20 10 20;
+}
+.SideButton {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 10 10 10 10; /* Top-left, top-right, bottom-right, bottom-left */
+  -fx-border-radius: 10 10 10 10;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 5, 5);
+}
+.menu-button {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 10 10 10 10; /* Top-left, top-right, bottom-right, bottom-left */
+  -fx-border-radius: 10 10 10 10;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 5, 5);
+}
+.menu-button:hover {
+  -fx-background-color: #004683;
+}
+.menu-button .label:hover {
+  -fx-text-fill: #ffffff;
+}
+
+.context-menu {
+  -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+  -fx-background-color: #004683;
+  -fx-background-insets: 0;
+  -fx-background-radius: 10 10 10 10;
+  -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; /* 4 1 8 1 */
+}
+.context-menu .label {
+  -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+  -fx-background-color: #ffffff;
+  -fx-pref-width: 245px;
+  -fx-alignment: center;
+  -fx-text-fill: #000000;
+  -fx-background-radius: 10 10 10 10;
+  -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; /* 4 1 8 1 */
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 5, 5);
+}
+.AddButton {
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+  -fx-background-color: #ffffff;
+  -fx-border-color: #004683;
+  -fx-background-radius: 25;
+  -fx-border-radius: 25;
+  -fx-border-width: 2;
+  -fx-border-style: solid;
+}
+.SideButton:hover {
+  -fx-background-color: #004683;
+  -fx-text-fill: white;
+}
+.AddButton:hover {
+  -fx-background-color: #004683;
+  -fx-text-fill: white;
+}
+
+.labelTitle_GM {
+  -fx-background-color: linear-gradient(to right, #007ce9, #004683);
+  /*-fx-background-radius: 10 10 10 10; /* Top-left, top-right, bottom-right, bottom-left */
+  -fx-border-radius: 10 10 10 10;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 30;
+  -fx-font-weight: bold;
+}
+.HBox_AddM {
+  -fx-background-color: #ffffff;
+}
+.LabelAjoutM {
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 18;
+  -fx-font-weight: bold;
+  -fx-background-color: #ffffff;
+  -fx-color: #004683;
+  -fx-border-color: #004683;
+  -fx-border-radius: 25;
+  -fx-border-width: 2;
+  -fx-border-style: solid;
+}
+
+.table-view {
+  -fx-background-color: #ffffff; /* Background color of the TableView */
+  -fx-table-cell-border-color: rgb(0, 0, 0); /* Border color of the cells */
+  -fx-background-insets: 0; /* Background insets */
+  -fx-border-width: 2;
+  -fx-border-color: #004683;
+}
+.table-view .column-header {
+  -fx-background-color: #f8f8f8; /* Background color of the header */
+  -fx-text-fill: black; /* Text color of the header */
+  -fx-pref-height: 60; /* Change the header height to 60 pixels */
+  -fx-font-size: 18;
+  -fx-font-weight: bold; /* Font weight of the header text */
+}
+.table-row-cell {
+  -fx-min-height: 45; /* Change the row height to 45 pixels */
+}
+.table-view .table-row-cell:selected {
+  -fx-background-color: #4caf50; /* Background color for selected row */
+}
+.LabelTitle_GE {
+  /* -fx-background-color: linear-gradient(to right, #007ce9, #004683); */
+  -fx-background-radius: 0 20 0 0;
+  -fx-border-radius: 0 20 0 0;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 30;
+  -fx-font-weight: bold;
+}
+.myGridPane {
+  /* -fx-background-color: linear-gradient(to right, #007ce9, #004683); */
+}
+.LabelForm_Student {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 10 10 10 10; /* Top-left, top-right, bottom-right, bottom-left */
+  -fx-border-radius: 10 10 10 10;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 16;
+  -fx-font-weight: bold;
+}
+.text-fieldFormeStudent {
+  -fx-border-color: #004683;
+  -fx-border-radius: 25px;
+  -fx-background-radius: 25px;
+  -fx-text-fill: #000000;
+  -fx-font-size: 18px;
+  -fx-font-style: bold;
+}
+.date-pickerForme_Student {
+  -fx-background-color: transparent;
+  -fx-text-fill: black;
+  -fx-font-size: 16px;
+  -fx-font-style: bold;
+  -fx-padding: 5px;
+}
+
+.date-pickerForme_Student .selected {
+  -fx-background-color: #004683;
+  -fx-color: #ffffff;
+}
+
+.radio-button {
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #ffffff;
+}
+.AddButton_Student {
+  -fx-background-color: #ffffff;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-border-color: #004683;
+  -fx-background-radius: 25;
+  -fx-border-radius: 25;
+  -fx-border-width: 2;
+  -fx-border-style: solid;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 5, 5);
+}
+.AddButton_Student:hover {
+  -fx-text-fill: #ffffff;
+  -fx-background-color: #004683;
+}
+.VboxCenter {
+  /* -fx-background-color: linear-gradient(to right, #007ce9, #004b8d); */
+  -fx-background-radius: 0 20 20 0;
+}
+.vboxsidebarGE {
+  -fx-background-color: linear-gradient(#007ce9, #004683);
+  -fx-background-radius: 20 0 0 20; /* Top-left, top-right, bottom-right, bottom-left */
+  -fx-border-radius: 20 0 0 20;
+}

@@ -30,8 +30,8 @@ public class Utils {
         }
     }
 
-    public String generateEmail(String nom,String prenom,int n){
-        return nom.substring(0, n-1).toLowerCase()+"."+ prenom.toLowerCase()+"@uit.ac.ma";
+    public String generateEmail(String nom,String prenom){
+        return nom.substring(0, 2).toLowerCase()+"."+ prenom.toLowerCase()+"@uit.ac.ma";
         
     }
       
