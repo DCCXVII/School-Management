@@ -21,7 +21,9 @@ public class AdministateurDao {
     // errors in the code 
     public void Addetudiant(Etudiant etudiant) {
         String sql = "INSERT INTO USER (NOM, PRENOM, GENRE, DATE_NAISSANCE, CIN, PHONE, USERNAME, EMAIL, PASSWORD, ROLE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        
+        String getUserIdSql = "SELECT LAST_INSERT_ID() INTO @user_id";
+        String insertIntoEtudiantSql = "INSERT INTO ETUDIANT (USER_ID,ID_CLASS,CIN,LEVEL) VALUES (@user_id,1,1,1)";
+
 
         Utils utils = new Utils();
 
@@ -43,8 +45,18 @@ public class AdministateurDao {
 
             stmt.execute();
             stmt.close();
-            System.out.println("Insertion successfully !!!");
 
+            // Execute the second statement to get the user ID
+            stmt = conn.prepareStatement(getUserIdSql);
+            stmt.execute();
+            stmt.close();
+
+            // Execute the third statement to insert the user ID into the ETUDIANT table
+            stmt = conn.prepareStatement(insertIntoEtudiantSql);
+            stmt.execute();
+            stmt.close();
+
+            System.out.println("Insertion successfully !!!");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
