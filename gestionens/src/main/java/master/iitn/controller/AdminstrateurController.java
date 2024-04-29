@@ -2,6 +2,7 @@ package master.iitn.controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.ResourceBundle;
 
@@ -49,6 +50,7 @@ public class AdminstrateurController implements Initializable {
         }
         return null;
     }
+
     // Fileds : AddMatiere
     @FXML
     private TextField TextField_AddMatiere;
@@ -100,11 +102,10 @@ public class AdminstrateurController implements Initializable {
     Utils utils = new Utils();
 
     AdministateurDao administateurDao = new AdministateurDao();
-    
+
     @FXML
     private void addNewUser(ActionEvent event) throws IOException {
         try {
-            // int user_id = 0;
             String nom = NomEtudiant.getText();
             String prenom = PrenomEtudiant.getText();
             String email = utils.generateEmail(nom, prenom);
@@ -113,19 +114,18 @@ public class AdminstrateurController implements Initializable {
             String cin = CinEtudiant.getText();
             String cne = CneEtudiant.getText();
             String level = LevelEtudiant.getText();
-            Date dob = java.sql.Date.valueOf(DateNaissanceEtudiant.getValue());
+
+            // Check if a date has been selected in the DatePicker
+            LocalDate selectedDate = DateNaissanceEtudiant.getValue();
+            Date dob = (selectedDate != null) ? java.sql.Date.valueOf(selectedDate) : null;
+
             String image = "default";
             Roles role = Roles.Etudiant;
             Gender gender = getSelectedGender().equals("Homme") ? Gender.Homme : Gender.Femme;
 
-            // create user
-            Etudiant etudiant = new Etudiant(0, image, nom, prenom, email, pass, role, cin, cne, tele, gender,
-                    dob, level); 
-            // print user (etudiant)
-
+            Etudiant etudiant = new Etudiant(0, image, nom, prenom, email, pass, role, cin, cne, tele, gender, dob,
+                    level);
             System.out.println(etudiant.toString());
-
-            //insert etudiant to the database
             administateurDao.Addetudiant(etudiant);
         } catch (Exception e) {
             e.printStackTrace();
