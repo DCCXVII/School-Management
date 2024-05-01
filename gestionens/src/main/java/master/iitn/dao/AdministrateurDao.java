@@ -9,15 +9,14 @@ import Utils.Utils;
 import master.iitn.model.Etudiant;
 // import master.iitn.model.etudiant;
 
-public class AdministateurDao {
+public class AdministrateurDao{
     ConnectionFactory connection;
 
-    public AdministateurDao() {
+    public AdministrateurDao() {
         this.connection = new ConnectionFactory();
     }
 
     // adding etudiant to the database
-    // errors in the code 
     public void Addetudiant(Etudiant etudiant) {
         String sql = "INSERT INTO USER (NOM, PRENOM, GENRE, DATE_NAISSANCE, CIN, PHONE, USERNAME, EMAIL, PASSWORD, ROLE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         String getUserIdSql = "SELECT LAST_INSERT_ID() INTO @user_id";
@@ -60,4 +59,7 @@ public class AdministateurDao {
             throw new RuntimeException(e);
         }
     }
+
+
+    
 }

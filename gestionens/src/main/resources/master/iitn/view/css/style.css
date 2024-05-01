@@ -1,109 +1,3 @@
-.labelinput {
-  -fx-font-size: 14px;
-  -fx-text-fill: #007ce9;
-  -fx-margin-right: 30px;
-}
-
-/* INTERFACE ADMIN *********************************************************************************************************** */
-.vboxsidebar {
-  -fx-background-color: linear-gradient(#007ce9, #004683);
-  -fx-background-radius: 0 0 20 0; /* Top-left, top-right, bottom-right, bottom-left */
-  -fx-border-radius: 10 20 10 20;
-}
-.SideButton {
-  -fx-background-radius: 10 10 10 10; /* Top-left, top-right, bottom-right, bottom-left */
-  -fx-border-radius: 10 10 10 10;
-  -fx-font-family: "Open Sans";
-  -fx-font-size: 18;
-  -fx-font-weight: bold;
-}
-.AddButton {
-  -fx-font-family: "Open Sans";
-  -fx-font-size: 18;
-  -fx-font-weight: bold;
-  -fx-background-color: #ffffff;
-  -fx-border-color: #004683;
-  -fx-border-radius: 25;
-  -fx-border-width: 2;
-  -fx-border-style: solid;
-}
-.SideButton:hover {
-  -fx-background-color: #004683;
-  -fx-text-fill: white;
-}
-.AddButton:hover {
-  -fx-background-color: #004683;
-  -fx-text-fill: white;
-}
-.split-menu-button {
-  -fx-background-color: #ffffff;
-  -fx-border-color: darkblue; /* Border color */
-  -fx-border-raduis: 10px;
-  -fx-border-width: 2px; /* Border width */
-  -fx-font-family: "Open Sans";
-  -fx-font-size: 18;
-  -fx-font-weight: bold;
-  /* -fx-background-color: #4caf50;
-  -fx-background-radius: 10;
-  -fx-border-radius: 10;*/
-}
-.menu-item {
-  -fx-background-color: white; /* Background color */
-  -fx-text-fill: black; /* Text color */
-  -fx-font-size: 12px; /* Font size */
-  -fx-padding: 5px; /* Padding */
-}
-
-/* Optional: Define hover state for MenuItem */
-.menu-item:hover {
-  -fx-background-color: rgb(215, 38, 38); /* Background color on hover */
-}
-
-.labelTitle {
-  -fx-background-color: linear-gradient(to right, #007ce9, #004683);
-  /*-fx-background-radius: 10 10 10 10; /* Top-left, top-right, bottom-right, bottom-left */
-  -fx-border-radius: 10 10 10 10;
-  -fx-font-family: "Open Sans";
-  -fx-font-size: 30;
-  -fx-font-weight: bold;
-}
-.HBox_AddM {
-  -fx-background-color: #ffffff;
-}
-.LabelAjoutM {
-  -fx-font-family: "Open Sans";
-  -fx-font-size: 18;
-  -fx-font-weight: bold;
-  -fx-background-color: #ffffff;
-  -fx-color: #004683;
-  -fx-border-color: #004683;
-  -fx-border-radius: 25;
-  -fx-border-width: 2;
-  -fx-border-style: solid;
-}
-
-.table-view {
-  -fx-background-color: #ffffff; /* Background color of the TableView */
-  -fx-table-cell-border-color: rgb(0, 0, 0); /* Border color of the cells */
-  -fx-background-insets: 0; /* Background insets */
-  -fx-border-width: 2;
-  -fx-border-color: #004683;
-}
-.table-view .column-header {
-  -fx-background-color: #f8f8f8; /* Background color of the header */
-  -fx-text-fill: black; /* Text color of the header */
-  -fx-pref-height: 60; /* Change the header height to 60 pixels */
-  -fx-font-size: 18;
-  -fx-font-weight: bold; /* Font weight of the header text */
-}
-.table-row-cell {
-  -fx-min-height: 45; /* Change the row height to 45 pixels */
-}
-.table-view .table-row-cell:selected {
-  -fx-background-color: #4caf50; /* Background color for selected row */
-}
-/* ********************************************************************************************************* */
-
 .vboxsidebar {
   -fx-background-color: linear-gradient(#007ce9, #004683);
   -fx-background-radius: 0 0 20 0; /* Top-left, top-right, bottom-right, bottom-left */
@@ -111,8 +5,8 @@
 }
 .SideButton {
   -fx-background-color: #ffffff;
-  -fx-background-radius: 10 10 10 10; /* Top-left, top-right, bottom-right, bottom-left */
-  -fx-border-radius: 10 10 10 10;
+  -fx-background-radius: 25; /* Top-left, top-right, bottom-right, bottom-left */
+  -fx-border-radius: 25;
   -fx-font-family: "Open Sans";
   -fx-font-size: 18;
   -fx-font-weight: bold;
@@ -120,8 +14,8 @@
 }
 .menu-button {
   -fx-background-color: #ffffff;
-  -fx-background-radius: 10 10 10 10; /* Top-left, top-right, bottom-right, bottom-left */
-  -fx-border-radius: 10 10 10 10;
+  -fx-background-radius: 25; /* Top-left, top-right, bottom-right, bottom-left */
+  -fx-border-radius: 25;
   -fx-font-family: "Open Sans";
   -fx-font-size: 18;
   -fx-font-weight: bold;
@@ -193,29 +87,75 @@
   -fx-border-width: 2;
   -fx-border-style: solid;
 }
-
+/*Table View*/
+/* .table-view { */
+/* -fx-background-color: #ffffff; Background color of the TableView */
+/* -fx-table-cell-border-color: rgb(0, 0, 0); Border color of the cells */
+/* -fx-background-insets: 0; Background insets */
+/* -fx-border-color: #004683; */
+/* } */
+/* .table-view .column-header .label { */
+/* -fx-background-color: #004683; Background color of the header */
+/* -fx-text-fill: #ffffff; Text color of the header */
+/* -fx-pref-height: 60; Change the header height to 60 pixels */
+/* -fx-font-size: 18; */
+/* -fx-font-weight: bold; Font weight of the header text */
+/* } */
+/* .table-row-cell { */
+/* -fx-pref-height: 50; Change the row height to 45 pixels */
+/* } */
+/* .table-view .table-row-cell:selected { */
+/* -fx-background-color: #4caf50; Background color for selected row */
+/* } */
 .table-view {
-  -fx-background-color: #ffffff; /* Background color of the TableView */
-  -fx-table-cell-border-color: rgb(0, 0, 0); /* Border color of the cells */
-  -fx-background-insets: 0; /* Background insets */
-  -fx-border-width: 2;
-  -fx-border-color: #004683;
+  -fx-background-color: transparent;
+}
+.table-view .label {
+  -fx-font-size: 16;
+  -fx-font-family: "Open Sans";
+}
+.table-view .column-header-background {
+  -fx-background-color: linear-gradient(to bottom, #1dbbdd44, #93f9b944);
+  -fx-background-radius: 7px 7px 0px 0px;
+  -fx-background-insets: 0 11px 0 0;
+  -fx-padding: 0 0 5px 0;
+  -fx-pref-height: 45px;
 }
 .table-view .column-header {
-  -fx-background-color: #f8f8f8; /* Background color of the header */
-  -fx-text-fill: black; /* Text color of the header */
-  -fx-pref-height: 60; /* Change the header height to 60 pixels */
-  -fx-font-size: 18;
-  -fx-font-weight: bold; /* Font weight of the header text */
+  -fx-background-color: transparent;
 }
-.table-row-cell {
-  -fx-min-height: 45; /* Change the row height to 45 pixels */
+.table-view .table-cell {
+  -fx-border-color: transparent;
+  -fx-padding: 2 0 2 10px;
 }
-.table-view .table-row-cell:selected {
-  -fx-background-color: #4caf50; /* Background color for selected row */
+.table-row-cell:hover {
+  -fx-background-color: #93f9b911;
+  -fx-text-background-color: red;
+}
+.table-row-cell:odd {
+  -fx-background-color: #93f9b911;
+  -fx-background-insets: 0, 0 0 1 0;
+  -fx-padding: 0em;
+}
+.table-row-cell:even {
+  -fx-background-color: #1dbbdd11;
+  -fx-background-insets: 0, 0 0 1 0;
+  -fx-padding: 0em;
+}
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+  -fx-background-color: transparent;
+}
+.table-row-cell:highlighted {
+  -fx-background-color: #81c483;
+  -fx-background-radius: 15px;
 }
 .LabelTitle_GE {
-  /* -fx-background-color: linear-gradient(to right, #007ce9, #004683); */
+  -fx-background-color: linear-gradient(to right, #007ce9, #004683);
   -fx-background-radius: 0 20 0 0;
   -fx-border-radius: 0 20 0 0;
   -fx-font-family: "Open Sans";
@@ -223,7 +163,7 @@
   -fx-font-weight: bold;
 }
 .myGridPane {
-  /* -fx-background-color: linear-gradient(to right, #007ce9, #004683); */
+  -fx-background-color: linear-gradient(to right, #007ce9, #004683);
 }
 .LabelForm_Student {
   -fx-background-color: #ffffff;
@@ -277,11 +217,247 @@
   -fx-background-color: #004683;
 }
 .VboxCenter {
-  /* -fx-background-color: linear-gradient(to right, #007ce9, #004b8d); */
+  -fx-background-color: linear-gradient(to right, #007ce9, #004b8d);
   -fx-background-radius: 0 20 20 0;
 }
 .vboxsidebarGE {
-  -fx-background-color: linear-gradient(#007ce9, #004683);
+  -fx-background-color: linear-gradient(to right, #004683, #007ce9);
   -fx-background-radius: 20 0 0 20; /* Top-left, top-right, bottom-right, bottom-left */
   -fx-border-radius: 20 0 0 20;
 }
+/*
+.HboxShow_Student {
+  -fx-background-color: #ffffff;
+}
+.Anchor_Student {
+  -fx-background-color: #d9e711;
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 5, 5);
+  -fx-background-radius: 20;
+  -fx-border-radius: 20;
+}
+.Showradio-button {
+  -fx-background-color: #1ed0b5;
+  -fx-effect: dropshadow(three-pass-box, rgb(0, 255, 255), 20, 0, 0, 0);
+  -fx-background-radius: 100;
+  -fx-border-radius: 100;
+  -fx-text-fill: #000000;
+  -fx-font-size: 12;
+  -fx-padding: 5;
+}
+/*le for the radio button */
+/*
+.Showradio-button .radio {
+  -fx-opacity: 0;
+}
+
+/* Style for the radio button label */
+/*
+.Showradio-button .label {
+  -fx-background-color: white; /* Background color for the label */
+/*-fx-padding: 5px; /* Padding around the label */
+/* -fx-border-width: 2; */
+/* -fx-border-color: #004683; Border color for the label */
+/* -fx-background-radius: 0; Square shape for the label */
+/* } */
+
+/* .Showradio-button:selected { */
+/* -fx-border-color: #004683; Change the border color to a neon green */
+/* -fx-background-color: rgb(225, 0, 0); Set the background color */
+/* -fx-text-fill: #44ff85; */
+/* fxtextfill: #ebe30e; */
+/* -fx-effect: innershadow( */
+/* gaussian, */
+/* #004683, */
+/* 10, */
+/* 0.5, */
+/* 0, */
+/* 0 */
+/* Add a neon glow effect */
+
+/*.LabelSearch_Student {
+  -fx-background-color: #2ed050;
+  -fx-font-family: "Open Sans";
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 25;
+  -fx-font-weight: bold;
+}/*
+.SerachField {
+  -fx-background-radius: 25;
+  -fx-border-radius: 25;
+  -fx-pref-width: 450;
+  -fx-pref-height: 50;
+  -fx-font-size: 18;
+  -fx-font-family: "Open Sans";
+}
+.SearchBtn {
+  -fx-background-color: #004683;
+  -fx-background-radius: 25;
+  -fx-border-radius: 25;
+  -fx-pref-width: 100;
+  -fx-pref-height: 50;
+  -fx-font-family: "Open Sans";
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 18px;
+}
+.SearchBtn:hover {
+  -fx-background-color: #2ed050;
+  -fx-background-radius: 25;
+  -fx-border-radius: 25;
+  -fx-pref-width: 100;
+  -fx-pref-height: 50;
+  -fx-font-family: "Open Sans";
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 18px;
+}
+*/
+.SideBareGui_Student {
+  -fx-background-color: #004683;
+}
+.HboxGui_Student {
+  -fx-background-color: #ffffff;
+}
+.LabelGui_Student {
+  -fx-background-color: #ffffff;
+  -fx-text-fill: #004683;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 30;
+  -fx-font-weight: bold;
+}
+.LabelSearch_Student {
+  -fx-background-color: #004683;
+  -fx-text-fill: #ffffff;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 22;
+  -fx-font-weight: bold;
+  -fx-background-radius: 32;
+  -fx-border-radius: 32;
+}
+.PaneSearch_Student {
+  -fx-border-color: #004683;
+  -fx-background-radius: 15;
+  -fx-border-radius: 15;
+  -fx-border-width: 5px;
+}
+
+.SerachField {
+  -fx-background-radius: 25;
+  -fx-border-radius: 25;
+  -fx-pref-width: 490;
+  -fx-pref-height: 50;
+  -fx-font-size: 18;
+  -fx-font-family: "Open Sans";
+}
+
+.SearchBtn {
+  -fx-background-color: #004683;
+  -fx-background-radius: 25;
+  -fx-border-radius: 25;
+  -fx-pref-width: 150;
+  -fx-pref-height: 40;
+  -fx-font-family: "Open Sans";
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 18px;
+  -fx-font-style: bold;
+}
+.SearchBtn:hover {
+  -fx-background-color: #2ed050;
+  -fx-background-radius: 25;
+  -fx-border-radius: 25;
+  -fx-pref-width: 150;
+  -fx-pref-height: 40;
+  -fx-font-family: "Open Sans";
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 18px;
+  -fx-font-style: bold;
+}
+
+.Showradio-button {
+  -fx-background-color: #ffffff;
+  -fx-effect: dropshadow(three-pass-box, rgb(0, 70, 131), 20, 0, 0, 0);
+  -fx-background-radius: 100;
+  -fx-border-radius: 100;
+  -fx-text-fill: #000000;
+  -fx-font-size: 18;
+  -fx-padding: 0 0 0 25;
+}
+
+.Showradio-button .radio {
+  -fx-border-width: 1px;
+  -fx-border-color: #004683;
+  -fx-background-color: white;
+  -fx-background-image: null;
+  -fx-border-radius: 15px;
+  -fx-padding: 3px;
+}
+
+.Showradio-button .dot {
+  -fx-padding: 8px;
+  -fx-background-color: #004683;
+}
+
+.Showradio-button .label {
+  -fx-background-color: #ffffff;
+  -fx-padding: 5px;
+  -fx-border-width: 2;
+  -fx-border-color: #004683;
+  -fx-background-radius: 0;
+}
+
+.Showradio-button:selected {
+  -fx-border-color: #004683;
+  -fx-background-color: #004683;
+  -fx-text-fill: #ffffff;
+  -fx-effect: innershadow(gaussian, #004683, 10, 0.5, 0, 0);
+}
+
+/* Sty
+/********************************************MenuButtonStyle***************************************************************/
+
+/*.menu-button:hover {
+  -fx-background-color: red;
+}
+.menu-button .label:hover {
+  -fx-text-fill: #ffffff; /* Change the text color to blue */
+
+/*.menu-button .label .text {
+  -fx-background-color: #004683;
+  -fx-text-fill: #ffffff;
+  -fx-background-radius: 10 10 10 10;
+  -fx-border-radius: 10 10 10 10;
+}
+/* .menu-item:focused .label { */
+/* -fx-text-fill: blue; */
+/* -fx-pref-width: 245px; */
+/* -fx-alignment: center; */
+/* } */
+/* .context-menu { */
+/* -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin"; */
+/* -fx-background-color: #004683; */
+/* -fx-background-insets: 0, 1, 2; */
+/* -fx-background-radius: 0 6 6 6, 0 5 5 5, 0 4 4 4; */
+/*    -fx-padding: 0.666667em 0.083333em 0.666667em 0.083333em;  8 1 8 1 */
+/* -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; 4 1 8 1 */
+/* } */
+
+/*Split-menu-button*/
+/*.split-menu-button {
+  -fx-background-color: #ffffff;
+  -fx-border-color: darkblue; /* Border color */
+/* -fx-border-raduis: 10px; */
+/* /* -fx-border-width: 2px; Border width */
+/* /* -fx-font-family: "Open Sans"; */
+/* /* -fx-font-size: 18; */
+/* /* -fx-font-weight: bold; 
+  /* -fx-background-color: #4caf50;
+  -fx-background-radius: 10;
+  -fx-border-radius: 10;*/
+/*  .menu-item {
+  -fx-background-color: white; /* Background color */
+/* -fx-text-fill: black; Text color */
+/* -fx-font-size: 12px; Font size */
+/* -fx-padding: 5px; Padding */
+
+/* Optional: Define hover state for MenuItem */
+/* .menu-item:hover { */
+/* -fx-background-color: rgb(215, 38, 38); Background color on hover */
+/* } */

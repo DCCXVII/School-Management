@@ -6,7 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
 import java.io.IOException;
 
 /**
@@ -19,7 +18,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("view/GestionDeStudent"), 1280, 720);
+        scene = new Scene(loadFXML("view/SearchEtudiant"), 1280, 720);
         stage.setScene(scene);
         stage.setTitle("Hello world");
         // ConnectDB connectDB ;
