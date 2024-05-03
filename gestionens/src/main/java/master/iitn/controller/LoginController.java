@@ -41,6 +41,8 @@ public class LoginController {
         try {
             Roles userRole = user.getRole();
 
+            System.out.println(userRole);
+            
             switch (userRole) {
                 case Etudiant:
                     App.setRoot("view/Etudiant_home");

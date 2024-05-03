@@ -25,12 +25,12 @@ public class UserDao {
              ResultSet rs = stmt.executeQuery(sql)) {
 
             if (rs.next()) {
-                user.setId(rs.getInt("USER_ID"));
+                user.setId(rs.getInt("ID_USER"));
                 user.setNom(rs.getString("NOM"));
                 user.setEmail(rs.getString("EMAIL"));
                 user.setPhone(rs.getString("PHONE"));
                 user.setCin(rs.getString("CIN"));
-                user.setRole(rs.getString("ROLE").equals("Admin") ? Roles.Administrateur : Roles.Etudiant);
+                user.setRole(rs.getString("ROLE").equals("ADMINISTRATEUR") ? Roles.Administrateur : Roles.Etudiant);
             } else {
                 throw new SQLException("Invalid email or password");
             }

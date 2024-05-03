@@ -20,7 +20,7 @@ public class AdministrateurDao{
     public void Addetudiant(Etudiant etudiant) {
         String sql = "INSERT INTO USER (NOM, PRENOM, GENRE, DATE_NAISSANCE, CIN, PHONE, USERNAME, EMAIL, PASSWORD, ROLE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         String getUserIdSql = "SELECT LAST_INSERT_ID() INTO @user_id";
-        String insertIntoEtudiantSql = "INSERT INTO ETUDIANT (USER_ID,ID_CLASS,CNE,LEVEL) VALUES (@user_id,1,1,1)";
+        String insertIntoEtudiantSql = "INSERT INTO ETUDIANT (ID_USER,ID_CLASS,CNE,LEVEL) VALUES (@user_id,1,1,1)";
 
 
         Utils utils = new Utils();
