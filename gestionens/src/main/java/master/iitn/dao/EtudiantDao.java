@@ -1,6 +1,7 @@
 package master.iitn.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -16,22 +17,24 @@ public class EtudiantDao {
     }
 
     public Etudiant getEtudiantById(int id) {
-        String sql = "SELECT e.CNE, c.NOM_CLASS, c.NIVEAU, c.ANNEE_UNIVERSITAIRE "
-                + "FROM USER u, ETUDIANT e, CLASS c " +
-                "WHERE u.ID_USER = e.ID_USER AND e.ID_CLASS = c.ID_CLASS AND u.ID_USER = " + id;
+        String sql = "SELECT e.ID_ETUDIANT, e.CNE, c.NOM_CLASS, eta.SEMESTRE, eta.ANNEE_UNIVERSITAIRE FROM USER u, ETUDIANT e, CLASS c, ETAT eta WHERE u.ID_USER = e.ID_USER AND e.ID_ETUDIANT = eta.ID_ETUDIANT AND eta.ID_CLASS=c.ID_CLASS AND u.ID_USER = "
+                + id;
         Etudiant etudiant = new Etudiant();
 
         try (Connection conn = connectionFactory.getConnection();
-                Statement stmt = conn.createStatement();
-                ResultSet rs = stmt.executeQuery(sql)) {
+                PreparedStatement stmt = conn.prepareStatement(sql);
+                ResultSet rs = stmt.executeQuery()) {
 
             if (rs.next()) {
+                etudiant.setID_ETUDIANT(rs.getInt("ID_ETUDIANT"));
                 etudiant.setCne(rs.getString("CNE"));
                 etudiant.setClasse(rs.getString("NOM_CLASS"));
-                etudiant.setNiveau(rs.getString("NIVEAU"));
+                etudiant.setNiveau(rs.getString("SEMESTRE"));
                 etudiant.setAnneeUniversitaire(rs.getString("ANNEE_UNIVERSITAIRE"));
             } else {
-                throw new SQLException("Error: Cannot fetch etudiant data");
+                // Handle cases where no results are found
+                // For example, return a default or null value
+                return null;
             }
 
         } catch (SQLException e) {
@@ -40,4 +43,5 @@ public class EtudiantDao {
 
         return etudiant;
     }
+
 }

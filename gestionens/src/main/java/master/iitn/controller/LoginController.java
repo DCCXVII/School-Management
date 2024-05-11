@@ -28,7 +28,6 @@ public class LoginController {
             User LoggedUser = userdao.LoginUser(EMAIL, PASSWORD);
             SessionController.getInstance().setUser(LoggedUser);
             Redirect(LoggedUser);
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -40,7 +39,7 @@ public class LoginController {
 
         switch (userRole) {
             case Etudiant:
-                App.setRoot("view/EtudiantProfile", SessionController.getInstance().getUser());
+                App.setRoot("view/ShowNotes", SessionController.getInstance().getUser());
                 break;
             case Administrateur:
                 App.setRoot("view/Admin", SessionController.getInstance().getUser());

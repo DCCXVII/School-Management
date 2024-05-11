@@ -7,6 +7,7 @@ import java.util.Date;
 import javafx.scene.image.Image;
 
 public class Etudiant extends User {
+    private int ID_ETUDIANT;
     private String cne;
     private String niveau;
     private String ANNEE_UNIVERSITAIRE;
@@ -84,6 +85,14 @@ public class Etudiant extends User {
 
     public void setClasse(String Class) {
         this.Class = Class;
+    }
+
+    public int setID_ETUDIANT(int ID_ETUDIANT) {
+        return this.ID_ETUDIANT = ID_ETUDIANT;
+    }
+
+    public int getID_ETUDIANT() {
+        return this.ID_ETUDIANT;
     }
 
 }

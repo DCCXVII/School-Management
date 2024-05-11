@@ -6,10 +6,10 @@ import java.security.NoSuchAlgorithmException;
 // Class that return a hash of passwrod 
 public class Utils {
 
-    public String generateHash( String password) {
+    public String generateHash(String password) {
         String algorithm = "SHA-256";
         String salt = "iitn-23/24";
-        String data =  password + salt;
+        String data = password + salt;
         try {
             MessageDigest digest = MessageDigest.getInstance(algorithm);
             byte[] hash = digest.digest(data.getBytes());
@@ -30,9 +30,9 @@ public class Utils {
         }
     }
 
-    public String generateEmail(String nom,String prenom){
-        return nom.substring(0, 2).toLowerCase()+"."+ prenom.toLowerCase()+"@uit.ac.ma";
-        
+    public String generateEmail(String nom, String prenom) {
+        return nom.substring(0, 2).toLowerCase() + "." + prenom.toLowerCase() + "@uit.ac.ma";
+
     }
-      
+
 }
