@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import master.iitn.model.User;
 
 import java.io.IOException;
 
@@ -18,14 +19,14 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("view/LoginGui"), 1280, 720);
+        scene = new Scene(loadFXML("view/GestionDeMatiere"), 1280, 720);
         stage.setScene(scene);
         stage.setTitle("Hello world");
         // ConnectDB connectDB ;
         stage.show();
     }
 
-    public static void setRoot(String fxml) throws IOException {
+    public static void setRoot(String fxml, User user) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
 

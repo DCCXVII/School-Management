@@ -3,7 +3,7 @@ package master.iitn.model;
 import java.util.Date;
 
 public class User {
-    private int user_id;
+    private int ID_USER;
     private String cin;
     private String image;
     private String nom;
@@ -15,17 +15,18 @@ public class User {
     private Gender geneder;
     private String phone;
 
-    public User(){
-        
+    public User() {
+
     }
 
-    public User(String email, String password){
+    public User(String email, String password) {
         this.email = email;
         this.password = password;
     }
 
-    public User(int user_id, String image, String nom, String prenom, String email, String password, Roles role, String cin,String phone,Gender gender,Date date2naissance) {
-        this.user_id = user_id;
+    public User(int ID_USER, String image, String nom, String prenom, String email, String password, Roles role,
+            String cin, String phone, Gender gender, Date date2naissance) {
+        this.ID_USER = ID_USER;
         this.image = image;
         this.nom = nom;
         this.prenom = prenom;
@@ -38,18 +39,20 @@ public class User {
         this.geneder = gender;
     }
 
-    public User getUser(){
+    public User getUser() {
         return this;
     }
 
     @Override
     public String toString() {
-        return "User [nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", password=" + password + ", role=" + role
-                + ", cin=" + cin + ", phone=" + phone + ", user_id=" + user_id + "date de naiss" +date_naissance + "gender : "+geneder+"]";
+        return "User [nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", password=" + password + ", role="
+                + role
+                + ", cin=" + cin + ", phone=" + phone + ", ID_USER=" + ID_USER + "date de naiss" + date_naissance
+                + "gender : " + geneder + "]";
     }
 
     public int getId() {
-        return user_id;
+        return ID_USER;
     }
 
     public String getCin() {
@@ -66,7 +69,7 @@ public class User {
 
     public String getPrenom() {
         return prenom;
-    }   
+    }
 
     public String getEmail() {
         return email;
@@ -88,12 +91,12 @@ public class User {
         return date_naissance;
     }
 
-    public Gender getGender(){
+    public Gender getGender() {
         return geneder;
     }
 
-    public void setId(int user_id) {
-        this.user_id = user_id;
+    public void setId(int ID_USER) {
+        this.ID_USER = ID_USER;
     }
 
     public void setCin(String cin) {
@@ -103,7 +106,7 @@ public class User {
     public void setImage(String image) {
         this.image = image;
     }
-    
+
     public void setNom(String nom) {
         this.nom = nom;
     }
@@ -132,16 +135,12 @@ public class User {
         this.date_naissance = date_naissance;
     }
 
-    public void setGender(Gender gender){
+    public void setGender(Gender gender) {
         this.geneder = gender;
     }
 
-    
-   
-
-    public boolean logout(User user){
+    public boolean logout(User user) {
         return true;
     }
 
-    
 }

@@ -5,9 +5,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import master.iitn.model.Gender;
 import master.iitn.model.Roles;
 import master.iitn.model.User;
-import Utils.Utils;
+import master.iitn.services.*;
 
 public class UserDao {
     ConnectionFactory connection;
@@ -17,19 +18,22 @@ public class UserDao {
         this.connection = new ConnectionFactory();
     }
 
-    public User LoginUser(String email,String password) {
+    public User LoginUser(String email, String password) {
         String sql = "SELECT * FROM USER WHERE EMAIL='" + email + "' AND PASSWORD='" + password + "'";
         User user = new User();
         try (Connection conn = connection.getConnection();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(sql)) {
 
             if (rs.next()) {
                 user.setId(rs.getInt("ID_USER"));
                 user.setNom(rs.getString("NOM"));
-                user.setEmail(rs.getString("EMAIL"));
-                user.setPhone(rs.getString("PHONE"));
+                user.setPrenom(rs.getString("PRENOM"));
+                user.setGender(rs.getString("GENRE").equals("Homme") ? Gender.Homme : Gender.Femme);
+                user.setDate_naissance(rs.getDate("DATE_NAISSANCE"));
                 user.setCin(rs.getString("CIN"));
+                user.setPhone(rs.getString("PHONE"));
+                user.setEmail(rs.getString("EMAIL"));
                 user.setRole(rs.getString("ROLE").equals("ADMINISTRATEUR") ? Roles.Administrateur : Roles.Etudiant);
             } else {
                 throw new SQLException("Invalid email or password");

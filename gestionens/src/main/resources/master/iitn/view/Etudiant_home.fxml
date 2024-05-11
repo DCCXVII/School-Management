@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="master.iitn.controller.EtudiantController">
    <left>
       <AnchorPane prefHeight="808.0" prefWidth="234.0" BorderPane.alignment="CENTER">
          <children>
@@ -63,7 +63,7 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Text>
-            <TextField fx:id="Nometprénomfield1" disable="true" editable="false" layoutX="248.0" layoutY="229.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="Nom" disable="true" editable="false" layoutX="248.0" layoutY="229.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font size="22.0" />
                </font>
@@ -73,27 +73,27 @@
                   <Font size="20.0" />
                </font>
             </Text>
-            <TextField fx:id="cnefield" disable="true" editable="false" layoutX="249.0" layoutY="294.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="cne" disable="true" editable="false" layoutX="249.0" layoutY="294.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font size="22.0" />
                </font>
             </TextField>
-            <TextField fx:id="cinfield" disable="true" editable="false" layoutX="249.0" layoutY="369.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="cin" disable="true" editable="false" layoutX="249.0" layoutY="369.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font size="22.0" />
                </font>
             </TextField>
-            <TextField fx:id="cinfield" disable="true" editable="false" layoutX="249.0" layoutY="444.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="email" disable="true" editable="false" layoutX="249.0" layoutY="444.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font size="22.0" />
                </font>
             </TextField>
-            <TextField fx:id="adressefield" disable="true" editable="false" layoutX="249.0" layoutY="529.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="date2naissance" disable="true" editable="false" layoutX="249.0" layoutY="529.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font size="22.0" />
                </font>
             </TextField>
-            <TextField fx:id="Numérotélephonefield" disable="true" editable="false" layoutX="249.0" layoutY="606.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="phone" disable="true" editable="false" layoutX="249.0" layoutY="606.0" style="-fx-background-color: transparent; -fx-border-color: #007ce9; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font size="22.0" />
                </font>
@@ -113,7 +113,7 @@
                   <Font size="20.0" />
                </font>
             </Text>
-            <Text fx:id="adressetext" fill="#007ce9" layoutX="149.0" layoutY="575.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-underline: #fffff;" text="Adresse" textAlignment="RIGHT">
+            <Text fx:id="adressetext" fill="#007ce9" layoutX="149.0" layoutY="575.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-underline: #fffff;" text="Date de naissance" textAlignment="RIGHT">
                <font>
                   <Font size="20.0" />
                </font>

@@ -3,25 +3,27 @@ package master.iitn.controller;
 import master.iitn.model.User;
 
 public final class SessionController {
-    private static SessionController instance;
+    private static SessionController instance = new SessionController();
     private User user;
 
-    private SessionController(User user) {
-        this.user = user;
+    private SessionController() {
     }
 
-    public static SessionController getInstance(User user) {
-        if (instance == null) {
-            instance = new SessionController(user);
-        }
+    public static SessionController getInstance() {
+
         return instance;
     }
 
     public User getUser() {
         return user;
+
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public void cleanUserSession() {
-        user = null;
+        this.user = null;
     }
 }

@@ -154,24 +154,62 @@
   -fx-background-color: #81c483;
   -fx-background-radius: 15px;
 }
-.LabelTitle_GE {
+/* .LabelTitle_GE {
   -fx-background-color: linear-gradient(to right, #007ce9, #004683);
   -fx-background-radius: 0 20 0 0;
   -fx-border-radius: 0 20 0 0;
   -fx-font-family: "Open Sans";
   -fx-font-size: 30;
   -fx-font-weight: bold;
+} */
+.BtnImportation {
+  -fx-background-color: #008357;
+  -fx-background-radius: 25px;
+  -fx-border-radius: 25px;
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 18px;
+  -fx-font-family: "Open Sans";
+  -fx-font-weight: bold;
+}
+.imageImpotPane {
+  -fx-background-radius: 15px;
+  -fx-border-radius: 15px;
+  -fx-border-color: #004683;
+}
+.BtnImportation:hover {
+  -fx-background-color: #81c483;
+  -fx-background-radius: 25px;
+  -fx-border-radius: 25px;
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 18px;
+  -fx-font-family: "Open Sans";
+  -fx-font-weight: bold;
 }
 .myGridPane {
-  -fx-background-color: linear-gradient(to right, #007ce9, #004683);
+  /* -fx-background-color: linear-gradient(to right, #007ce9, #004683); */
+  -fx-backgorund-color: #004683;
+  -fx-border-color: #004683;
+  -fx-background-radius: 15px;
+  -fx-border-radius: 15px;
+  -fx-border-width: 3px;
+}
+.LabelAdd_Student {
+  -fx-background-color: #004683;
+  -fx-text-fill: #ffffff;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 22;
+  -fx-font-weight: bold;
+  -fx-background-radius: 32;
+  -fx-border-radius: 32;
 }
 .LabelForm_Student {
-  -fx-background-color: #ffffff;
+  -fx-background-color: #004683;
   -fx-background-radius: 10 10 10 10; /* Top-left, top-right, bottom-right, bottom-left */
   -fx-border-radius: 10 10 10 10;
   -fx-font-family: "Open Sans";
   -fx-font-size: 16;
   -fx-font-weight: bold;
+  -fx-text-fill: #ffffff;
 }
 .text-fieldFormeStudent {
   -fx-border-color: #004683;
@@ -180,6 +218,21 @@
   -fx-text-fill: #000000;
   -fx-font-size: 18px;
   -fx-font-style: bold;
+}
+.LabelShowStudent {
+  -fx-text-fill: #000000;
+  -fx-font-family: "Open Sans";
+  -fx-font-weight: 600;
+  -fx-font-size: 14px;
+  -fx-border-radius: 10px;
+  -fx-background-radius: 10px;
+  -fx-border-color: #004683;
+}
+.eyeIconBtn {
+  -fx-background-color: transparent;
+}
+.eyeIconBtn:focused {
+  -fx-background-color: transparent;
 }
 .date-pickerForme_Student {
   -fx-background-color: transparent;
@@ -194,11 +247,25 @@
   -fx-color: #ffffff;
 }
 
-.radio-button {
+.Genreradio-button {
+  -fx-background-color: #ffffff;
+  -fx-effect: dropshadow(three-pass-box, rgb(0, 70, 131), 20, 0, 0, 0);
+  -fx-background-radius: 100;
+  -fx-border-radius: 100;
+  -fx-text-fill: #000000;
+  -fx-font-size: 16;
+  -fx-padding: 0 0 0 25;
   -fx-font-family: "Open Sans";
-  -fx-font-size: 16px;
   -fx-font-weight: bold;
+}
+.Genreradio-button .radio {
+  -fx-opacity: 0;
+}
+.Genreradio-button:selected {
+  -fx-border-color: #004683;
+  -fx-background-color: #004683;
   -fx-text-fill: #ffffff;
+  -fx-effect: innershadow(gaussian, #004683, 10, 0.5, 0, 0);
 }
 .AddButton_Student {
   -fx-background-color: #ffffff;
@@ -217,14 +284,15 @@
   -fx-background-color: #004683;
 }
 .VboxCenter {
-  -fx-background-color: linear-gradient(to right, #007ce9, #004b8d);
-  -fx-background-radius: 0 20 20 0;
+  /* -fx-background-color: linear-gradient(to right, #007ce9, #004b8d);
+  -fx-background-radius: 0 20 20 0; */
+  -fx-background-color: #ffffff;
 }
-.vboxsidebarGE {
-  -fx-background-color: linear-gradient(to right, #004683, #007ce9);
-  -fx-background-radius: 20 0 0 20; /* Top-left, top-right, bottom-right, bottom-left */
-  -fx-border-radius: 20 0 0 20;
-}
+/* .vboxsidebarGE  */
+/* -fx-background-color: linear-gradient(to right, #004683, #007ce9); */
+/* -fx-background-radius: 20 0 0 20; Top-left, top-right, bottom-right, bottom-left */
+/* -fx-border-radius: 20 0 0 20; */
+
 /*
 .HboxShow_Student {
   -fx-background-color: #ffffff;
@@ -380,7 +448,6 @@
   -fx-font-size: 18;
   -fx-padding: 0 0 0 25;
 }
-
 .Showradio-button .radio {
   -fx-border-width: 1px;
   -fx-border-color: #004683;
@@ -409,7 +476,79 @@
   -fx-text-fill: #ffffff;
   -fx-effect: innershadow(gaussian, #004683, 10, 0.5, 0, 0);
 }
-
+.GuiLogIn {
+  -fx-background-color: #007ce933;
+  -fx-background-radius: 15;
+  -fx-border-radius: 15;
+  -fx-border-color: #007ce9;
+}
+.Label_GuiLogin {
+  -fx-background-color: #ffffff;
+  -fx-background-radius: 25;
+  -fx-border-radius: 25;
+  -fx-border-color: #ffffff;
+  -fx-text-fill: #004683;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 36px;
+  -fx-font-style: normal;
+  -fx-font-weight: 600;
+  -fx-line-height: normal;
+}
+.Label_GuiLoginTitle {
+  -fx-text-fill: #ffffff;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 42px;
+  -fx-font-style: normal;
+  -fx-font-weight: 600;
+  -fx-line-height: normal;
+}
+.TextField_GuiLogin {
+  -fx-font-size: 18px;
+  -fx-font-family: "Open Sans";
+  -fx-background-radius: 15px;
+  -fx-border-radius: 15px;
+  -fx-border-color: #000000;
+  -fx-border-width: 2px;
+  -fx-border-style: solid;
+}
+.TextField_GuiLogin:focused {
+  -fx-font-size: 18px;
+  -fx-font-family: "Open Sans";
+  -fx-background-radius: 15px;
+  -fx-border-radius: 15px;
+  -fx-border-color: #000000;
+  -fx-border-width: 2px;
+  -fx-border-style: solid;
+}
+.Btn_GuiLogin {
+  -fx-background-color: #007ce9;
+  -fx-background-radius: 15;
+  -fx-border-radius: 15;
+  -fx-text-fill: #ffffff;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 24px;
+  -fx-font-style: normal;
+  -fx-font-weight: 600;
+  -fx-line-height: normal;
+}
+.Btn_GuiLogin:hover {
+  -fx-background-color: #004683;
+  -fx-border-radius: 15;
+  -fx-text-fill: #ffffff;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 24px;
+  -fx-font-style: normal;
+  -fx-font-weight: 600;
+  -fx-line-height: normal;
+}
+.Labels_GuiLogin {
+  -fx-text-fill: #000000;
+  -fx-font-family: "Open Sans";
+  -fx-font-size: 18px;
+  -fx-font-style: normal;
+  -fx-font-weight: 500;
+  -fx-line-height: normal;
+}
 /* Sty
 /********************************************MenuButtonStyle***************************************************************/
 
@@ -461,3 +600,35 @@
 /* .menu-item:hover { */
 /* -fx-background-color: rgb(215, 38, 38); Background color on hover */
 /* } */
+.date-picker {
+  /* -fx-background-color:#004683; */
+  -fx-background-radius: 25px;
+  -fx-border-radius: 25px;
+}
+.date-picker-popup {
+  -fx-border-color: #007ce9;
+  -fx-background-color: #004683;
+  -fx-background-radius: 25px;
+  -fx-border-radius: 25px;
+}
+.date-picker .selected {
+  -fx-background-color: #008357;
+  -fx-text-fill: white;
+}
+.date-picker .selected:focused {
+  -fx-background-color: #007ce9;
+  -fx-text-fill: white;
+}
+.date-picker-popup .month-year-pane {
+  -fx-background-color: #007ce9;
+}
+.date-picker-popup .month-year-pane .label {
+  -fx-text-fill: white;
+}
+.date-picker-popup .week-number-cell {
+  -fx-text-fill: #ffffff;
+}
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+  -fx-background-color: white;
+}

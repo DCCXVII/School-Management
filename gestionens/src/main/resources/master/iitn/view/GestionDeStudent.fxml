@@ -263,7 +263,7 @@
                               <Insets left="15.0" />
                            </GridPane.margin>
                         </DatePicker>
-                        <ChoiceBox prefHeight="40.0" prefWidth="235.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                        <ChoiceBox prefHeight="40.0" prefWidth="235.0" GridPane.columnIndex="3" GridPane.rowIndex="3" fx:id="ClassChoiceBox">
                            <GridPane.margin>
                               <Insets left="15.0" right="20.0" />
                            </GridPane.margin>

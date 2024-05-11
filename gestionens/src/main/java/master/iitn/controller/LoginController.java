@@ -26,9 +26,7 @@ public class LoginController {
             String EMAIL = email.getText();
             String PASSWORD = password.getText();
             User LoggedUser = userdao.LoginUser(EMAIL, PASSWORD);
-            System.out.println(LoggedUser.toString());
-
-            System.out.println("enterd succefully!!");
+            SessionController.getInstance().setUser(LoggedUser);
             Redirect(LoggedUser);
 
         } catch (Exception e) {
@@ -37,32 +35,27 @@ public class LoginController {
     }
 
     @FXML
-    private void Redirect(User user) throws IOException {
-        try {
-            Roles userRole = user.getRole();
+    private void Redirect(User user) throws Exception {
+        Roles userRole = user.getRole();
 
-            System.out.println(userRole);
-            
-            switch (userRole) {
-                case Etudiant:
-                    App.setRoot("view/Etudiant_home");
-                    break;
-                case Administrateur:
-                    App.setRoot("view/Admin");
-                    break;
-                case Professeur:
-                    App.setRoot("view/Professeur");
-                    break;
-                case DircteurPedagogique:
-                    App.setRoot("view/DirecteurPedagogique");
-                    break;
-                default:
-                    // Handle unexpected cases or unassigned roles
-                    break;
-            }
-        } catch (Exception e) {
-            e.getStackTrace();
+        switch (userRole) {
+            case Etudiant:
+                App.setRoot("view/EtudiantProfile", SessionController.getInstance().getUser());
+                break;
+            case Administrateur:
+                App.setRoot("view/Admin", SessionController.getInstance().getUser());
+                break;
+            case Professeur:
+                App.setRoot("view/Professeur", SessionController.getInstance().getUser());
+                break;
+            case DircteurPedagogique:
+                App.setRoot("view/DirecteurPedagogique", SessionController.getInstance().getUser());
+                break;
+            default:
+                // Handle unexpected cases or unassigned roles
+                break;
         }
+
     }
 
 }
