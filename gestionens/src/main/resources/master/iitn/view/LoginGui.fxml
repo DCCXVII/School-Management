@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane fx:id="AnchorPaneBackgroundLogin" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="ImageBackgroundLogin" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/uit.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="LabelBienvenue" alignment="CENTER" contentDisplay="CENTER" layoutX="307.5" layoutY="46.0" prefHeight="62.0" prefWidth="665.0" styleClass="Label_GuiLoginTitle" stylesheets="@css/style.css" text="Bienvenue dans votre espace Privé" />
+            <VBox fx:id="VboxLogoEnsa" prefHeight="720.0" prefWidth="185.0">
+               <children>
+                  <ImageView fx:id="Ensa_Logo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cropped-ensak-logo.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="20.0" top="35.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox fx:id="VboxLogoUit" layoutX="1080.0" prefHeight="720.0" prefWidth="185.0">
+               <children>
+                  <ImageView fx:id="Uit_Logo" fitHeight="150.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Ibn-Tofail-University_Logo_Vertical_Full-Color-and-white-02-1536x1459.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+            <AnchorPane fx:id="AnchorPaneIMGLogin" layoutX="398.0" layoutY="120.0" prefHeight="485.0" prefWidth="485.0" styleClass="GuiLogIn" stylesheets="@css/style.css">
+               <children>
+                  <ImageView fx:id="IMGLogin485x485" fitHeight="485.0" fitWidth="485.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/uit485_485.jpg" />
+                     </image>
+                     <effect>
+                        <GaussianBlur radius="12.5" />
+                     </effect>
+                  </ImageView>
+                  <Label fx:id="LabelLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="56.0" prefWidth="385.0" styleClass="Label_GuiLogin" stylesheets="@css/style.css" text="Login" />
+                  <TextField fx:id="TextFieldEmailLogin" layoutX="50.0" layoutY="174.0" prefHeight="65.0" prefWidth="385.0" styleClass="TextField_GuiLogin" stylesheets="@css/style.css" />
+                  <PasswordField layoutX="50.0" layoutY="277.0" prefHeight="65.0" prefWidth="385.0" styleClass="TextField_GuiLogin" stylesheets="@css/style.css" />
+                  <TextField fx:id="TextFieldPasswdLogin" layoutX="50.0" layoutY="277.0" prefHeight="65.0" prefWidth="385.0" styleClass="TextField_GuiLogin" stylesheets="@css/style.css" visible="false" />
+                  <ImageView fx:id="IconEyeLogin" fitHeight="24.0" fitWidth="24.0" layoutX="400.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Vector.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="BtnLogin" layoutX="50.0" layoutY="381.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="385.0" styleClass="Btn_GuiLogin" stylesheets="@css/style.css" text="LOGIN" textFill="#ed1212" />
+                  <Label fx:id="LabelEmailLogin" layoutX="65.0" layoutY="142.0" styleClass="Labels_GuiLogin" stylesheets="@css/style.css" text="E-mail">
+                     <graphic>
+                        <ImageView fx:id="IconUserLogin" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@../images/IconUser.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="LabelPasswdLogin" layoutX="65.0" layoutY="245.0" styleClass="Labels_GuiLogin" stylesheets="@css/style.css" text="Password">
+                     <graphic>
+                        <ImageView fx:id="IconPasswdLogin" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-6.0">
+                           <image>
+                              <Image url="@../images/Lock.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Hyperlink fx:id="LinkForgotPasswd" layoutX="165.0" layoutY="345.0" styleClass="Labels_GuiLogin" stylesheets="@css/style.css" text="Forgot password?" />
+               </children>
+            </AnchorPane>
+            <ToggleButton layoutX="988.0" layoutY="318.0" mnemonicParsing="false" opacity="0.0">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Vector.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

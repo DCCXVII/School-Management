@@ -1,5 +1,9 @@
 package master.iitn.controller;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.Date;
@@ -11,6 +15,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableColumn;
@@ -18,6 +23,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 import master.iitn.dao.AdministrateurDao;
 import master.iitn.dao.MatiereDao;
 import master.iitn.model.Etudiant;
@@ -26,10 +35,32 @@ import master.iitn.model.Matiere;
 import master.iitn.model.Roles;
 import master.iitn.services.Utils;
 
+import java.awt.BorderLayout;
+import java.io.ByteArrayInputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
+
+
 public class AdministrateurController implements Initializable {
     AdministrateurDao administrateurService;
     MatiereDao matiereService;
     Utils utils;
+    String profilePath;
+
+    public AdministrateurController(){
+        this.administrateurService = new AdministrateurDao();
+        this.matiereService = new MatiereDao();
+        this.utils = new Utils();
+    }
+    
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -38,8 +69,9 @@ public class AdministrateurController implements Initializable {
         RBtn_MaleStudent.setToggleGroup(Genre);
         RBtn_FemaleStudent.setToggleGroup(Genre);
 
+        String sql = "SELECT * FROM CLASS";
         // Initialize the ChoiceBox
-        ClassChoiceBox.getItems().addAll("IITN", "GE");
+        ComboBoxClasse.getItems().addAll("IITN", "GE");
     }
 
     // Gender Section
@@ -52,7 +84,7 @@ public class AdministrateurController implements Initializable {
 
     // Class
     @FXML
-    private ChoiceBox<String> ClassChoiceBox;
+    private ComboBox<String> ComboBoxClasse;
 
     // Add Matiere Fields
     @FXML
@@ -71,8 +103,8 @@ public class AdministrateurController implements Initializable {
     private TextField PrenomEtudiant;
     @FXML
     private TextField EmailEtudiant;
-    @FXML
-    private TextField PasswordEtudiant;
+    // @FXML
+    // private TextField PasswordEtudiant;
     @FXML
     private TextField PhoneEtudiant;
     @FXML
@@ -87,6 +119,11 @@ public class AdministrateurController implements Initializable {
     private Button AddEtudiant;
     @FXML
     private Button Cancel;
+    @FXML 
+    private ImageView ProfileStudent;
+
+
+
 
     @FXML
     private void addNewUser(ActionEvent event) {
@@ -99,15 +136,22 @@ public class AdministrateurController implements Initializable {
             String cin = CinEtudiant.getText();
             String cne = CneEtudiant.getText();
             String level = LevelEtudiant.getText();
-            String selectedClass = ClassChoiceBox.getValue();
+            String selectedClass = ComboBoxClasse.getValue();
             LocalDate selectedDate = DateNaissanceEtudiant.getValue();
             Date dateOfBirth = (selectedDate != null) ? java.sql.Date.valueOf(selectedDate) : null;
-            String image = "default";
+            
+            System.out.println(profilePath.toString());
+        
+            // String image = "default";
             Roles role = Roles.Etudiant;
             Gender gender = getSelectedGender().equals("Homme") ? Gender.Homme : Gender.Femme;
             String anneeUniversitaier = "2023-2024";
-            Etudiant etudiant = new Etudiant(0, image, nom, prenom, email, password, role, cin, cne, telephone, gender,
+
+            Etudiant etudiant = new Etudiant(0, profilePath, nom, prenom, email, password, role, cin, cne, telephone, gender,
                     dateOfBirth, level, selectedClass, anneeUniversitaier);
+
+                    System.err.println();
+            
             administrateurService.addEtudiant(etudiant);
         } catch (Exception e) {
             logError("Error adding new student: ", e);
@@ -136,6 +180,35 @@ public class AdministrateurController implements Initializable {
         ObservableList<Matiere> matieres = matiereService.getAllMatieres();
         TableMatiere.setItems(matieres);
     }
+
+    @FXML
+    private void ImportStudentImage() throws IOException {
+        FileChooser fileChooser = new FileChooser();
+
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif")
+        );
+
+        File file = fileChooser.showOpenDialog(new Stage());
+
+        try {
+            this.profilePath = file.getAbsolutePath();
+
+            FileInputStream inputStream = new FileInputStream(profilePath);
+            System.out.println("tttttttest 1111111111111");
+            System.out.println(profilePath);
+            ProfileStudent.setImage(new Image(inputStream)); 
+
+            System.out.println("tttttttest 2222222222222222222");
+            System.out.println(profilePath);
+
+            // inputStream.close();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     private String getSelectedGender() {
         if (RBtn_MaleStudent.isSelected()) {

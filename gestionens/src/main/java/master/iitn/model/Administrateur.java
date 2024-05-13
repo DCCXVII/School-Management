@@ -1,6 +1,9 @@
 package master.iitn.model;
 
+import java.io.FileInputStream;
 import java.sql.Date;
+
+import javafx.scene.image.Image;
 
 public class Administrateur extends User {
     private int admin_id;

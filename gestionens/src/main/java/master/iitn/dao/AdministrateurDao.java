@@ -1,10 +1,21 @@
 package master.iitn.dao;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import javax.imageio.ImageIO;
+
+import java.awt.Graphics2D;
+import java.awt.Image;
+
+import java.awt.image.BufferedImage;
 
 import master.iitn.model.Etudiant;
 import master.iitn.model.Roles;
@@ -56,29 +67,36 @@ public class AdministrateurDao {
     //     return etudiant;
     // }
 
-    public void addEtudiant(Etudiant etudiant) {
-        String insertUserSql = "INSERT INTO USER (NOM, PRENOM, GENRE, DATE_NAISSANCE, CIN, PHONE, USERNAME, EMAIL, PASSWORD, ROLE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    public void addEtudiant(Etudiant etudiant) throws IOException{
+        String insertUserSql = "INSERT INTO USER (IMAGE, NOM, PRENOM, GENRE, DATE_NAISSANCE, CIN, PHONE, EMAIL, PASSWORD, ROLE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         // String getUserIdSql = "SELECT LAST_INSERT_ID()";
-        String insertEtudiantSql = "INSERT INTO ETUDIANT (ID_USER, ID_CLASS, CNE, LEVEL) VALUES (?, 1, ?, ?)";
+        String insertEtudiantSql = "INSERT INTO ETUDIANT (ID_USER, ID_CLASS, CNE) VALUES (?, 1, ?)";
 
         try (Connection conn = connectionFactory.getConnection();
                 PreparedStatement userStmt = conn.prepareStatement(insertUserSql, Statement.RETURN_GENERATED_KEYS);
                 PreparedStatement etudiantStmt = conn.prepareStatement(insertEtudiantSql)) {
             conn.setAutoCommit(false);
-
+            
+            // setBinaryStream(1, fis, (int) imageFile.length())
             // Insert user data
-            userStmt.setString(1, etudiant.getNom());
-            userStmt.setString(2, etudiant.getPrenom());
-            userStmt.setString(3, etudiant.getGender().toString());
-            userStmt.setString(4, etudiant.getDate_naissance().toString());
-            userStmt.setString(5, etudiant.getCin());
-            userStmt.setString(6, etudiant.getPhone());
-            userStmt.setString(7, "etudianttest");
+        
+            // System.out.println(etudiant.getImage());
+            File imageFile = new File(etudiant.getImage()); // Replace this with the path to your image file
+            FileInputStream fis = new FileInputStream(imageFile);
+
+            userStmt.setBinaryStream(1, fis);
+            userStmt.setString(2, etudiant.getNom());
+            userStmt.setString(3, etudiant.getPrenom());
+            userStmt.setString(4, etudiant.getGender().toString());
+            userStmt.setString(5, etudiant.getDate_naissance().toString());
+            userStmt.setString(6, etudiant.getCin());
+            userStmt.setString(7, etudiant.getPhone());
             userStmt.setString(8, utils.generateEmail(etudiant.getNom(), etudiant.getPrenom()));
             userStmt.setString(9, utils.generateHash(etudiant.getPassword()));
             userStmt.setString(10, Roles.Etudiant.toString());
             userStmt.executeUpdate();
-
+            System.out.println(userStmt.toString());
             // Get the generated user ID
             int userId;
             try (ResultSet rs = userStmt.getGeneratedKeys()) {
@@ -92,7 +110,7 @@ public class AdministrateurDao {
             // Insert etudiant data
             etudiantStmt.setInt(1, userId);
             etudiantStmt.setString(2, etudiant.getCne());
-            etudiantStmt.setString(3, etudiant.getLevel());
+            // etudiantStmt.setString(3, etudiant.getLevel());
             etudiantStmt.executeUpdate();
 
             conn.commit();

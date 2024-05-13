@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox fx:id="VBox_RightSide" prefHeight="720.0" prefWidth="315.0" styleClass="SideBareGui_Student" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="Ensa_Logo" fitHeight="84.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cropped-ensak-logo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="65.0" top="25.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button fx:id="Button_Matiere" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Gestion de Matière">
+               <graphic>
+                  <ImageView fx:id="icone_Matiere" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/livre.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <MenuButton fx:id="MenuBtn_Student" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="MENU" stylesheets="@css/style.css" text="Gestion d'Etudiant">
+               <items>
+                  <MenuItem fx:id="AddBtn_Student1" mnemonicParsing="false" text="Ajouter Etudiant" />
+                  <MenuItem fx:id="ShowBtn_Student" mnemonicParsing="false" text="Afficher Etudiant" />
+               </items>
+               <graphic>
+                  <ImageView fx:id="icone_Student" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/etudiant.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </MenuButton>
+            <Button fx:id="Button_impression" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Impression">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/impression.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="ProfilBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Profil">
+               <graphic>
+                  <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/utilisateur.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="LogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Déconnecter">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="icone_Logout" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/se-deconnecter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="25.0" top="200.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox fx:id="Vbox_Center" prefHeight="0.0" prefWidth="100.0" styleClass="VboxCenter" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="Label_AddStudent" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@css/style.css" text="Gestion des Etudiants" textAlignment="RIGHT" textFill="#fdfdfd">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="Label_AjouterEtudiant" alignment="CENTER" prefHeight="56.0" prefWidth="685.0" styleClass="LabelAdd_Student" stylesheets="@css/style.css" text="Ajouter Etudiant">
+               <VBox.margin>
+                  <Insets left="147.5" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane fx:id="Grid_AddStudent" layoutX="17.5" prefHeight="500.0" prefWidth="925.0" styleClass="myGridPane" stylesheets="@css/style.css">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="285.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="285.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                        <Label fx:id="LabelName_Student" alignment="CENTER" prefHeight="45.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Nom">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="LabelCIN_Student" alignment="CENTER" prefHeight="45.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="CIN" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="LabelDate_Student" alignment="CENTER" prefHeight="45.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Date de Naissance" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="LabelGenre_Student" alignment="CENTER" prefHeight="45.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Genre" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="LabelEmail_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="E-mail" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="LabelPhone_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Phone" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="LabelFirstName_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Prénom" GridPane.columnIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="LabelCNE_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="CNE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="LabelLevel_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Niveau" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="LabelClasse_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Classe" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="TextF_NameStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="15.0" right="15.0" top="5.0" />
+                           </GridPane.margin></TextField>
+                        <TextField fx:id="TextF_PNameStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="3">
+                           <GridPane.margin>
+                              <Insets left="15.0" right="20.0" />
+                           </GridPane.margin></TextField>
+                        <TextField fx:id="TextF_CINStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </GridPane.margin></TextField>
+                        <TextField fx:id="TextF_CNEStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="15.0" right="20.0" />
+                           </GridPane.margin></TextField>
+                        <DatePicker fx:id="TextF_DateStudent" prefHeight="40.0" prefWidth="260.0" styleClass="date-pickerForme_Student" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="15.0" />
+                           </GridPane.margin>
+                        </DatePicker>
+                        <TextField fx:id="TextF_LevelStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="15.0" right="20.0" />
+                           </GridPane.margin></TextField>
+                        <GridPane fx:id="GridRBtn" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                          <columnConstraints>
+                            <ColumnConstraints fx:id="ClmGridMale0" hgrow="SOMETIMES" maxWidth="167.11114501953125" minWidth="10.0" prefWidth="142.5" />
+                            <ColumnConstraints fx:id="ClmGridFemale1" hgrow="SOMETIMES" maxWidth="132.88891601562497" minWidth="10.0" prefWidth="142.5" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints fx:id="RowGridGenre0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <RadioButton fx:id="RBtn_MaleStudent" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="117.5" styleClass="Genreradio-button" stylesheets="@css/style.css" text="Homme">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Genre" />
+                                 </toggleGroup>
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0">
+                                       <image>
+                                          <Image url="@../images/man.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </RadioButton>
+                              <RadioButton fx:id="RBtn_FemaleStudent" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="117.5" styleClass="Genreradio-button" stylesheets="@css/style.css" text="Femme" toggleGroup="$Genre" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                                 <graphic>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0">
+                                       <image>
+                                          <Image url="@../images/girl.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </RadioButton>
+                           </children>
+                        </GridPane>
+                        <TextField fx:id="TextF_EmailStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </GridPane.margin></TextField>
+                        <TextField fx:id="TextF_PhoneStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="15.0" right="15.0" top="10.0" />
+                           </GridPane.margin></TextField>
+                        <AnchorPane fx:id="AnchorePaneImage" maxHeight="165.0" maxWidth="150.0" styleClass="imageImpotPane" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                           <children>
+                              <ImageView fx:id="ProfileStudent" fitHeight="160.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="3.0" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="45.0" top="5.0" />
+                           </GridPane.margin>
+                        </AnchorPane>
+                        <Button fx:id="ImportBtn_Student" mnemonicParsing="false" prefHeight="45.0" prefWidth="165.0" styleClass="BtnImportation" stylesheets="@css/style.css" text="Importer Image" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets left="50.0" top="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <MenuButton alignment="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="40.0" prefWidth="175.0" text="Classes" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Master IITN" />
+                            <MenuItem mnemonicParsing="false" text="Master SSI" />
+                              <MenuItem mnemonicParsing="false" text="Génie Industriel" />
+                          </items>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" left="50.0" />
+                           </GridPane.margin>
+                        </MenuButton>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <GridPane prefHeight="59.0" prefWidth="965.0" stylesheets="@css/style.css">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="AddBtn_Student" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="AddButton_Student" stylesheets="@css/style.css" text="Ajouter">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="CancelBtn_Student" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="AddButton_Student" stylesheets="@css/style.css" text="Annuler" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

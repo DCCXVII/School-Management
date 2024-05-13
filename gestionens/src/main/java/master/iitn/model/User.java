@@ -1,6 +1,9 @@
 package master.iitn.model;
 
+import java.io.FileInputStream;
 import java.util.Date;
+
+import javafx.scene.image.Image;
 
 public class User {
     private int ID_USER;

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox fx:id="VBox_LeftSide" prefHeight="720.0" prefWidth="315.0" styleClass="SideBareGui_Student" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="Ensa_Logo" fitHeight="84.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cropped-ensak-logo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="65.0" top="25.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button fx:id="Button_Matiere" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Gestion de Matière">
+               <graphic>
+                  <ImageView fx:id="icone_Matiere" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/livre.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <MenuButton fx:id="MenuBtn_Student" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="MENU" stylesheets="@css/style.css" text="Gestion d'Etudiant">
+               <items>
+                  <MenuItem fx:id="AddBtn_Student" mnemonicParsing="false" text="Ajouter Etudiant" />
+                  <MenuItem fx:id="ShowBtn_Student" mnemonicParsing="false" text="Afficher Etudiant" />
+               </items>
+               <graphic>
+                  <ImageView fx:id="icone_Student" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/etudiant.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </MenuButton>
+            <Button fx:id="Button_impression" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Impression">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/impression.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="ProfilBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Profil">
+               <graphic>
+                  <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/utilisateur.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="LogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Déconnecter">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="icone_Logout" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/se-deconnecter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="25.0" top="200.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <AnchorPane prefHeight="720.0" prefWidth="980.0" styleClass="VboxCenter" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="75.0" prefWidth="965.0" styleClass="LabelGui_Student" stylesheets="@css/style.css" text="Gestion d'Impression" />
+            <Label fx:id="LabelShow_imprimer" alignment="CENTER" layoutX="141.0" layoutY="87.0" prefHeight="56.0" prefWidth="685.0" styleClass="LabelSearch_Student" stylesheets="@css/style.css" text="Espace impression" />
+            <TextField fx:id="TextFieldSearch_Student" layoutX="223.0" layoutY="190.0" styleClass="SerachField" stylesheets="@css/style.css" />
+            <Button fx:id="BtnSearch_Student" layoutX="560.0" layoutY="195.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="146.0" styleClass="SearchBtn" stylesheets="@css/style.css" text="Chercher">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/chercher.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TableView fx:id="TableView_Student" layoutX="51.0" layoutY="260.0" prefHeight="300.0" prefWidth="874.0" stylesheets="@css/style.css">
+               <columns>
+                  <TableColumn fx:id="Clm_Classe" prefWidth="120.0" text="Classe" />
+                  <TableColumn fx:id="Clm_NomPrenom" prefWidth="223.0" text="Nom &amp; Prénom" />
+                  <TableColumn fx:id="Clm_CNE" prefWidth="203.0" text="CNE" />
+                  <TableColumn fx:id="Clm_Phone" prefWidth="145.0" text="Note" />
+                  <TableColumn prefWidth="173.0" text="Action" />
+               </columns>
+            </TableView>
+            <Button fx:id="button_ajouter" layoutX="207.0" layoutY="600.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="240.0" styleClass="AddButton_Student" stylesheets="@css/style.css" text="Attestation de scolarité" />
+            <Button fx:id="button_modifier" layoutX="533.0" layoutY="600.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="240.0" styleClass="AddButton_Student" stylesheets="@css/style.css" text="Relevé de notes" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

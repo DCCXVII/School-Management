@@ -26,7 +26,7 @@ public class ProfesseurDao {
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(sql)) {
             if (rs.next()) {
-                professeur.setImage(rs.getString("IMAGE"));
+                // professeur.setImage(rs.getString("IMAGE"));
                 professeur.setNom(rs.getString("NOM"));
                 professeur.setPrenom(rs.getString("PRENOM"));
                 professeur.setGender(rs.getString("GENRE").equals("Homme") ? Gender.Homme : Gender.Femme);
