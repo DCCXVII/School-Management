@@ -3,6 +3,7 @@ package master.iitn.model;
 public class Note {
     int ID_NOTE;
     int ID_ETUDIANT;
+    String NOM_MATIERE;
     float noteSemestre;
     int Annnee;
     Mentions mention;
@@ -27,6 +28,14 @@ public class Note {
 
     public void setID_NOTE(int ID_NOTE) {
         this.ID_NOTE = ID_NOTE;
+    }
+
+    public void setID_MATIERE(String NOM_MATIERE) {
+        this.NOM_MATIERE = NOM_MATIERE;
+    }
+
+    public String getID_MATIERE() {
+        return this.NOM_MATIERE;
     }
 
     public int getID_ETUDIANT() {
@@ -69,8 +78,14 @@ public class Note {
         this.Semestre = Semestre;
     }
 
-    public Note getNote(){
+    public Note getNote() {
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "Note{" + "ID_NOTE=" + ID_NOTE + ", ID_ETUDIANT=" + ID_ETUDIANT + ", noteSemestre=" + noteSemestre
+                + ", Annnee=" + Annnee + ", mention=" + mention + ", Semestre=" + Semestre + '}';
     }
 
 }
