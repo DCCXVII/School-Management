@@ -13,18 +13,19 @@ import master.iitn.model.User;
 public class LoginController {
 
     @FXML
-    private TextField email;
+    private TextField Email;
 
     @FXML
-    private TextField password;
+    private TextField Password;
 
     UserDao userdao = new UserDao();
 
     @FXML
     private void loginUser(ActionEvent event) throws IOException {
         try {
-            String EMAIL = email.getText();
-            String PASSWORD = password.getText();
+            String EMAIL = Email.getText().trim();
+            String PASSWORD = Password.getText().trim();
+            System.out.println(EMAIL + " " + PASSWORD);
             User LoggedUser = userdao.LoginUser(EMAIL, PASSWORD);
             SessionController.getInstance().setUser(LoggedUser);
             Redirect(LoggedUser);
@@ -39,7 +40,7 @@ public class LoginController {
 
         switch (userRole) {
             case Etudiant:
-                App.setRoot("view/ShowNotes", SessionController.getInstance().getUser());
+                App.setRoot("view/Etudiant/MainEtudiant", SessionController.getInstance().getUser());
                 break;
             case Administrateur:
                 App.setRoot("view/Admin", SessionController.getInstance().getUser());

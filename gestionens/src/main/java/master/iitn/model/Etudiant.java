@@ -1,17 +1,13 @@
 package master.iitn.model;
-
-import java.io.FileInputStream;
-import java.io.InputStream;
 import java.util.Date;
 
-import javafx.scene.image.Image;
+
 
 public class Etudiant extends User {
     private int ID_ETUDIANT;
     private String cne;
     private String niveau;
     private String ANNEE_UNIVERSITAIRE;
-    // private InputStream image;
     private String Class;
 
     public Etudiant() {

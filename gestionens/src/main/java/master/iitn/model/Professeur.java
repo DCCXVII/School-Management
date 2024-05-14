@@ -1,10 +1,8 @@
 package master.iitn.model;
 
-import java.io.FileInputStream;
 import java.sql.Date;
 import java.util.List;
 
-import javafx.scene.image.Image;
 
 public class Professeur extends User {
     public List<Matiere> matieres;

@@ -14,17 +14,17 @@
 
 <BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="master.iitn.controller.NoteController">
    <left>
-      <VBox fx:id="VBox_RightSide" prefHeight="720.0" prefWidth="315.0" styleClass="SideBareGui_Student" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+      <VBox fx:id="VBox_RightSide" prefHeight="720.0" prefWidth="315.0" styleClass="SideBareGui_Student" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
          <children>
             <ImageView fx:id="Ensa_Logo" fitHeight="84.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
                <VBox.margin>
                   <Insets left="65.0" top="32.0" />
                </VBox.margin>
                <image>
-                  <Image url="@../images/cropped-ensak-logo.png" />
+                  <Image url="@../../images/cropped-ensak-logo.png" />
                </image>
             </ImageView>
-            <Button fx:id="Btn_MesNotes" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="MES NOTES" >
+            <Button fx:id="Btn_MesNotes" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="MES NOTES" >
                <!-- onAction="#goToViewNotes" -->
                <VBox.margin>
                   <Insets left="20.0" top="32.0" />
@@ -32,7 +32,7 @@
                <graphic>
                   <ImageView fx:id="icone_Accueil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
                      <image>
-                        <Image url="@../images/bouton-daccueil.png" />
+                        <Image url="@../../images/bouton-daccueil.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -40,11 +40,11 @@
                   <Font size="1.0" />
                </font>
             </Button>
-            <Button fx:id="Btn_Inscription" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="INSCRIPTION">
+            <Button fx:id="Btn_Inscription" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="INSCRIPTION">
                <graphic>
                   <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
                      <image>
-                        <Image url="@../images/utilisateur.png" />
+                        <Image url="@../../images/utilisateur.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -55,14 +55,14 @@
                   <Insets left="20.0" top="25.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="LogoutBtn" mnemonicParsing="false" prefHeight="65.0" prefWidth="255.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Deconnecte">
+            <Button fx:id="LogoutBtn" mnemonicParsing="false" prefHeight="65.0" prefWidth="255.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Se Deconnecte">
                <font>
                   <Font size="1.0" />
                </font>
                <graphic>
                   <ImageView fx:id="icone_Logout" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
                      <image>
-                        <Image url="@../images/se-deconnecter.png" />
+                        <Image url="@../../images/se-deconnecter.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -74,9 +74,9 @@
       </VBox>
    </left>
    <center>
-      <VBox fx:id="Vbox_CenterSessionStudent" prefHeight="0.0" prefWidth="100.0" styleClass="VboxCenter" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+      <VBox fx:id="Vbox_CenterSessionStudent" prefHeight="0.0" prefWidth="100.0" styleClass="VboxCenter" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="Label_SessionStudent" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@css/style.css" text="Bienvenue, " textAlignment="RIGHT" textFill="#fdfdfd">
+            <Label fx:id="Label_SessionStudent" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@../css/style.css" text="Bienvenue, " textAlignment="RIGHT" textFill="#fdfdfd">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -84,7 +84,7 @@
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label fx:id="Label_AffichageNotes" alignment="CENTER" prefHeight="56.0" prefWidth="685.0" styleClass="LabelAdd_Student" stylesheets="@css/style.css" text="Affichage des Notes">
+            <Label fx:id="Label_AffichageNotes" alignment="CENTER" prefHeight="56.0" prefWidth="685.0" styleClass="LabelAdd_Student" stylesheets="@../css/style.css" text="Affichage des Notes">
                <VBox.margin>
                   <Insets left="147.5" />
                </VBox.margin>

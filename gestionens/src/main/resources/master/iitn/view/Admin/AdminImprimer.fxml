@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="720.0" prefWidth="980.0" styleClass="VboxCenter" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="75.0" prefWidth="965.0" styleClass="LabelGui_Student" stylesheets="@css/style.css" text="Gestion d'Impression" />
+            <Label fx:id="LabelShow_imprimer" alignment="CENTER" layoutX="141.0" layoutY="87.0" prefHeight="56.0" prefWidth="685.0" styleClass="LabelSearch_Student" stylesheets="@css/style.css" text="Espace impression" />
+            <TextField fx:id="TextFieldSearch_Student" layoutX="223.0" layoutY="172.0" promptText="CNE" styleClass="SerachField" stylesheets="@css/style.css" />
+            <Button fx:id="BtnSearch_Student" layoutX="560.0" layoutY="177.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="146.0" styleClass="SearchBtn" stylesheets="@css/style.css" text="Chercher">
+               <graphic>
+                  <ImageView fx:id="icone_chercher" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/chercher.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <GridPane fx:id="grid" layoutX="242.0" layoutY="497.0" prefHeight="144.0" prefWidth="480.0" styleClass="myGridPane" stylesheets="@css/style.css">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="222.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="254.0" minWidth="10.0" prefWidth="250.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ComboBox fx:id="combo_semestre" prefHeight="43.0" prefWidth="192.0" styleClass="ComboBox" stylesheets="@css/style.css">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <Button fx:id="button_modifier" mnemonicParsing="false" prefHeight="50.0" prefWidth="224.0" styleClass="AddButton_Student" stylesheets="@css/style.css" text="Relevé de notes" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="button_ajouter" mnemonicParsing="false" prefHeight="50.0" prefWidth="228.0" styleClass="AddButton_Student" stylesheets="@css/style.css" text="Attestation de scolarité" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+            </GridPane>
+            <TableView fx:id="TableView_Student" layoutX="45.0" layoutY="253.0" prefHeight="208.0" prefWidth="874.0" stylesheets="@css/style.css">
+               <columns>
+                  <TableColumn fx:id="Clm_Classe" prefWidth="120.0" text="Classe" />
+                  <TableColumn fx:id="Clm_NomPrenom" prefWidth="223.0" text="Nom &amp; Prénom" />
+                  <TableColumn fx:id="Clm_CNE" prefWidth="203.0" text="CNE" />
+                  <TableColumn fx:id="Clm_Note" prefWidth="145.0" text="Note" />
+                  <TableColumn fx:id="Clm_Résultat" prefWidth="173.0" text="Résultat" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

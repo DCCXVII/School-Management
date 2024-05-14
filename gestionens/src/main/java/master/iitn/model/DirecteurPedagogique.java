@@ -1,9 +1,6 @@
 package master.iitn.model;
 
-import java.io.FileInputStream;
 import java.sql.Date;
-
-import javafx.scene.image.Image;
 
 public class DirecteurPedagogique extends User {
     private int id_directeur;

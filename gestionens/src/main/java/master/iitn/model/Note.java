@@ -9,7 +9,7 @@ public class Note {
     private String session2;
     private Double noteS2;
     private String resultatS2;
-    private int ID_ETUDIANT;
+    // private int ID_ETUDIANT;
 
     public Note() {
     }
@@ -88,11 +88,11 @@ public class Note {
         return resultatS2;
     }
 
-    public void setID_ETUDIANT(int ID_ETUDIANT) {
-        this.ID_ETUDIANT = ID_ETUDIANT;
-    }
+    // public void setID_ETUDIANT(int ID_ETUDIANT) {
+    //     this.ID_ETUDIANT = ID_ETUDIANT;
+    // }
 
-    public int getID_ETUDIANT() {
-        return ID_ETUDIANT;
-    }
+    // public int getID_ETUDIANT() {
+    //     return ID_ETUDIANT;
+    // }
 }
