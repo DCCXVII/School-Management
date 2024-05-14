@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox fx:id="VBox_LeftSide" prefHeight="720.0" prefWidth="315.0" styleClass="SideBareGui_Student" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="Ensa_Logo" fitHeight="84.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cropped-ensak-logo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="65.0" top="25.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button fx:id="Btn_ProfilDirecteur" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Profil">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/utilisateur.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="25.0" top="40.0" />
+               </VBox.margin>
+            </Button>
+            <MenuButton fx:id="Btn_NotesDirecteurPeda" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" text="Génerer Notes">
+               <items>
+                  <MenuItem fx:id="Btn_NotesModuleDirecteurPeda" mnemonicParsing="false" text="Notes des Modules" />
+                  <MenuItem fx:id="Btn_NotesSemettresDirecteurPeda" mnemonicParsing="false" text="Notes de Seméstres" />
+               </items>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/grade.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+            </MenuButton>
+            <Button fx:id="LogoutBtn" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Deconnecte">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="icone_Logout" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                     <image>
+                        <Image url="@../images/se-deconnecter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="20.0" top="315.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="720.0" prefWidth="966.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="Label_SessionAdmin" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@css/style.css" textAlignment="RIGHT" textFill="#fdfdfd">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="Label_InformationPersonnel" alignment="CENTER" contentDisplay="CENTER" prefHeight="56.0" prefWidth="685.0" styleClass="LabelAdd_Student" stylesheets="@css/style.css" text="INFORMATION PERSONNELES">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="147.5" top="32.0" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane fx:id="AnchorePaneSessionStudent" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <GridPane fx:id="Grid_InformationPersonnele" hgap="10.0" layoutX="15.0" layoutY="1.0" prefHeight="368.0" prefWidth="935.0" style="-fx-background-color: #ffffff;" vgap="10.0" AnchorPane.bottomAnchor="-27.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="Label_Nom" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Nom">
+                           <GridPane.margin>
+                              <Insets left="250.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="Label_ShowNom" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@css/style.css" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="Label_Prenom" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Prénom" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="250.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="Label_ShowPrenom" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="Label_CIN" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="CIN" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="250.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="Label_ShowCIN" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="Label_Email" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="E-mail" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="250.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="Label_ShowEmail" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="Label_Phone" alignment="CENTER" layoutX="20.0" layoutY="143.0" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Phone" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="250.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="Label_ShowPhone" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

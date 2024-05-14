@@ -11,6 +11,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.imageio.ImageIO;
+import javax.swing.JComboBox;
+
+import javafx.collections.ObservableList;
+import javafx.scene.control.ComboBox;
 
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -71,18 +75,17 @@ public class AdministrateurDao {
     public void addEtudiant(Etudiant etudiant) throws IOException{
         String insertUserSql = "INSERT INTO USER (IMAGE, NOM, PRENOM, GENRE, DATE_NAISSANCE, CIN, PHONE, EMAIL, PASSWORD, ROLE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         // String getUserIdSql = "SELECT LAST_INSERT_ID()";
-        String insertEtudiantSql = "INSERT INTO ETUDIANT (ID_USER, ID_CLASS, CNE) VALUES (?, 1, ?)";
+        String insertEtudiantSql = "INSERT INTO ETUDIANT (ID_USER, CNE) VALUES (?, ?)";
+        String insertEtatSql = "INSERT INTO ETAT (ID_ETUDIANT, ID_CLASS, SEMESTRE, ANNEE_UNIVERSITAIRE) VALUES (?, ?, ?, ?)";
 
         try (Connection conn = connectionFactory.getConnection();
                 PreparedStatement userStmt = conn.prepareStatement(insertUserSql, Statement.RETURN_GENERATED_KEYS);
-                PreparedStatement etudiantStmt = conn.prepareStatement(insertEtudiantSql)) {
+                PreparedStatement etudiantStmt = conn.prepareStatement(insertEtudiantSql);
+                PreparedStatement etatStmt = conn.prepareStatement(insertEtatSql)) {
+
             conn.setAutoCommit(false);
             
-            // setBinaryStream(1, fis, (int) imageFile.length())
-            // Insert user data
-        
-            // System.out.println(etudiant.getImage());
-            File imageFile = new File(etudiant.getImage()); // Replace this with the path to your image file
+            File imageFile = new File(etudiant.getImage());
             FileInputStream fis = new FileInputStream(imageFile);
 
             userStmt.setBinaryStream(1, fis);
@@ -96,8 +99,10 @@ public class AdministrateurDao {
             userStmt.setString(9, utils.generateHash(etudiant.getPassword()));
             userStmt.setString(10, Roles.Etudiant.toString());
             userStmt.executeUpdate();
-            System.out.println(userStmt.toString());
-            // Get the generated user ID
+
+            // System.out.println(userStmt.toString());
+
+            // GET LAST ID USER
             int userId;
             try (ResultSet rs = userStmt.getGeneratedKeys()) {
                 if (rs.next()) {
@@ -110,19 +115,59 @@ public class AdministrateurDao {
             // Insert etudiant data
             etudiantStmt.setInt(1, userId);
             etudiantStmt.setString(2, etudiant.getCne());
-            // etudiantStmt.setString(3, etudiant.getLevel());
             etudiantStmt.executeUpdate();
 
+            // GET LAST ID ETUDIANT
+            int etudiantId;
+            try (ResultSet rs = etudiantStmt.getGeneratedKeys()) {
+                if (rs.next()) {
+                    etudiantId = rs.getInt(1);
+                } else {
+                    throw new SQLException("Failed to get generated user ID");
+                }
+            }
+
+            // INSERT ETAT DATA
+            etatStmt.setInt(1, etudiantId);
+            etatStmt.setInt(2, userId);
+            etatStmt.setString(3, etudiant.getLevel());
+            etatStmt.setString(4, etudiant.getAnneeUniversitaire());
+            etatStmt.executeUpdate();
+            
             conn.commit();
+
             System.out.println("Insertion successful!");
+
         } catch (SQLException e) {
             logError("Error adding student: ", e);
             throw new RuntimeException("Error adding student", e);
         }
     }
 
+    public ObservableList<String> getClassNames() {
+        ComboBox<String> classeComboBox = new ComboBox<>();
+        String sql = "SELECT ID_CLASS, NOM_CLASS FROM CLASS";
+        String classInfo ;
+        try (Connection conn = connectionFactory.getConnection()) {
+            PreparedStatement getClassStmt = conn.prepareStatement(sql);
+            ResultSet resultClassName = getClassStmt.executeQuery();
+    
+            while (resultClassName.next()) {
+                classInfo = resultClassName.getInt("ID_CLASS") +" "+ resultClassName.getString("NOM_CLASS");
+                classeComboBox.getItems().add(classInfo);
+            }
+    
+        } catch (SQLException e) {
+            logError("Error getting class names: ", e);
+            throw new RuntimeException("Error getting class names", e);
+        }
+        System.err.println(classeComboBox.getItems().toString());
+        return classeComboBox.getItems();
+    }
+    
     private void logError(String message, Exception e) {
         // Implement logging mechanism
         System.err.println(message + e.getMessage());
     }
+
 }

@@ -27,6 +27,24 @@
                   <Insets bottom="10.0" left="65.0" top="25.0" />
                </VBox.margin>
             </ImageView>
+            <Button fx:id="ProfilBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Profil">
+               <graphic>
+                  <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/utilisateur.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
             <Button fx:id="Button_Matiere" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Gestion de Matière">
                <graphic>
                   <ImageView fx:id="icone_Matiere" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
@@ -82,25 +100,7 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button fx:id="ProfilBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Profil">
-               <graphic>
-                  <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/utilisateur.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font size="1.0" />
-               </font>
-               <VBox.margin>
-                  <Insets left="25.0" top="15.0" />
-               </VBox.margin>
-               <padding>
-                  <Insets left="20.0" />
-               </padding>
-            </Button>
-            <Button fx:id="LogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Déconnecter">
+            <Button fx:id="LogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Deconnecte">
                <font>
                   <Font size="1.0" />
                </font>

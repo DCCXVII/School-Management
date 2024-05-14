@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
@@ -20,7 +21,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="master.iitn.controller.AdministrateurController">
    <left>
       <VBox fx:id="VBox_RightSide" prefHeight="720.0" prefWidth="315.0" styleClass="SideBareGui_Student" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
          <children>
@@ -32,6 +33,24 @@
                   <Insets bottom="10.0" left="65.0" top="25.0" />
                </VBox.margin>
             </ImageView>
+            <Button fx:id="ProfilBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Profil">
+               <graphic>
+                  <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/utilisateur.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
             <Button fx:id="Button_Matiere" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Gestion de Matière">
                <graphic>
                   <ImageView fx:id="icone_Matiere" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
@@ -87,25 +106,7 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button fx:id="ProfilBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Profil">
-               <graphic>
-                  <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/utilisateur.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font size="1.0" />
-               </font>
-               <VBox.margin>
-                  <Insets left="25.0" top="15.0" />
-               </VBox.margin>
-               <padding>
-                  <Insets left="20.0" />
-               </padding>
-            </Button>
-            <Button fx:id="LogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Déconnecter">
+            <Button fx:id="LogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Deconnecte">
                <font>
                   <Font size="1.0" />
                </font>
@@ -293,21 +294,19 @@
                               <Insets left="45.0" top="5.0" />
                            </GridPane.margin>
                         </AnchorPane>
-                        <Button fx:id="ImportBtn_Student" mnemonicParsing="false" prefHeight="45.0" prefWidth="165.0" styleClass="BtnImportation" stylesheets="@css/style.css" text="Importer Image" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                        <Button fx:id="ImportBtn_Student" mnemonicParsing="false" prefHeight="45.0" prefWidth="165.0" styleClass="BtnImportation" stylesheets="@css/style.css" text="Importer Image" GridPane.columnIndex="3" GridPane.rowIndex="5" onAction="#ImportStudentImage">
                            <GridPane.margin>
                               <Insets left="50.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <MenuButton alignment="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="40.0" prefWidth="175.0" text="Classes" GridPane.columnIndex="3" GridPane.rowIndex="3">
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Master IITN" />
-                            <MenuItem mnemonicParsing="false" text="Master SSI" />
-                              <MenuItem mnemonicParsing="false" text="Génie Industriel" />
-                          </items>
+                        <ComboBox fx:id="ComboBoxClasse" prefHeight="39.0" prefWidth="204.0" promptText="Classe" styleClass="combo-box" stylesheets="@css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="3">
                            <GridPane.margin>
-                              <Insets bottom="5.0" left="50.0" />
+                              <Insets left="30.0" right="30.0" />
                            </GridPane.margin>
-                        </MenuButton>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </ComboBox>
                      </children>
                      <opaqueInsets>
                         <Insets />
@@ -330,7 +329,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="AddBtn_Student" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="AddButton_Student" stylesheets="@css/style.css" text="Ajouter">
+                  <Button fx:id="AddBtn_Student" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="AddButton_Student" stylesheets="@css/style.css" text="Ajouter" onAction="#addNewUser">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>

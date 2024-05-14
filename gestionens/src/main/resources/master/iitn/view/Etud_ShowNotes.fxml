@@ -24,11 +24,11 @@
                   <Image url="@../images/cropped-ensak-logo.png" />
                </image>
             </ImageView>
-            <Button fx:id="Btn_MesNotes" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="MES NOTES">
+            <Button fx:id="Btn_Inscription" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="INSCRIPTION">
                <graphic>
-                  <ImageView fx:id="icone_Accueil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/bouton-daccueil.png" />
+                        <Image url="@../images/utilisateur.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -42,11 +42,11 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button fx:id="Btn_Inscription" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="INSCRIPTION">
+            <Button fx:id="Btn_MesNotes" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="MES NOTES">
                <graphic>
-                  <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="icone_Accueil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/utilisateur.png" />
+                        <Image url="@../images/bouton-daccueil.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -60,7 +60,7 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button fx:id="LogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="255.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Deconnecte">
+            <Button fx:id="LogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="255.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Déconnecter">
                <font>
                   <Font size="1.0" />
                </font>

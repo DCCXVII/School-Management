@@ -27,24 +27,9 @@
                   <Insets bottom="10.0" left="65.0" top="25.0" />
                </VBox.margin>
             </ImageView>
-            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Gestion des Notes">
-               <VBox.margin>
-                  <Insets left="25.0" top="40.0" />
-               </VBox.margin>
-               <graphic>
-                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../images/grade.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <padding>
-                  <Insets left="20.0" />
-               </padding>
-            </Button>
             <Button alignment="BASELINE_LEFT" layoutX="10.0" layoutY="129.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Profil">
                <VBox.margin>
-                  <Insets left="25.0" top="15.0" />
+                  <Insets left="25.0" top="40.0" />
                </VBox.margin>
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
@@ -57,7 +42,22 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button fx:id="LogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Déconnecter">
+            <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Gestion des Notes">
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/grade.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="LogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Deconnecte">
                <font>
                   <Font size="1.0" />
                </font>
@@ -91,12 +91,12 @@
                <children>
                   <VBox prefWidth="326.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="55.0" prefWidth="225.0" styleClass="LabelGui_ProfNotes" stylesheets="@css/style.css" text="CNE">
+                        <Label fx:id="Label_CNE" alignment="CENTER" prefHeight="55.0" prefWidth="225.0" styleClass="LabelGui_ProfNotes" stylesheets="@css/style.css" text="CNE">
                            <VBox.margin>
                               <Insets left="50.0" top="15.0" />
                            </VBox.margin>
                         </Label>
-                        <Label alignment="CENTER" prefHeight="55.0" prefWidth="225.0" styleClass="LabelGui_ProfNotes" stylesheets="@css/style.css" text="Note">
+                        <Label fx:id="Label_Note" alignment="CENTER" prefHeight="55.0" prefWidth="225.0" styleClass="LabelGui_ProfNotes" stylesheets="@css/style.css" text="Note">
                            <VBox.margin>
                               <Insets left="50.0" top="15.0" />
                            </VBox.margin>
@@ -105,12 +105,12 @@
                   </VBox>
                   <VBox prefWidth="326.0">
                      <children>
-                        <TextField prefHeight="55.0" prefWidth="50.0" styleClass="TextField_ProfNotes" stylesheets="@css/style.css">
+                        <TextField fx:id="Text_Cne" prefHeight="55.0" prefWidth="50.0" styleClass="TextField_ProfNotes" stylesheets="@css/style.css">
                            <VBox.margin>
                               <Insets left="50.0" right="50.0" top="15.0" />
                            </VBox.margin>
                         </TextField>
-                        <TextField prefHeight="55.0" prefWidth="221.0" styleClass="TextField_ProfNotes" stylesheets="@css/style.css">
+                        <TextField fx:id="Text_Note" prefHeight="55.0" prefWidth="221.0" styleClass="TextField_ProfNotes" stylesheets="@css/style.css">
                            <VBox.margin>
                               <Insets left="50.0" right="50.0" top="15.0" />
                            </VBox.margin>
@@ -124,7 +124,7 @@
                   </VBox>
                   <VBox prefWidth="326.0">
                      <children>
-                        <MenuButton alignment="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="55.0" prefWidth="225.0" styleClass="AddNotesMenu" stylesheets="@css/style.css" text="Classes">
+                        <MenuButton fx:id="MenuButton_Classe" alignment="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="55.0" prefWidth="225.0" styleClass="AddNotesMenu" stylesheets="@css/style.css" text="Classe">
                           <items>
                             <MenuItem mnemonicParsing="false" text="Master IITN" />
                             <MenuItem mnemonicParsing="false" text="Master SSI" />
@@ -133,7 +133,7 @@
                               <Insets left="50.0" top="15.0" />
                            </VBox.margin>
                         </MenuButton>
-                        <MenuButton alignment="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="59.0" prefWidth="225.0" styleClass="AddNotesMenu" stylesheets="@css/style.css" text="Matiers">
+                        <MenuButton fx:id="MenuButton_Matière" alignment="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="59.0" prefWidth="225.0" styleClass="AddNotesMenu" stylesheets="@css/style.css" text="Matière">
                            <items>
                               <MenuItem mnemonicParsing="false" text="Supply Chaine" />
                               <MenuItem mnemonicParsing="false" text="CPOO" />
@@ -142,7 +142,7 @@
                               <Insets left="50.0" top="15.0" />
                            </VBox.margin>
                         </MenuButton>
-                        <MenuButton alignment="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="59.0" prefWidth="225.0" styleClass="AddNotesMenu" stylesheets="@css/style.css" text="Session">
+                        <MenuButton fx:id="MenuButton_session" alignment="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="59.0" prefWidth="225.0" styleClass="AddNotesMenu" stylesheets="@css/style.css" text="Session">
                            <items>
                               <MenuItem mnemonicParsing="false" text="Session Normal" />
                               <MenuItem mnemonicParsing="false" text="Session Rattrapage" />

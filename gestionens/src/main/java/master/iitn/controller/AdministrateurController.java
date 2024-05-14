@@ -69,9 +69,9 @@ public class AdministrateurController implements Initializable {
         RBtn_MaleStudent.setToggleGroup(Genre);
         RBtn_FemaleStudent.setToggleGroup(Genre);
 
-        String sql = "SELECT * FROM CLASS";
         // Initialize the ChoiceBox
-        ComboBoxClasse.getItems().addAll("IITN", "GE");
+        // ComboBoxClasse.getItems().addAll("IITN", "GE");
+        ComboBoxClasse.getItems().addAll(administrateurService.getClassNames()) ;
     }
 
     // Gender Section
@@ -140,7 +140,7 @@ public class AdministrateurController implements Initializable {
             LocalDate selectedDate = DateNaissanceEtudiant.getValue();
             Date dateOfBirth = (selectedDate != null) ? java.sql.Date.valueOf(selectedDate) : null;
             
-            System.out.println(profilePath.toString());
+            // System.out.println(profilePath.toString());
         
             // String image = "default";
             Roles role = Roles.Etudiant;
@@ -195,14 +195,9 @@ public class AdministrateurController implements Initializable {
             this.profilePath = file.getAbsolutePath();
 
             FileInputStream inputStream = new FileInputStream(profilePath);
-            System.out.println("tttttttest 1111111111111");
-            System.out.println(profilePath);
             ProfileStudent.setImage(new Image(inputStream)); 
 
-            System.out.println("tttttttest 2222222222222222222");
-            System.out.println(profilePath);
-
-            // inputStream.close();
+            inputStream.close();
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
