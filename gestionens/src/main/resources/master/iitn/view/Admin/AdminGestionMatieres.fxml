@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox fx:id="Vbox_Center" prefHeight="0.0" prefWidth="100.0" styleClass="VboxCenter" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="Label_GestionMatière" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@css/style.css" text="Gestion de matière" textAlignment="RIGHT" textFill="#fdfdfd">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="Label_AjouterMatière" alignment="CENTER" prefHeight="56.0" prefWidth="685.0" styleClass="LabelAdd_Student" stylesheets="@css/style.css" text="Ajouter une matière">
+               <VBox.margin>
+                  <Insets left="147.1405" />
+               </VBox.margin>
+            </Label>
+            <HBox fx:id="HBox_AddMatiere" prefHeight="150.0" prefWidth="980.0" styleClass="HBox_AddM" stylesheets="@css/style.css">
+               <children>
+                  <VBox>
+                     <HBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </HBox.margin>
+                     <children>
+                        <ComboBox fx:id="ComboModule" prefHeight="60.0" prefWidth="225.0" promptText="Module" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <HBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </HBox.margin>
+                     <children>
+                        <ComboBox fx:id="ComboClasse" prefHeight="60.0" prefWidth="225.0" promptText="Classe" />
+                        <Label fx:id="LabelNom_Matiere" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" prefWidth="225.0" styleClass="LabelAjoutM" stylesheets="@css/style.css" text="Nom du matière ">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <HBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </HBox.margin>
+                     <children>
+                        <ComboBox fx:id="ComboMatiere" prefHeight="60.0" prefWidth="225.0" promptText="Gestion de Matière" />
+                        <TextField fx:id="TextField_AddMatiere" prefHeight="60.0" prefWidth="225.0" styleClass="TextFieldAjoutM" stylesheets="@css/style.css">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="Label_AfficherMatière" alignment="CENTER" prefHeight="56.0" prefWidth="685.0" styleClass="LabelAdd_Student" stylesheets="@css/style.css" text="Afficher une matière">
+               <VBox.margin>
+                  <Insets left="140.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TableView fx:id="TableView_Matiere" prefHeight="275.0" prefWidth="385.0" stylesheets="@css/style.css">
+               <columns>
+                  <TableColumn fx:id="Col_Classe" minWidth="0.0" prefWidth="270.0" text="Classe" />
+                  <TableColumn fx:id="Col_Module" minWidth="0.0" prefWidth="317.0" text="Module" />
+                  <TableColumn fx:id="Col_NomMatiere" minWidth="0.0" prefWidth="317.0" text="Nom du Matière" />
+               </columns>
+               <VBox.margin>
+                  <Insets left="25.0" right="25.0" top="20.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

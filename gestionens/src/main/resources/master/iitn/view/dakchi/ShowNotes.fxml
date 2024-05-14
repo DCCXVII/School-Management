@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ETUDAINT NOTES AFFICHAGE -->
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="master.iitn.controller.NoteController">
+   <left>
+      <VBox fx:id="VBox_RightSide" prefHeight="720.0" prefWidth="315.0" styleClass="SideBareGui_Student" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="Ensa_Logo" fitHeight="84.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets left="65.0" top="32.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@../../images/cropped-ensak-logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Btn_MesNotes" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="MES NOTES" >
+               <!-- onAction="#goToViewNotes" -->
+               <VBox.margin>
+                  <Insets left="20.0" top="32.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fx:id="icone_Accueil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                     <image>
+                        <Image url="@../../images/bouton-daccueil.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </Button>
+            <Button fx:id="Btn_Inscription" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="INSCRIPTION">
+               <graphic>
+                  <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
+                     <image>
+                        <Image url="@../../images/utilisateur.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="20.0" top="25.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="LogoutBtn" mnemonicParsing="false" prefHeight="65.0" prefWidth="255.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Se Deconnecte">
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="icone_Logout" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+                     <image>
+                        <Image url="@../../images/se-deconnecter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="20.0" top="325.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox fx:id="Vbox_CenterSessionStudent" prefHeight="0.0" prefWidth="100.0" styleClass="VboxCenter" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="Label_SessionStudent" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@../css/style.css" text="Bienvenue, " textAlignment="RIGHT" textFill="#fdfdfd">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="Label_AffichageNotes" alignment="CENTER" prefHeight="56.0" prefWidth="685.0" styleClass="LabelAdd_Student" stylesheets="@../css/style.css" text="Affichage des Notes">
+               <VBox.margin>
+                  <Insets left="147.5" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane fx:id="AnchorePaneSessionStudent" prefHeight="200.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <children>
+                  <TableView fx:id="notesTable" prefHeight="500.0" prefWidth="980.0">
+                    <columns>
+                      <TableColumn fx:id="Annee" prefWidth="136.0" text="ANNEE" />
+                      <TableColumn fx:id="Matiere" prefWidth="169.99990844726562" text="Matière " />
+                        <TableColumn fx:id="Session1" prefWidth="140.0" text="Session 1">
+                           <columns>
+                              <TableColumn fx:id="NoteS1" prefWidth="165.0" text="NOTE" />
+                              <TableColumn fx:id="ResultatS1" prefWidth="165.0" text="RESULTAT" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="Session2" minWidth="0.0" prefWidth="344.8887939453125" text="Session 2">
+                           <columns>
+                              <TableColumn fx:id="NoteS2" prefWidth="165.0" text="NOTE" />
+                              <TableColumn fx:id="ResultatS2" prefWidth="165.0" text="RESULTAT" />
+                           </columns>
+                        </TableColumn>
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

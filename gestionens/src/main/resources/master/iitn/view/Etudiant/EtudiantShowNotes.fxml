@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox fx:id="Vbox_CenterSessionStudent" prefHeight="0.0" prefWidth="100.0" styleClass="VboxCenter" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="Label_SessionStudent" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@../css/style.css" textAlignment="RIGHT" textFill="#fdfdfd">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="Label_AffichageNotes" alignment="CENTER" prefHeight="56.0" prefWidth="685.0" styleClass="LabelAdd_Student" stylesheets="@../css/style.css" text="Affichage des Notes">
+               <VBox.margin>
+                  <Insets left="147.5" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane fx:id="AnchorePaneSessionStudent" prefHeight="200.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <children>
+                  <TableView fx:id="TableViewShowNotes" layoutY="16.0" prefHeight="484.0" prefWidth="980.0">
+                    <columns>
+                      <TableColumn fx:id="Clm_Année" prefWidth="136.0" text="Année" />
+                      <TableColumn fx:id="Clm_Matière" prefWidth="169.99990844726562" text="Matière " />
+                        <TableColumn fx:id="Clm_SessionNormale" prefWidth="140.0" text="Session normale">
+                           <columns>
+                              <TableColumn fx:id="Clm_NoteS1" prefWidth="165.0" text="Note" />
+                              <TableColumn fx:id="Clm_ResultatS1" prefWidth="165.0" text="Résultat" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="Clm_SessionRattrapage" minWidth="0.0" prefWidth="344.8887939453125" text="Session rattrapage">
+                           <columns>
+                              <TableColumn fx:id="Clm_NoteS2" prefWidth="165.0" text="Note" />
+                              <TableColumn fx:id="Clm_ResultatS2" prefWidth="165.0" text="Résultat" />
+                           </columns>
+                        </TableColumn>
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

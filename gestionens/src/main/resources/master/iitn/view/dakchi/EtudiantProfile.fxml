@@ -14,57 +14,38 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="master.iitn.controller.EtudiantController">
    <left>
       <VBox fx:id="VBox_RightSide" prefHeight="720.0" prefWidth="315.0" styleClass="SideBareGui_Student" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
          <children>
             <ImageView fx:id="Ensa_Logo" fitHeight="84.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
                <VBox.margin>
-                  <Insets bottom="10.0" left="65.0" top="25.0" />
+                  <Insets left="65.0" top="32.0" />
                </VBox.margin>
                <image>
                   <Image url="@../../images/cropped-ensak-logo.png" />
                </image>
             </ImageView>
-<<<<<<< HEAD:gestionens/src/main/resources/master/iitn/view/Etud_StudentProfil.fxml
-            <Button fx:id="Btn_Inscription" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="INSCRIPTION">
-=======
-            <Button fx:id="Btn_MesNotes" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="MES NOTES">
->>>>>>> 269e45f0f5ccd9dd1264d0dc2cb4be7a39fe2477:gestionens/src/main/resources/master/iitn/view/Etudiant_Profil.fxml
+            <Button fx:id="Btn_MesNotes" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="MES NOTES">
+               <VBox.margin>
+                  <Insets left="20.0" top="32.0" />
+               </VBox.margin>
                <graphic>
-                  <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="icone_Accueil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
                      <image>
-<<<<<<< HEAD:gestionens/src/main/resources/master/iitn/view/Etud_StudentProfil.fxml
-                        <Image url="@../images/utilisateur.png" />
-=======
                         <Image url="@../../images/bouton-daccueil.png" />
->>>>>>> 269e45f0f5ccd9dd1264d0dc2cb4be7a39fe2477:gestionens/src/main/resources/master/iitn/view/Etudiant_Profil.fxml
                      </image>
                   </ImageView>
                </graphic>
                <font>
                   <Font size="1.0" />
                </font>
-               <VBox.margin>
-                  <Insets left="25.0" top="40.0" />
-               </VBox.margin>
-               <padding>
-                  <Insets left="20.0" />
-               </padding>
             </Button>
-<<<<<<< HEAD:gestionens/src/main/resources/master/iitn/view/Etud_StudentProfil.fxml
-            <Button fx:id="Btn_MesNotes" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="MES NOTES">
-=======
-            <Button fx:id="Btn_Inscription" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="INSCRIPTION">
->>>>>>> 269e45f0f5ccd9dd1264d0dc2cb4be7a39fe2477:gestionens/src/main/resources/master/iitn/view/Etudiant_Profil.fxml
+            <Button fx:id="Btn_Inscription" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="INSCRIPTION">
                <graphic>
-                  <ImageView fx:id="icone_Accueil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-5.0">
                      <image>
-<<<<<<< HEAD:gestionens/src/main/resources/master/iitn/view/Etud_StudentProfil.fxml
-                        <Image url="@../images/bouton-daccueil.png" />
-=======
                         <Image url="@../../images/utilisateur.png" />
->>>>>>> 269e45f0f5ccd9dd1264d0dc2cb4be7a39fe2477:gestionens/src/main/resources/master/iitn/view/Etudiant_Profil.fxml
                      </image>
                   </ImageView>
                </graphic>
@@ -72,29 +53,23 @@
                   <Font size="1.0" />
                </font>
                <VBox.margin>
-                  <Insets left="25.0" top="15.0" />
+                  <Insets left="20.0" top="25.0" />
                </VBox.margin>
-               <padding>
-                  <Insets left="20.0" />
-               </padding>
             </Button>
-            <Button fx:id="LogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="255.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Se Deconnecte">
+            <Button fx:id="LogoutBtn" mnemonicParsing="false" prefHeight="65.0" prefWidth="255.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Se Deconnecte">
                <font>
                   <Font size="1.0" />
                </font>
                <graphic>
-                  <ImageView fx:id="icone_Logout" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="icone_Logout" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
                      <image>
                         <Image url="@../../images/se-deconnecter.png" />
                      </image>
                   </ImageView>
                </graphic>
                <VBox.margin>
-                  <Insets left="25.0" top="315.0" />
+                  <Insets left="20.0" top="325.0" />
                </VBox.margin>
-               <padding>
-                  <Insets left="20.0" />
-               </padding>
             </Button>
          </children>
       </VBox>
@@ -102,7 +77,7 @@
    <center>
       <VBox fx:id="Vbox_CenterSessionStudent" prefHeight="0.0" prefWidth="100.0" styleClass="VboxCenter" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="Label_SessionStudent" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@../css/style.css" textAlignment="RIGHT" textFill="#fdfdfd">
+            <Label fx:id="SessionEtudiant" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@../css/style.css" text="Bienvenue, " textAlignment="RIGHT" textFill="#fdfdfd">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -138,7 +113,7 @@
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin></Label>
-                        <Label fx:id="Label_ShowNomStudent" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1">
+                        <Label fx:id="Nom" text="HELLO TEST" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1">
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin></Label>
@@ -146,7 +121,7 @@
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin></Label>
-                        <Label fx:id="Label_ShowPrenomStudent" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="3">
+                        <Label fx:id="Prenom" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="3">
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin></Label>
@@ -154,7 +129,7 @@
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin></Label>
-                        <Label fx:id="Label_ShowCNEStudent" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Label fx:id="Cne" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin></Label>
@@ -162,7 +137,7 @@
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin></Label>
-                        <Label fx:id="Label_ShowCINStudent" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <Label fx:id="Cin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin></Label>
@@ -170,17 +145,19 @@
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin></Label>
-                        <Label fx:id="Label_ShowDateStudent" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                           <GridPane.margin>
-                              <Insets left="10.0" right="10.0" />
-                           </GridPane.margin>
-                        </Label>
+                        <Label GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <Label fx:id="Label_EmailStudent" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="E-mail" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="Label_ShowEmailStudent" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                        <Label GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label fx:id="date2naissance" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="Email" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin>
@@ -190,7 +167,7 @@
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="Label_ShowPhoneStudent" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Label fx:id="Phone" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin>
@@ -220,7 +197,7 @@
                         <Insets left="45.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label fx:id="Label_ShowAnneeStudent" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.rowIndex="1">
+                  <Label fx:id="AnneeUniv" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="45.0" />
                      </GridPane.margin>
@@ -230,7 +207,7 @@
                         <Insets left="45.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label fx:id="Label_ShowClasseStudent" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Label fx:id="Classe" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="45.0" />
                      </GridPane.margin>
@@ -240,7 +217,7 @@
                         <Insets left="45.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label fx:id="Label_ShowNiveauStudent" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Label fx:id="Level" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="45.0" />
                      </GridPane.margin>

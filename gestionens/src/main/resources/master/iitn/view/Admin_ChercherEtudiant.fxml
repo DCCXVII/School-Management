@@ -19,16 +19,17 @@
 
 <BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <left>
-      <VBox fx:id="VBox_RightSide" prefHeight="720.0" prefWidth="315.0" styleClass="SideBareGui_Student" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+      <VBox fx:id="VBox_RightSide" prefHeight="720.0" prefWidth="315.0" styleClass="SideBareGui_Student" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
          <children>
             <ImageView fx:id="Ensa_Logo" fitHeight="84.0" fitWidth="194.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/cropped-ensak-logo.png" />
+                  <Image url="@../../images/cropped-ensak-logo.png" />
                </image>
                <VBox.margin>
                   <Insets bottom="10.0" left="65.0" top="25.0" />
                </VBox.margin>
             </ImageView>
+<<<<<<< HEAD
             <Button fx:id="ProfilBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Profil">
                <graphic>
                   <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
@@ -48,10 +49,13 @@
                </padding>
             </Button>
             <Button fx:id="Button_Matiere" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Gestion de Matière">
+=======
+            <Button fx:id="Button_Matiere" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Gestion de Matière">
+>>>>>>> 269e45f0f5ccd9dd1264d0dc2cb4be7a39fe2477
                <graphic>
                   <ImageView fx:id="icone_Matiere" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/livre.png" />
+                        <Image url="@../../images/livre.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -65,7 +69,7 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <MenuButton fx:id="MenuBtn_Student" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="MENU" stylesheets="@css/style.css" text="Gestion d'Etudiant">
+            <MenuButton fx:id="MenuBtn_Student" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="MENU" stylesheets="@../css/style.css" text="Gestion d'Etudiant">
                <items>
                   <MenuItem fx:id="AddBtn_Student1" mnemonicParsing="false" text="Ajouter Etudiant" />
                   <MenuItem fx:id="ShowBtn_Student" mnemonicParsing="false" text="Afficher Etudiant" />
@@ -73,7 +77,7 @@
                <graphic>
                   <ImageView fx:id="icone_Student" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/etudiant.png" />
+                        <Image url="@../../images/etudiant.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -84,7 +88,7 @@
                   <Insets left="10.0" />
                </padding>
             </MenuButton>
-            <Button fx:id="Button_impression" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Impression">
+            <Button fx:id="Button_impression" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Impression">
                <font>
                   <Font size="1.0" />
                </font>
@@ -94,7 +98,7 @@
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/impression.png" />
+                        <Image url="@../../images/impression.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -102,14 +106,36 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
+<<<<<<< HEAD
             <Button fx:id="LogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@css/style.css" text="Se Deconnecte">
+=======
+            <Button fx:id="ProfilBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Profil">
+               <graphic>
+                  <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/utilisateur.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font size="1.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </Button>
+            <Button fx:id="LogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Se Déconnecter">
+>>>>>>> 269e45f0f5ccd9dd1264d0dc2cb4be7a39fe2477
                <font>
                   <Font size="1.0" />
                </font>
                <graphic>
                   <ImageView fx:id="icone_Logout" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/se-deconnecter.png" />
+                        <Image url="@../../images/se-deconnecter.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -124,9 +150,9 @@
       </VBox>
    </left>
    <center>
-      <VBox fx:id="Vbox_Center" prefHeight="0.0" prefWidth="100.0" styleClass="HboxGui_Student" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+      <VBox fx:id="Vbox_Center" prefHeight="0.0" prefWidth="100.0" styleClass="HboxGui_Student" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="Label_AddStudent" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@css/style.css" text="Gestion des Etudiants" textAlignment="RIGHT" textFill="#fdfdfd">
+            <Label fx:id="Label_AddStudent" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@../css/style.css" text="Gestion des Etudiants" textAlignment="RIGHT" textFill="#fdfdfd">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -136,22 +162,23 @@
             </Label>
             <AnchorPane fx:id="AnchorPaneSearch_Student" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="LabelSearch_Student" alignment="CENTER" layoutX="140.0" prefHeight="56.0" prefWidth="685.0" styleClass="LabelSearch_Student" stylesheets="@css/style.css" text="Chercher Etudiant" />
-                  <AnchorPane fx:id="BorderPaneSearch_Student" layoutX="143.0" layoutY="65.0" prefHeight="163.0" prefWidth="685.0" styleClass="PaneSearch_Student" stylesheets="@css/style.css">
+                  <Label fx:id="LabelSearch_Student" alignment="CENTER" layoutX="140.0" prefHeight="56.0" prefWidth="685.0" styleClass="LabelSearch_Student" stylesheets="@../css/style.css" text="Chercher Etudiant" />
+                  <AnchorPane fx:id="BorderPaneSearch_Student" layoutX="143.0" layoutY="65.0" prefHeight="163.0" prefWidth="685.0" styleClass="PaneSearch_Student" stylesheets="@../css/style.css">
                      <children>
-                        <TextField fx:id="TextFieldSearch_Student" layoutX="103.0" layoutY="23.0" styleClass="SerachField" stylesheets="@css/style.css" />
-                        <Button fx:id="BtnSearch_Student" layoutX="440.0" layoutY="28.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="146.0" styleClass="SearchBtn" stylesheets="@css/style.css" text="Chercher">
+                        <TextField fx:id="TextFieldSearch_Student" layoutX="103.0" layoutY="23.0" styleClass="SerachField" stylesheets="@../css/style.css" />
+                        <Button fx:id="BtnSearch_Student" layoutX="440.0" layoutY="28.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="146.0" styleClass="SearchBtn" stylesheets="@../css/style.css" text="Chercher">
                            <graphic>
                               <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/chercher.png" />
+                                    <Image url="@../../images/chercher.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </Button>
-                        <RadioButton fx:id="RadioBtn_CIN" contentDisplay="TOP" layoutX="119.0" layoutY="103.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" styleClass="Showradio-button" stylesheets="@css/style.css" text="CIN">
+                        <RadioButton fx:id="RadioBtn_CIN" contentDisplay="TOP" layoutX="119.0" layoutY="103.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" styleClass="Showradio-button" stylesheets="@../css/style.css" text="CIN">
                            <opaqueInsets>
                               <Insets />
+<<<<<<< HEAD
                            </opaqueInsets>
                            <toggleGroup>
                               <ToggleGroup fx:id="Group" />
@@ -161,6 +188,14 @@
                               <Insets />
                            </opaqueInsets></RadioButton>
                         <RadioButton fx:id="RadioBtn_Classe" layoutX="447.0" layoutY="103.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" styleClass="Showradio-button" stylesheets="@css/style.css" text="Classe" toggleGroup="$Group">
+=======
+                           </opaqueInsets></RadioButton>
+                        <RadioButton fx:id="RadioBtn_CNE" layoutX="288.0" layoutY="103.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" styleClass="Showradio-button" stylesheets="@../css/style.css" text="CNE">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets></RadioButton>
+                        <RadioButton fx:id="RadioBtn_Classe" layoutX="447.0" layoutY="103.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="120.0" styleClass="Showradio-button" stylesheets="@../css/style.css" text="Classe">
+>>>>>>> 269e45f0f5ccd9dd1264d0dc2cb4be7a39fe2477
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets></RadioButton>
@@ -170,10 +205,10 @@
             </AnchorPane>
             <AnchorPane prefHeight="383.0" prefWidth="980.0">
                <children>
-                  <Label fx:id="LabelShow_Student" alignment="CENTER" layoutX="140.0" layoutY="8.0" prefHeight="56.0" prefWidth="685.0" styleClass="LabelSearch_Student" stylesheets="@css/style.css" text="Afficher Etudiant" />
-                  <VBox layoutY="72.0" prefHeight="328.0" prefWidth="980.0" stylesheets="@css/style.css">
+                  <Label fx:id="LabelShow_Student" alignment="CENTER" layoutX="140.0" layoutY="8.0" prefHeight="56.0" prefWidth="685.0" styleClass="LabelSearch_Student" stylesheets="@../css/style.css" text="Afficher Etudiant" />
+                  <VBox layoutY="72.0" prefHeight="328.0" prefWidth="980.0" stylesheets="@../css/style.css">
                      <children>
-                        <TableView fx:id="TableView_Student" prefHeight="326.0" prefWidth="980.0" stylesheets="@css/style.css">
+                        <TableView fx:id="TableView_Student" prefHeight="326.0" prefWidth="980.0" stylesheets="@../css/style.css">
                           <columns>
                             <TableColumn fx:id="ClmID_Etudiant" prefWidth="93.0" text="ID_Etudiant" />
                             <TableColumn fx:id="Clm_NomPrenom" prefWidth="147.0" text="Nom &amp; Prénom" />

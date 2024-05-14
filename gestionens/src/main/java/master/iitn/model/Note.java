@@ -1,91 +1,98 @@
 package master.iitn.model;
 
 public class Note {
-    int ID_NOTE;
-    int ID_ETUDIANT;
-    String NOM_MATIERE;
-    float noteSemestre;
-    int Annnee;
-    Mentions mention;
-    String Semestre;
+    private String annee;
+    private String matiere;
+    private String session1;
+    private Double noteS1;
+    private String resultatS1;
+    private String session2;
+    private Double noteS2;
+    private String resultatS2;
+    // private int ID_ETUDIANT;
 
     public Note() {
-
     }
 
-    public Note(int ID_NOTE, int ID_ETUDIANT, float noteSemestre, int Annnee, Mentions mention, String Semestre) {
-        this.ID_NOTE = ID_NOTE;
-        this.ID_ETUDIANT = ID_ETUDIANT;
-        this.noteSemestre = noteSemestre;
-        this.Annnee = Annnee;
-        this.mention = mention;
-        this.Semestre = Semestre;
+    public Note(String annee, String matiere, Double noteS1, String resultatS1,
+            Double noteS2, String resultatS2) {
+        this.annee = annee;
+        this.matiere = matiere;
+        this.noteS1 = noteS1;
+        this.resultatS1 = resultatS1;
+        this.noteS2 = noteS2;
+        this.resultatS2 = resultatS2;
     }
 
-    public int getID_NOTE() {
-        return ID_NOTE;
+    public String getAnnee() {
+        return annee;
     }
 
-    public void setID_NOTE(int ID_NOTE) {
-        this.ID_NOTE = ID_NOTE;
+    public String getMatiere() {
+        return matiere;
     }
 
-    public void setID_MATIERE(String NOM_MATIERE) {
-        this.NOM_MATIERE = NOM_MATIERE;
+    public String getSession1() {
+        return session1;
     }
 
-    public String getID_MATIERE() {
-        return this.NOM_MATIERE;
+    public Double getNoteS1() {
+        return noteS1;
     }
 
-    public int getID_ETUDIANT() {
-        return ID_ETUDIANT;
+    public void setAnnee(String annee) {
+        this.annee = annee;
     }
 
-    public void setID_ETUDIANT(int ID_ETUDIANT) {
-        this.ID_ETUDIANT = ID_ETUDIANT;
+    public void setMatiere(String matiere) {
+        this.matiere = matiere;
     }
 
-    public float getNoteSemestre() {
-        return noteSemestre;
+    public void setSession1(String session1) {
+        this.session1 = session1;
     }
 
-    public void setNoteSemestre(float noteSemestre) {
-        this.noteSemestre = noteSemestre;
+    public void setNoteS1(Double noteS1) {
+        this.noteS1 = noteS1;
     }
 
-    public int getAnnnee() {
-        return Annnee;
+    public void setResultatS1(String resultatS1) {
+        this.resultatS1 = resultatS1;
     }
 
-    public void setAnnnee(int Annnee) {
-        this.Annnee = Annnee;
+    public void setSession2(String session2) {
+        this.session2 = session2;
     }
 
-    public Mentions getMention() {
-        return mention;
+    public void setNoteS2(Double noteS2) {
+        this.noteS2 = noteS2;
     }
 
-    public void setMention(Mentions mention) {
-        this.mention = mention;
+    public void setResultatS2(String resultatS2) {
+        this.resultatS2 = resultatS2;
     }
 
-    public String getSemestre() {
-        return Semestre;
+    public String getResultatS1() {
+        return resultatS1;
     }
 
-    public void setSemestre(String Semestre) {
-        this.Semestre = Semestre;
+    public String getSession2() {
+        return session2;
     }
 
-    public Note getNote() {
-        return this;
+    public Double getNoteS2() {
+        return noteS2;
     }
 
-    @Override
-    public String toString() {
-        return "Note{" + "ID_NOTE=" + ID_NOTE + ", ID_ETUDIANT=" + ID_ETUDIANT + ", noteSemestre=" + noteSemestre
-                + ", Annnee=" + Annnee + ", mention=" + mention + ", Semestre=" + Semestre + '}';
+    public String getResultatS2() {
+        return resultatS2;
     }
 
+    // public void setID_ETUDIANT(int ID_ETUDIANT) {
+    //     this.ID_ETUDIANT = ID_ETUDIANT;
+    // }
+
+    // public int getID_ETUDIANT() {
+    //     return ID_ETUDIANT;
+    // }
 }
