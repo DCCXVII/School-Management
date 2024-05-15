@@ -87,6 +87,7 @@ public class AdministrateurController implements Initializable {
     private ComboBox<String> ComboBoxClasse;
 
     // Add Matiere Fields
+ 
     @FXML
     private TextField TextField_AddMatiere;
     @FXML
@@ -158,17 +159,17 @@ public class AdministrateurController implements Initializable {
         }
     }
 
-    @FXML
-    private void addNewMatiere(ActionEvent event) {
-        try {
-            String nomMatiere = TextField_AddMatiere.getText();
-            Matiere matiere = new Matiere(nomMatiere);
-            matiereService.addMatiere(matiere);
-            FillMatieres(event);
-        } catch (Exception e) {
-            logError("Error adding new matiere: ", e);
-        }
-    }
+    // @FXML
+    // private void addNewMatiere(ActionEvent event) {
+    //     try {
+    //         String nomMatiere = TextField_AddMatiere.getText();
+    //         Matiere matiere = new Matiere(nomMatiere);
+    //         matiereService.addMatiere(matiere);
+    //         FillMatieres(event);
+    //     } catch (Exception e) {
+    //         logError("Error adding new matiere: ", e);
+    //     }
+    // }
 
     @FXML
     public void FillMatieres(ActionEvent event) {

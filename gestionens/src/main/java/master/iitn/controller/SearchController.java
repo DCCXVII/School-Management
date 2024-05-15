@@ -57,7 +57,11 @@ public class SearchController implements Initializable{
     @FXML
     private TableColumn<User, String> CNE;
     @FXML
+    private TableColumn<User, String> Genre;
+    @FXML
     private TableColumn<User, String> Email;
+    @FXML
+    private TableColumn<User, String> Phone;
     @FXML
     private TableColumn<User, String> Classe;
 
@@ -79,13 +83,16 @@ public class SearchController implements Initializable{
     @FXML
     public void FillUpUsersTable(ActionEvent event) {
         // Bind the table columns to the properties of the User class
-        ID_Etudiant.setCellValueFactory(new PropertyValueFactory<>("id")); // Update to match the property name in User
+        ID_Etudiant.setCellValueFactory(new PropertyValueFactory<>("id"));
         Nom.setCellValueFactory(new PropertyValueFactory<>("nom"));
         Prenom.setCellValueFactory(new PropertyValueFactory<>("prenom"));
         CIN.setCellValueFactory(new PropertyValueFactory<>("cin"));
         CNE.setCellValueFactory(new PropertyValueFactory<>("cne"));
+        Genre.setCellValueFactory(new PropertyValueFactory<>("gender"));
         Email.setCellValueFactory(new PropertyValueFactory<>("email"));
-        Classe.setCellValueFactory(new PropertyValueFactory<>("Classe"));
+        Phone.setCellValueFactory(new PropertyValueFactory<>("phone"));
+        Classe.setCellValueFactory(new PropertyValueFactory<>("classe"));
+
         // Fetch all User objects from the database based on search criteria
         ObservableList<Etudiant> etudiants = searchingDao.searchEtudiant(getSelectedSeachIndex(),
                 SearchStudentField.getText());

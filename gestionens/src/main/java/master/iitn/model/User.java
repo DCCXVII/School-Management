@@ -13,7 +13,7 @@ public class User {
     private String password;
     private Roles role;
     private Date date_naissance;
-    private Gender geneder;
+    private Gender gender;
     private String phone;
 
     public User() {
@@ -37,7 +37,7 @@ public class User {
         this.cin = cin;
         this.phone = phone;
         this.date_naissance = date2naissance;
-        this.geneder = gender;
+        this.gender = gender;
     }
 
     public User getUser() {
@@ -49,7 +49,7 @@ public class User {
         return "User [nom=" + nom + ", prenom=" + prenom + ", email=" + email + ", password=" + password + ", role="
                 + role
                 + ", cin=" + cin + ", phone=" + phone + ", ID_USER=" + ID_USER + "date de naiss" + date_naissance
-                + "gender : " + geneder + "]";
+                + "gender : " + gender + "]";
     }
 
     public int getId() {
@@ -93,7 +93,7 @@ public class User {
     }
 
     public Gender getGender() {
-        return geneder;
+        return gender;
     }
 
     public void setId(int ID_USER) {
@@ -137,7 +137,7 @@ public class User {
     }
 
     public void setGender(Gender gender) {
-        this.geneder = gender;
+        this.gender = gender;
     }
 
     public boolean logout(User user) {

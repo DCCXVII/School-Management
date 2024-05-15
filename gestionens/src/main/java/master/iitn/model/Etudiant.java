@@ -7,31 +7,31 @@ public class Etudiant extends User {
     private int ID_ETUDIANT;
     private String cne;
     private String niveau;
-    private String ANNEE_UNIVERSITAIRE;
-    private String Class;
+    private String annee_universitaire;
+    private String classe;
 
     public Etudiant() {
         super();
     }
 
     public Etudiant(int ID_USER, String image, String nom, String prenom, String email, String password, Roles role,
-            String cin, String cne, String phone, Gender gender, Date date2naissance, String niveau, String Class,
+            String cin, String cne, String phone, Gender gender, Date date2naissance, String niveau, String classe,
             String anneeUniversitaire) {
         super(ID_USER, image, nom, prenom, email, password, role, cin, phone, gender, date2naissance);
         this.cne = cne;
         this.niveau = niveau;
-        this.Class = Class;
-        this.ANNEE_UNIVERSITAIRE = anneeUniversitaire;
+        this.classe = classe;
+        this.annee_universitaire = anneeUniversitaire;
     }
 
     // costumized constructors:
 
     // to retrieve more info about an etudiant from the database
-    public Etudiant(String cne, String Classe, String niveau, String anneeUniversitaire) {
+    public Etudiant(String cne, String classe, String niveau, String anneeUniversitaire) {
         this.cne = cne;
-        this.Class = Classe;
+        this.classe = classe;
         this.niveau = niveau;
-        this.ANNEE_UNIVERSITAIRE = anneeUniversitaire;
+        this.annee_universitaire = anneeUniversitaire;
     }
 
     // to use in the Etudiant space:
@@ -41,8 +41,8 @@ public class Etudiant extends User {
                 user.getRole(), user.getCin(), user.getPhone(), user.getGender(), user.getDate_naissance());
         this.cne = etudiant.getCne();
         this.niveau = etudiant.getLevel();
-        this.Class = etudiant.getClasse();
-        this.ANNEE_UNIVERSITAIRE = etudiant.getAnneeUniversitaire();
+        this.classe = etudiant.getClasse();
+        this.annee_universitaire = etudiant.getAnneeUniversitaire();
     }
 
     public String getLevel() {
@@ -63,11 +63,11 @@ public class Etudiant extends User {
     }
 
     public void setAnneeUniversitaire(String anneeUniversitaire) {
-        this.ANNEE_UNIVERSITAIRE = anneeUniversitaire;
+        this.annee_universitaire = anneeUniversitaire;
     }
 
     public String getAnneeUniversitaire() {
-        return this.ANNEE_UNIVERSITAIRE;
+        return this.annee_universitaire;
     }
 
     @Override
@@ -76,11 +76,11 @@ public class Etudiant extends User {
     }
 
     public String getClasse() {
-        return this.Class;
+        return this.classe;
     }
 
-    public void setClasse(String Class) {
-        this.Class = Class;
+    public void setClasse(String classe) {
+        this.classe = classe;
     }
 
     public int setID_ETUDIANT(int ID_ETUDIANT) {

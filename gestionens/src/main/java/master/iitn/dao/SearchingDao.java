@@ -38,9 +38,10 @@ public class SearchingDao {
     }
 
     private String getSearchQuery(String searchIndex) {
-        String sql = "SELECT e.ID_ETUDIANT, u.NOM, u.PRENOM, u.CIN, e.CNE, u.GENRE, u.EMAIL, u.PHONE, c.NOM_CLASS "
-                + "FROM USER u, ETUDIANT e, CLASS c "
-                + "WHERE u.ID_USER = e.ID_USER AND c.ID_CLASS = e.ID_CLASS AND %s = ?";
+        String sql = "SELECT e.ID_ETUDIANT, u.NOM, u.PRENOM, u.CIN, e.CNE, u.GENRE, u.EMAIL, u.PHONE, c.NOM_CLASS " + 
+                     "FROM USER u, ETUDIANT e, ETAT et, CLASS c " + 
+                     "WHERE u.ID_USER = e.ID_USER AND e.ID_ETUDIANT=et.ID_ETUDIANT " +
+                     "AND et.ID_CLASS= c.ID_CLASS AND %s = ?";
 
         switch (searchIndex) {
             case "CIN":

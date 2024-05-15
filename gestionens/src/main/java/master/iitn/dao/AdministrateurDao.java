@@ -80,7 +80,7 @@ public class AdministrateurDao {
 
         try (Connection conn = connectionFactory.getConnection();
                 PreparedStatement userStmt = conn.prepareStatement(insertUserSql, Statement.RETURN_GENERATED_KEYS);
-                PreparedStatement etudiantStmt = conn.prepareStatement(insertEtudiantSql);
+                PreparedStatement etudiantStmt = conn.prepareStatement(insertEtudiantSql, Statement.RETURN_GENERATED_KEYS);
                 PreparedStatement etatStmt = conn.prepareStatement(insertEtatSql)) {
 
             conn.setAutoCommit(false);
@@ -123,13 +123,14 @@ public class AdministrateurDao {
                 if (rs.next()) {
                     etudiantId = rs.getInt(1);
                 } else {
-                    throw new SQLException("Failed to get generated user ID");
+                    throw new SQLException("Failed to get generated student ID");
                 }
             }
 
             // INSERT ETAT DATA
+            int idClass = Integer.parseInt(etudiant.getClasse().split(" ")[0]);
             etatStmt.setInt(1, etudiantId);
-            etatStmt.setInt(2, userId);
+            etatStmt.setInt(2, idClass);
             etatStmt.setString(3, etudiant.getLevel());
             etatStmt.setString(4, etudiant.getAnneeUniversitaire());
             etatStmt.executeUpdate();

@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="master.iitn.controller.AdministrateurController">
    <center>
-      <VBox fx:id="Vbox_CenterSessionStudent" prefHeight="0.0" prefWidth="100.0" styleClass="VboxCenter" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+      <VBox fx:id="Vbox_CenterSessionStudent" prefHeight="0.0" prefWidth="100.0" styleClass="VboxCenter" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="Label_SessionAdmin" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@css/style.css" textAlignment="RIGHT" textFill="#fdfdfd">
+            <Label fx:id="Label_SessionAdmin" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@../css/style.css" textAlignment="RIGHT" textFill="#fdfdfd">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -22,7 +22,7 @@
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label fx:id="Label_InformationPersonnel" alignment="CENTER" prefHeight="56.0" prefWidth="685.0" styleClass="LabelAdd_Student" stylesheets="@css/style.css" text="INFORMATION PERSONNELES">
+            <Label fx:id="Label_InformationPersonnel" alignment="CENTER" prefHeight="56.0" prefWidth="685.0" styleClass="LabelAdd_Student" stylesheets="@../css/style.css" text="INFORMATION PERSONNELES">
                <VBox.margin>
                   <Insets bottom="30.0" left="147.5" top="32.0" />
                </VBox.margin>
@@ -45,46 +45,46 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label fx:id="Label_NomAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Nom">
+                        <Label fx:id="Label_NomAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="Nom">
                            <GridPane.margin>
                               <Insets left="250.0" right="10.0" />
                            </GridPane.margin></Label>
-                        <Label fx:id="Label_ShowNomAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@css/style.css" GridPane.columnIndex="1">
+                        <Label fx:id="Label_ShowNomAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1">
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin></Label>
-                        <Label fx:id="Label_PrenomAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Prénom" GridPane.rowIndex="1">
+                        <Label fx:id="Label_PrenomAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="Prénom" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="250.0" right="10.0" />
                            </GridPane.margin></Label>
-                        <Label fx:id="Label_ShowPrenomAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Label fx:id="Label_ShowPrenomAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin></Label>
-                        <Label fx:id="Label_CINAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="CIN" GridPane.rowIndex="2">
+                        <Label fx:id="Label_CINAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="CIN" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="250.0" right="10.0" />
                            </GridPane.margin></Label>
-                        <Label fx:id="Label_ShowCINAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <Label fx:id="Label_ShowCINAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin></Label>
-                        <Label fx:id="Label_EmailAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="E-mail" GridPane.rowIndex="3">
+                        <Label fx:id="Label_EmailAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="E-mail" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets left="250.0" right="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="Label_ShowEmailAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                        <Label fx:id="Label_ShowEmailAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="Label_PhoneAdmin" alignment="CENTER" layoutX="20.0" layoutY="143.0" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Phone" GridPane.rowIndex="4">
+                        <Label fx:id="Label_PhoneAdmin" alignment="CENTER" layoutX="20.0" layoutY="143.0" prefHeight="50.0" prefWidth="200.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="Phone" GridPane.rowIndex="4">
                            <GridPane.margin>
                               <Insets left="250.0" right="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="Label_ShowPhoneAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <Label fx:id="Label_ShowPhoneAdmin" alignment="CENTER" prefHeight="50.0" prefWidth="200.0" styleClass="LabelShowStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                            </GridPane.margin>

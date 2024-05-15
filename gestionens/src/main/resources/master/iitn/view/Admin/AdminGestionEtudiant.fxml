@@ -2,10 +2,9 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
@@ -20,11 +19,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="master.iitn.controller.AdministrateurController">
    <center>
-      <VBox fx:id="Vbox_Center" prefHeight="0.0" prefWidth="100.0" styleClass="VboxCenter" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
+      <VBox fx:id="Vbox_Center" prefHeight="0.0" prefWidth="100.0" styleClass="VboxCenter" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="Label_AddStudent" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@css/style.css" text="Gestion des Etudiants" textAlignment="RIGHT" textFill="#fdfdfd">
+            <Label fx:id="Label_AddStudent" alignment="CENTER" prefHeight="75.0" prefWidth="980.0" styleClass="LabelGui_Student" stylesheets="@../css/style.css" text="Gestion des Etudiants" textAlignment="RIGHT" textFill="#fdfdfd">
                <VBox.margin>
                   <Insets />
                </VBox.margin>
@@ -32,14 +31,14 @@
                   <Font size="32.0" />
                </font>
             </Label>
-            <Label fx:id="Label_AjouterEtudiant" alignment="CENTER" prefHeight="56.0" prefWidth="685.0" styleClass="LabelAdd_Student" stylesheets="@css/style.css" text="Ajouter Etudiant">
+            <Label fx:id="Label_AjouterEtudiant" alignment="CENTER" prefHeight="56.0" prefWidth="685.0" styleClass="LabelAdd_Student" stylesheets="@../css/style.css" text="Ajouter Etudiant">
                <VBox.margin>
                   <Insets left="147.5" />
                </VBox.margin>
             </Label>
             <AnchorPane prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <GridPane fx:id="Grid_AddStudent" layoutX="17.5" prefHeight="500.0" prefWidth="925.0" styleClass="myGridPane" stylesheets="@css/style.css">
+                  <GridPane fx:id="Grid_AddStudent" layoutX="17.5" prefHeight="500.0" prefWidth="925.0" styleClass="myGridPane" stylesheets="@../css/style.css">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="285.0" />
@@ -56,78 +55,78 @@
                     </rowConstraints>
                      <children>
                         <HBox prefHeight="100.0" prefWidth="200.0" />
-                        <Label fx:id="LabelName_Student" alignment="CENTER" prefHeight="45.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Nom">
+                        <Label fx:id="LabelName_Student" alignment="CENTER" prefHeight="45.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="Nom">
                            <GridPane.margin>
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="LabelCIN_Student" alignment="CENTER" prefHeight="45.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="CIN" GridPane.rowIndex="1">
+                        <Label fx:id="LabelCIN_Student" alignment="CENTER" prefHeight="45.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="CIN" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="LabelDate_Student" alignment="CENTER" prefHeight="45.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Date de Naissance" GridPane.rowIndex="2">
+                        <Label fx:id="LabelDate_Student" alignment="CENTER" prefHeight="45.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="Date de Naissance" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="LabelGenre_Student" alignment="CENTER" prefHeight="45.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Genre" GridPane.rowIndex="3">
+                        <Label fx:id="LabelGenre_Student" alignment="CENTER" prefHeight="45.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="Genre" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="LabelEmail_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="E-mail" GridPane.rowIndex="4">
+                        <Label fx:id="LabelEmail_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="E-mail" GridPane.rowIndex="4">
                            <GridPane.margin>
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="LabelPhone_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Phone" GridPane.rowIndex="5">
+                        <Label fx:id="LabelPhone_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="Phone" GridPane.rowIndex="5">
                            <GridPane.margin>
                               <Insets left="10.0" top="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="LabelFirstName_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Prénom" GridPane.columnIndex="2">
+                        <Label fx:id="LabelFirstName_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="Prénom" GridPane.columnIndex="2">
                            <GridPane.margin>
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="LabelCNE_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="CNE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <Label fx:id="LabelCNE_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="CNE" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="LabelLevel_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Niveau" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                        <Label fx:id="LabelLevel_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="Niveau" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <Label fx:id="LabelClasse_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@css/style.css" text="Classe" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                        <Label fx:id="LabelClasse_Student" alignment="CENTER" prefHeight="40.0" prefWidth="165.0" styleClass="LabelForm_Student" stylesheets="@../css/style.css" text="Classe" GridPane.columnIndex="2" GridPane.rowIndex="3">
                            <GridPane.margin>
                               <Insets left="10.0" />
                            </GridPane.margin>
                         </Label>
-                        <TextField fx:id="TextF_NameStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="1">
+                        <TextField fx:id="NomEtudiant" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1">
                            <GridPane.margin>
                               <Insets left="15.0" right="15.0" top="5.0" />
                            </GridPane.margin></TextField>
-                        <TextField fx:id="TextF_PNameStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="3">
+                        <TextField fx:id="PrenomEtudiant" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@../css/style.css" GridPane.columnIndex="3">
                            <GridPane.margin>
                               <Insets left="15.0" right="20.0" />
                            </GridPane.margin></TextField>
-                        <TextField fx:id="TextF_CINStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <TextField fx:id="CinEtudiant" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="15.0" right="15.0" />
                            </GridPane.margin></TextField>
-                        <TextField fx:id="TextF_CNEStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                        <TextField fx:id="CneEtudiant" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@../css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets left="15.0" right="20.0" />
                            </GridPane.margin></TextField>
-                        <DatePicker fx:id="TextF_DateStudent" prefHeight="40.0" prefWidth="260.0" styleClass="date-pickerForme_Student" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <DatePicker fx:id="DateNaissanceEtudiant" prefHeight="40.0" prefWidth="260.0" styleClass="date-pickerForme_Student" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="15.0" />
                            </GridPane.margin>
                         </DatePicker>
-                        <TextField fx:id="TextF_LevelStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                        <TextField fx:id="LevelEtudiant" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@../css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets left="15.0" right="20.0" />
                            </GridPane.margin></TextField>
@@ -140,7 +139,7 @@
                             <RowConstraints fx:id="RowGridGenre0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <RadioButton fx:id="RBtn_MaleStudent" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="117.5" styleClass="Genreradio-button" stylesheets="@css/style.css" text="Homme">
+                              <RadioButton fx:id="RBtn_MaleStudent" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="117.5" styleClass="Genreradio-button" stylesheets="@../css/style.css" text="Homme">
                                  <GridPane.margin>
                                     <Insets left="20.0" />
                                  </GridPane.margin>
@@ -153,30 +152,30 @@
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0">
                                        <image>
-                                          <Image url="@../images/man.png" />
+                                          <Image url="@../../images/man.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>
                               </RadioButton>
-                              <RadioButton fx:id="RBtn_FemaleStudent" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="117.5" styleClass="Genreradio-button" stylesheets="@css/style.css" text="Femme" toggleGroup="$Genre" GridPane.columnIndex="1">
+                              <RadioButton fx:id="RBtn_FemaleStudent" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="117.5" styleClass="Genreradio-button" stylesheets="@../css/style.css" text="Femme" toggleGroup="$Genre" GridPane.columnIndex="1">
                                  <GridPane.margin>
                                     <Insets left="10.0" />
                                  </GridPane.margin>
                                  <graphic>
                                     <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0">
                                        <image>
-                                          <Image url="@../images/girl.png" />
+                                          <Image url="@../../images/girl.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>
                               </RadioButton>
                            </children>
                         </GridPane>
-                        <TextField fx:id="TextF_EmailStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                        <TextField fx:id="EmailEtudiant" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
                            <GridPane.margin>
                               <Insets left="15.0" right="15.0" />
                            </GridPane.margin></TextField>
-                        <TextField fx:id="TextF_PhoneStudent" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                        <TextField fx:id="PhoneEtudiant" prefHeight="40.0" prefWidth="235.0" styleClass="text-fieldFormeStudent" stylesheets="@../css/style.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
                            <GridPane.margin>
                               <Insets left="15.0" right="15.0" top="10.0" />
                            </GridPane.margin></TextField>
@@ -188,21 +187,19 @@
                               <Insets left="45.0" top="5.0" />
                            </GridPane.margin>
                         </AnchorPane>
-                        <Button fx:id="ImportBtn_Student" mnemonicParsing="false" prefHeight="45.0" prefWidth="165.0" styleClass="BtnImportation" stylesheets="@css/style.css" text="Importer Image" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                        <Button fx:id="ImportBtn_Student" mnemonicParsing="false" onAction="#ImportStudentImage" prefHeight="45.0" prefWidth="165.0" styleClass="BtnImportation" stylesheets="@../css/style.css" text="Importer Image" GridPane.columnIndex="3" GridPane.rowIndex="5">
                            <GridPane.margin>
                               <Insets left="50.0" top="10.0" />
                            </GridPane.margin>
                         </Button>
-                        <MenuButton alignment="CENTER" mnemonicParsing="false" popupSide="RIGHT" prefHeight="40.0" prefWidth="175.0" text="Classes" GridPane.columnIndex="3" GridPane.rowIndex="3">
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Master IITN" />
-                            <MenuItem mnemonicParsing="false" text="Master SSI" />
-                              <MenuItem mnemonicParsing="false" text="Génie Industriel" />
-                          </items>
+                        <ComboBox fx:id="ComboBoxClasse" prefHeight="39.0" prefWidth="204.0" promptText="Classe" styleClass="combo-box" stylesheets="@../css/style.css" GridPane.columnIndex="3" GridPane.rowIndex="3">
                            <GridPane.margin>
-                              <Insets bottom="5.0" left="50.0" />
+                              <Insets left="30.0" right="30.0" />
                            </GridPane.margin>
-                        </MenuButton>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </ComboBox>
                      </children>
                      <opaqueInsets>
                         <Insets />
@@ -216,7 +213,7 @@
                   <Insets top="15.0" />
                </VBox.margin>
             </AnchorPane>
-            <GridPane prefHeight="59.0" prefWidth="965.0" stylesheets="@css/style.css">
+            <GridPane prefHeight="59.0" prefWidth="965.0" stylesheets="@../css/style.css">
               <columnConstraints>
                 <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -225,12 +222,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="AddBtn_Student" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="AddButton_Student" stylesheets="@css/style.css" text="Ajouter">
+                  <Button fx:id="AddEtudiant" alignment="CENTER" mnemonicParsing="false" onAction="#addNewUser" prefHeight="50.0" prefWidth="150.0" styleClass="AddButton_Student" stylesheets="@../css/style.css" text="Ajouter">
                      <GridPane.margin>
                         <Insets right="15.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="CancelBtn_Student" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="AddButton_Student" stylesheets="@css/style.css" text="Annuler" GridPane.columnIndex="1">
+                  <Button fx:id="CancelBtn_Student" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" styleClass="AddButton_Student" stylesheets="@../css/style.css" text="Annuler" GridPane.columnIndex="1">
                      <GridPane.margin>
                         <Insets left="15.0" />
                      </GridPane.margin>
