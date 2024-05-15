@@ -187,7 +187,7 @@ public class AdministrateurController implements Initializable {
         FileChooser fileChooser = new FileChooser();
 
         fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.gif")
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg","*.jpeg", "*.gif")
         );
 
         File file = fileChooser.showOpenDialog(new Stage());
