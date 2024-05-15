@@ -35,18 +35,6 @@ import master.iitn.model.Matiere;
 import master.iitn.model.Roles;
 import master.iitn.services.Utils;
 
-import java.awt.BorderLayout;
-import java.io.ByteArrayInputStream;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.SwingUtilities;
 
 
 public class AdministrateurController implements Initializable {
