@@ -1,6 +1,7 @@
 package master.iitn.model;
 
 public class Note {
+    private int ID_NOTE;
     private String annee;
     private String matiere;
     private String session1;
@@ -9,10 +10,13 @@ public class Note {
     private String session2;
     private Double noteS2;
     private String resultatS2;
-    // private int ID_ETUDIANT;
+    private int ID_ETUDIANT;
 
     public Note() {
     }
+
+    // Note : this contsturctor is used in the ProfController class
+
 
     public Note(String annee, String matiere, Double noteS1, String resultatS1,
             Double noteS2, String resultatS2) {
@@ -88,11 +92,11 @@ public class Note {
         return resultatS2;
     }
 
-    // public void setID_ETUDIANT(int ID_ETUDIANT) {
-    //     this.ID_ETUDIANT = ID_ETUDIANT;
-    // }
+    public void setID_ETUDIANT(int ID_ETUDIANT) {
+        this.ID_ETUDIANT = ID_ETUDIANT;
+    }
 
-    // public int getID_ETUDIANT() {
-    //     return ID_ETUDIANT;
-    // }
+    public int getID_ETUDIANT() {
+        return ID_ETUDIANT;
+    }
 }

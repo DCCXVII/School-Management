@@ -23,7 +23,7 @@ import java.awt.image.BufferedImage;
 
 import master.iitn.model.Etudiant;
 import master.iitn.model.Roles;
-import master.iitn.services.Utils;
+import master.iitn.utils.Utils;
 
 public class AdministrateurDao {
     private final ConnectionFactory connectionFactory;
@@ -99,8 +99,6 @@ public class AdministrateurDao {
             userStmt.setString(9, utils.generateHash(etudiant.getPassword()));
             userStmt.setString(10, Roles.Etudiant.toString());
             userStmt.executeUpdate();
-
-            // System.out.println(userStmt.toString());
 
             // GET LAST ID USER
             int userId;

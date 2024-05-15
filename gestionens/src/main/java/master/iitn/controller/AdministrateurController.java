@@ -33,7 +33,7 @@ import master.iitn.model.Etudiant;
 import master.iitn.model.Gender;
 import master.iitn.model.Matiere;
 import master.iitn.model.Roles;
-import master.iitn.services.Utils;
+import master.iitn.utils.Utils;
 
 
 

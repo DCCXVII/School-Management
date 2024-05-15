@@ -1,4 +1,4 @@
-package master.iitn.services;
+package master.iitn.utils;
 
 import java.util.function.Predicate;
 

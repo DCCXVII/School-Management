@@ -1,7 +1,9 @@
-package master.iitn.services;
+package master.iitn.utils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+
+import master.iitn.model.Roles;
 
 // Class that return a hash of passwrod 
 public class Utils {
@@ -33,6 +35,31 @@ public class Utils {
     public String generateEmail(String nom, String prenom) {
         return nom.substring(0, 2).toLowerCase() + "." + prenom.toLowerCase() + "@uit.ac.ma";
 
+    }
+
+    public Roles setRole(String role) {
+        Roles r = null;
+        switch (role) {
+            case "ETUDIANT":
+                r = Roles.Etudiant;
+                break;
+
+            case "PROFESSEUR":
+                r = Roles.Professeur;
+                break;
+
+            case "ADMINISTRATEUR":
+                r = Roles.Administrateur;
+                break;
+
+            case "DIRECTEUR":
+                r = Roles.DircteurPedagogique;
+                break;
+            default:
+                break;
+
+        }
+        return r;
     }
 
 }

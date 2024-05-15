@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import master.iitn.model.Note;
-import master.iitn.services.Utils;
+import master.iitn.utils.Utils;
 
 public class NoteDao {
     ConnectionFactory connectionFactory;

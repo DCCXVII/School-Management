@@ -27,4 +27,9 @@ public class Classe {
     public void setNOM_CLASSE(String NOM_CLASS) {
         this.NOM_CLASS = NOM_CLASS;
     }
+
+    @Override
+    public String toString() {
+        return ID_CLASS + " " + NOM_CLASS;
+    }
 }

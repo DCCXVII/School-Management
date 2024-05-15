@@ -6,9 +6,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import master.iitn.model.Gender;
-import master.iitn.model.Roles;
 import master.iitn.model.User;
-import master.iitn.services.*;
+import master.iitn.utils.*;
 
 public class UserDao {
     ConnectionFactory connection;
@@ -20,7 +19,14 @@ public class UserDao {
 
     public User LoginUser(String email, String password) {
         String sql = "SELECT * FROM USER WHERE EMAIL='" + email + "' AND PASSWORD='" + password + "'";
+
+        // ---------- khdmha ila kan l hashage dyal password ---- //
+
+        // String hashedpaString = utils.generateHash(password);
+        // String sql = "SELECT * FROM USER WHERE EMAIL='" + email + "' AND PASSWORD='"
+        // + hashedpaString + "'";
         User user = new User();
+        System.out.println(sql);
         try (Connection conn = connection.getConnection();
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(sql)) {
@@ -34,7 +40,7 @@ public class UserDao {
                 user.setCin(rs.getString("CIN"));
                 user.setPhone(rs.getString("PHONE"));
                 user.setEmail(rs.getString("EMAIL"));
-                user.setRole(rs.getString("ROLE").equals("ADMINISTRATEUR") ? Roles.Administrateur : Roles.Etudiant);
+                user.setRole(utils.setRole(rs.getString("ROLE")));
             } else {
                 throw new SQLException("Invalid email or password");
             }

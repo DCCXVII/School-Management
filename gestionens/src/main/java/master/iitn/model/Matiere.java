@@ -6,40 +6,53 @@ public class Matiere {
     private String nom_matiere;
     private int id_matiere;
 
-    public Matiere(){
+    public Matiere() {
 
     }
-    public Matiere(String nom_matiere){
+
+    public Matiere(int id_matiere, String nom_matiere) {
         this.nom_matiere = nom_matiere;
-    }
-
-    public void setId(int id_matiere){
         this.id_matiere = id_matiere;
     }
 
-    public int getId(){
+    public Matiere(String nom_matiere) {
+        this.nom_matiere = nom_matiere;
+    }
+
+    public void setId(int id_matiere) {
+        this.id_matiere = id_matiere;
+    }
+
+    public int getId() {
         return id_matiere;
     }
 
-    public String getNomMatiere(){
+    public String getNomMatiere() {
         return this.nom_matiere;
     }
-    public void setNomMatiere(String nom_matiere){
+
+    public void setNomMatiere(String nom_matiere) {
         this.nom_matiere = nom_matiere;
     }
-    
-    public String getNomClass(){
+
+    public String getNomClass() {
         return this.nom_class;
     }
-    public void setNomClass(String nom_class){
+
+    public void setNomClass(String nom_class) {
         this.nom_class = nom_class;
     }
 
-    
-    public String getNomModule(){
+    public String getNomModule() {
         return this.nom_module;
     }
-    public void setNomModule(String nom_module){
+
+    public void setNomModule(String nom_module) {
         this.nom_module = nom_module;
+    }
+
+    @Override
+    public String toString() {
+        return id_matiere + " " + nom_class;
     }
 }
