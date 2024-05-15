@@ -19,10 +19,13 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+<<<<<<< HEAD
         scene = new Scene(loadFXML("view/Admin/AdminImprimer"), 1280, 720);
+=======
+        scene = new Scene(loadFXML("view/Prof/MainProf"), 1280, 720);
+>>>>>>> 31d01d05bd612a6e38793bc812e41fba97f0ab87
         stage.setScene(scene);
         stage.setTitle("School Management");
-        // ConnectDB connectDB ;
         stage.show();
     }
 

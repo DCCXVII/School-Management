@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="BorderPane_Matiere" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="master.iitn.controller.NoteController">
    <center>
       <VBox fx:id="Vbox_CenterSessionStudent" prefHeight="0.0" prefWidth="100.0" styleClass="VboxCenter" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
          <children>
@@ -31,24 +31,24 @@
                   <Insets top="15.0" />
                </VBox.margin>
                <children>
-                  <TableView fx:id="TableViewShowNotes" layoutY="16.0" prefHeight="484.0" prefWidth="980.0">
-                    <columns>
-                      <TableColumn fx:id="Clm_Année" prefWidth="136.0" text="Année" />
-                      <TableColumn fx:id="Clm_Matière" prefWidth="169.99990844726562" text="Matière " />
-                        <TableColumn fx:id="Clm_SessionNormale" prefWidth="140.0" text="Session normale">
-                           <columns>
-                              <TableColumn fx:id="Clm_NoteS1" prefWidth="165.0" text="Note" />
-                              <TableColumn fx:id="Clm_ResultatS1" prefWidth="165.0" text="Résultat" />
-                           </columns>
-                        </TableColumn>
-                        <TableColumn fx:id="Clm_SessionRattrapage" minWidth="0.0" prefWidth="344.8887939453125" text="Session rattrapage">
-                           <columns>
-                              <TableColumn fx:id="Clm_NoteS2" prefWidth="165.0" text="Note" />
-                              <TableColumn fx:id="Clm_ResultatS2" prefWidth="165.0" text="Résultat" />
-                           </columns>
-                        </TableColumn>
-                    </columns>
-                  </TableView>
+                  <TableView fx:id="notesTable" prefHeight="500.0" prefWidth="980.0">
+                     <columns>
+                       <TableColumn fx:id="Annee" prefWidth="136.0" text="ANNEE" />
+                       <TableColumn fx:id="Matiere" prefWidth="169.99990844726562" text="Matière " />
+                         <TableColumn fx:id="Session1" prefWidth="140.0" text="Session 1">
+                            <columns>
+                               <TableColumn fx:id="NoteS1" prefWidth="165.0" text="NOTE" />
+                               <TableColumn fx:id="ResultatS1" prefWidth="165.0" text="RESULTAT" />
+                            </columns>
+                         </TableColumn>
+                         <TableColumn fx:id="Session2" minWidth="0.0" prefWidth="344.8887939453125" text="Session 2">
+                            <columns>
+                               <TableColumn fx:id="NoteS2" prefWidth="165.0" text="NOTE" />
+                               <TableColumn fx:id="ResultatS2" prefWidth="165.0" text="RESULTAT" />
+                            </columns>
+                         </TableColumn>
+                     </columns>
+                   </TableView>
                </children>
             </AnchorPane>
          </children>

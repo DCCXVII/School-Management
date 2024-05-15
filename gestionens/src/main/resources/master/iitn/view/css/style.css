@@ -750,6 +750,7 @@
   -fx-background-color: #ffffff;
   -fx-background-radius: 25;
   -fx-border-radius: 25;
+  -fx-alignment: center;
   -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 5, 5);
 }
 .combo-box:hover {
@@ -762,13 +763,13 @@
   -fx-font-family: "Open Sans";
   -fx-font-weight: bold;
   -fx-alignment: center;
+ 
 }
 .combo-box .list-view {
   -fx-background-radius: 10;
   -fx-border-radius: 10;
   -fx-background-color: #ffffff;
-  -fx-translate-x: 225;
-  -fx-translate-y: -50;
+  -fx-alignment: center;
 }
 .combo-box .list-view:hover {
   -fx-background-color: #81c483;
