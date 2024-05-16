@@ -22,7 +22,7 @@
                   <Insets bottom="10.0" left="65.0" top="25.0" />
                </VBox.margin>
             </ImageView>
-            <Button fx:id="ProfilBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Profil">
+            <Button fx:id="ProfilBtn" onAction="#goToProfile" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Profil">
                <graphic>
                   <ImageView fx:id="icone_Profil" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -40,7 +40,7 @@
                   <Insets left="20.0" />
                </padding>
             </Button>
-            <Button fx:id="Button_Matiere" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Gestion de Matière">
+            <Button fx:id="Button_Matiere"  alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Gestion de Matière" onAction="#goToGestionMatiere">
                <graphic>
                   <ImageView fx:id="icone_Matiere" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -60,8 +60,8 @@
             </Button>
             <MenuButton fx:id="MenuBtn_Student" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="MENU" stylesheets="@../css/style.css" text="Gestion d'Etudiant">
                <items>
-                  <MenuItem fx:id="AddBtn_Student1" mnemonicParsing="false" text="Ajouter Etudiant" />
-                  <MenuItem fx:id="ShowBtn_Student" mnemonicParsing="false" text="Afficher Etudiant" />
+                  <MenuItem fx:id="AddBtn_Student1" mnemonicParsing="false" text="Ajouter Etudiant" onAction="#goToAddEtudiant"/>
+                  <MenuItem fx:id="ShowBtn_Student" mnemonicParsing="false" text="Afficher Etudiant" onAction="#goToSearchEtudiant"/>
                </items>
                <graphic>
                   <ImageView fx:id="icone_Student" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
@@ -77,7 +77,7 @@
                   <Insets left="10.0" />
                </padding>
             </MenuButton>
-            <Button fx:id="Button_impression" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Impression">
+            <Button fx:id="Button_impression" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="65.0" prefWidth="265.0" styleClass="SideButton" stylesheets="@../css/style.css" text="Impression" onAction="#goToImpression">
                <font>
                   <Font size="1.0" />
                </font>

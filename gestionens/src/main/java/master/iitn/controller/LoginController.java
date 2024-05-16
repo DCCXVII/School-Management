@@ -43,7 +43,7 @@ public class LoginController {
                 App.setRoot("view/Etudiant/MainEtudiant", SessionController.getInstance().getUser());
                 break;
             case Administrateur:
-                App.setRoot("view/Admin", SessionController.getInstance().getUser());
+                App.setRoot("view/Admin/MainAdmin", SessionController.getInstance().getUser());
                 break;
             case Professeur:
                 App.setRoot("view/Prof/MainProf", SessionController.getInstance().getUser());

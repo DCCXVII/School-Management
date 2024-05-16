@@ -49,7 +49,7 @@
                               <Insets left="50.0" right="50.0" top="15.0" />
                            </VBox.margin>
                         </TextField>
-                        <Button fx:id="btnSoumettre" mnemonicParsing="false" prefHeight="50.0" prefWidth="195.0" styleClass="AddButton_Student" stylesheets="@../css/style.css" text="Soumettre">
+                        <Button fx:id="btnSoumettre" mnemonicParsing="false" prefHeight="50.0" prefWidth="195.0" styleClass="AddButton_Student" stylesheets="@../css/style.css" text="Soumettre" onAction="#addNoteByEtudiantId">
                            <VBox.margin>
                               <Insets bottom="5.0" left="65.0" right="30.0" top="10.0" />
                            </VBox.margin>

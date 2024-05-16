@@ -1,7 +1,6 @@
 package master.iitn.model;
 
 public class Note {
-    private int ID_NOTE;
     private String annee;
     private String matiere;
     private String session1;
@@ -16,7 +15,6 @@ public class Note {
     }
 
     // Note : this contsturctor is used in the ProfController class
-
 
     public Note(String annee, String matiere, Double noteS1, String resultatS1,
             Double noteS2, String resultatS2) {

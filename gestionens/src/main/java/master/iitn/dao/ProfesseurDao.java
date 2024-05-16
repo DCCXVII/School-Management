@@ -5,8 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -123,7 +121,17 @@ public class ProfesseurDao {
         return notes;
     }
 
-    public void addNoteByEtudiant(){
-        
+    public void addNoteByEtudiantId(int idEtudiant, int idMatiere, int noteNormale) {
+        String sql = "INSERT INTO NOTES (ID_NOTE, ID_MATIERE, ID_ETUDIANT, NOTE_NORMALE, MENTION_NORMALE, NOTE_RATTRAPAGE, MENTION_RATTRAPAGE) VALUES (NULL, ?, ?, ?, ?, NULL, NULL)";
+        try (Connection conn = connectionFactory.getConnection();
+                PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, idMatiere);
+            stmt.setInt(2, idEtudiant);
+            stmt.setInt(3, noteNormale);
+            stmt.setString(4, "Validé");
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

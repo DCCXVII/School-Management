@@ -94,4 +94,12 @@ public class ProfController implements Initializable {
         TableauNotes.setItems(notes);
     }
 
+    @FXML
+    public void addNoteByEtudiantId(ActionEvent event) {
+        int idEtudiant = Integer.parseInt(Cne.getText());
+        int noteNormale = Integer.parseInt(Note.getText());
+        professeurDao.addNoteByEtudiantId(idEtudiant, idMatiere, noteNormale);
+        setNoteByClasse(event);
+    }
+
 }

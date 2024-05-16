@@ -16,7 +16,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import master.iitn.model.Matiere;
 import master.iitn.dao.MatiereDao;
 
-public class MatiereController implements Initializable{
+public class MatiereController implements Initializable {
 
     MatiereDao matiereDao = new MatiereDao();
 
@@ -44,7 +44,7 @@ public class MatiereController implements Initializable{
     private TableColumn<Matiere, String> Col_NomMatiere;
 
     @Override
-    public void initialize(URL location, ResourceBundle resources){
+    public void initialize(URL location, ResourceBundle resources) {
         FillMatieres(null);
 
         ComboClasse.getItems().addAll(matiereDao.getClassNames());
@@ -52,8 +52,6 @@ public class MatiereController implements Initializable{
         ComboProfesseur.getItems().addAll(matiereDao.getProfesseurNames());
 
     }
-
-    
 
     @FXML
     private void addNewMatiere(ActionEvent event) throws IOException {

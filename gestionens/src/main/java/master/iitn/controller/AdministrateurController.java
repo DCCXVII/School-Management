@@ -14,7 +14,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.RadioButton;
@@ -35,20 +34,17 @@ import master.iitn.model.Matiere;
 import master.iitn.model.Roles;
 import master.iitn.utils.Utils;
 
-
-
 public class AdministrateurController implements Initializable {
     AdministrateurDao administrateurService;
     MatiereDao matiereService;
     Utils utils;
     String profilePath;
 
-    public AdministrateurController(){
+    public AdministrateurController() {
         this.administrateurService = new AdministrateurDao();
         this.matiereService = new MatiereDao();
         this.utils = new Utils();
     }
-    
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -59,7 +55,7 @@ public class AdministrateurController implements Initializable {
 
         // Initialize the ChoiceBox
         // ComboBoxClasse.getItems().addAll("IITN", "GE");
-        ComboBoxClasse.getItems().addAll(administrateurService.getClassNames()) ;
+        ComboBoxClasse.getItems().addAll(administrateurService.getClassNames());
     }
 
     // Gender Section
@@ -75,7 +71,7 @@ public class AdministrateurController implements Initializable {
     private ComboBox<String> ComboBoxClasse;
 
     // Add Matiere Fields
- 
+
     @FXML
     private TextField TextField_AddMatiere;
     @FXML
@@ -108,11 +104,8 @@ public class AdministrateurController implements Initializable {
     private Button AddEtudiant;
     @FXML
     private Button Cancel;
-    @FXML 
+    @FXML
     private ImageView ProfileStudent;
-
-
-
 
     @FXML
     private void addNewUser(ActionEvent event) {
@@ -128,36 +121,25 @@ public class AdministrateurController implements Initializable {
             String selectedClass = ComboBoxClasse.getValue();
             LocalDate selectedDate = DateNaissanceEtudiant.getValue();
             Date dateOfBirth = (selectedDate != null) ? java.sql.Date.valueOf(selectedDate) : null;
-            
+
             // System.out.println(profilePath.toString());
-        
+
             // String image = "default";
             Roles role = Roles.Etudiant;
             Gender gender = getSelectedGender().equals("Homme") ? Gender.Homme : Gender.Femme;
             String anneeUniversitaier = "2023-2024";
 
-            Etudiant etudiant = new Etudiant(0, profilePath, nom, prenom, email, password, role, cin, cne, telephone, gender,
+            Etudiant etudiant = new Etudiant(0, profilePath, nom, prenom, email, password, role, cin, cne, telephone,
+                    gender,
                     dateOfBirth, level, selectedClass, anneeUniversitaier);
 
-                    System.err.println();
-            
+            System.err.println();
+
             administrateurService.addEtudiant(etudiant);
         } catch (Exception e) {
             logError("Error adding new student: ", e);
         }
     }
-
-    // @FXML
-    // private void addNewMatiere(ActionEvent event) {
-    //     try {
-    //         String nomMatiere = TextField_AddMatiere.getText();
-    //         Matiere matiere = new Matiere(nomMatiere);
-    //         matiereService.addMatiere(matiere);
-    //         FillMatieres(event);
-    //     } catch (Exception e) {
-    //         logError("Error adding new matiere: ", e);
-    //     }
-    // }
 
     @FXML
     public void FillMatieres(ActionEvent event) {
@@ -175,8 +157,7 @@ public class AdministrateurController implements Initializable {
         FileChooser fileChooser = new FileChooser();
 
         fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg","*.jpeg", "*.gif")
-        );
+                new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg", "*.gif"));
 
         File file = fileChooser.showOpenDialog(new Stage());
 
@@ -184,7 +165,7 @@ public class AdministrateurController implements Initializable {
             this.profilePath = file.getAbsolutePath();
 
             FileInputStream inputStream = new FileInputStream(profilePath);
-            ProfileStudent.setImage(new Image(inputStream)); 
+            ProfileStudent.setImage(new Image(inputStream));
 
             inputStream.close();
 
@@ -192,7 +173,6 @@ public class AdministrateurController implements Initializable {
             e.printStackTrace();
         }
     }
-
 
     private String getSelectedGender() {
         if (RBtn_MaleStudent.isSelected()) {

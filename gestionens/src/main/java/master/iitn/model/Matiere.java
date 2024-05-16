@@ -53,6 +53,6 @@ public class Matiere {
 
     @Override
     public String toString() {
-        return id_matiere + " " + nom_class;
+        return id_matiere + " " + nom_matiere;
     }
 }
